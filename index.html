@@ -11,6 +11,7 @@
     <link rel="manifest" href="/public/favicon/site.webmanifest" />
     <title>AquaFinders - Find the best place for your water well!</title>
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body>
     <header>
@@ -19,12 +20,17 @@
           <img src="public/Asset 9.png" alt="AquaFinders" width="260" height="60" />
         </div>
         <h1 class="_not_visible">AquaFinders - Find the best place for your water well!</h1>
-        <ul class="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about-us">About us</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-container">
+          <ul class="nav-links">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about-us">About us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -32,7 +38,8 @@
       <section class="hero-container">
         <div class="hero">
           <h2>Find the best place to drill your water well!</h2>
-          <p>Don't gamble thousands of dollars drilling blind. We combine cutting-edge subsurface imaging technology and expert geological analysis to reveal hidden groundwater beneath your property. We'll help you confidently select the optimal locations for drilling, significantly improving your chances of a productive, high-yield well.</p>
+          <p>Dry and low-yield wells are a real risk! Besides harming your budget, it can also delay your construction! At AquaFinders, we combine cutting-edge subsurface imaging technology and expert geological analysis to reveal hidden groundwater beneath your property. We'll help you confidently select the optimal locations for drilling, significantly improving your chances of a productive well that will greatly benefit you for decades to come!</p>
+          <a href="#contact" class="cta-button">Learn More</a>
           <a href="#contact" class="cta-button">Get a Free Consultation</a>
         </div>
       </section>
@@ -41,20 +48,32 @@
         <h3>Our Services</h3>
         <div class="service-grid">
           <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-water fa-2x"></i>
+            </div>
             <h3>Finding water</h3>
             <p>We use advanced scientific techniques to identify prime locations for well drilling - residential, commercial, and agriculture.</p>
           </div>
           <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-tint-slash fa-2x"></i>
+            </div>
             <h3>Avoinding water</h3>
             <p>Sometime you want to dig and avoid water, like when digging deeper foundations. We can help with that too.</p>
           </div>
           <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-bolt fa-2x"></i>
+            </div>
             <h3>Soil resistivity</h3>
             <p>Test required for grounding projects for substations and tramission systems, solar farms, industrial plants, etc.</p>
           </div>
           <div class="service-card">
-            <h3>Geophysical</h3>
-            <p>Geophysical and hydrogeophysical study of your property, to assist in environmental, construction, and mining work.</p>
+            <div class="service-icon">
+              <i class="fas fa-clipboard-list fa-2x"></i>
+            </div>
+            <h3>Studies</h3>
+            <p>Geophysical and hydrogeophysical studies of your property, to assist in environmental, construction, and mining work.</p>
           </div>
         </div>
       </section>
@@ -117,5 +136,26 @@
       </defs>
     </svg>
     
+    <script>
+      // Mobile menu toggle functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navContainer = document.querySelector('.nav-container');
+        
+        menuToggle.addEventListener('click', function() {
+          navContainer.classList.toggle('active');
+          menuToggle.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            navContainer.classList.remove('active');
+            menuToggle.classList.remove('active');
+          });
+        });
+      });
+    </script>
   </body>
 </html>
