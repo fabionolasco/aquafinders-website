@@ -2,28 +2,3 @@
   from = "/public/images/:file"
   to = "/.netlify/images?url=/public/images/:file"
   status = 200
-
-[[redirects]]
-  from = "/public/images/_mobile/:file"
-  to = "/.netlify/images?url=/public/images/_mobile/:file"
-  status = 200
-
-[[redirects]]
-  from = "/public/images/_tablet/:file"
-  to = "/.netlify/images?url=/public/images/_tablet/:file"
-  status = 200
-
-[[redirects]]
-  from = "/public/images/_medium/:file"
-  to = "/.netlify/images?url=/public/images/_medium/:file"
-  status = 200
-
-[[redirects]]
-  from = "/public/images/_large/:file"
-  to = "/.netlify/images?url=/public/images/_large/:file"
-  status = 200
-
-[[redirects]]
-  from = "/public/images/_xlarge/:file"
-  to = "/.netlify/images?url=/public/images/_xlarge/:file"
-  status = 200
