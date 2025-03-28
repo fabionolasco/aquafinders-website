@@ -1,7 +1,32 @@
+[[plugins]]
+  package = "netlify-plugin-image-optim"
+
 [[redirects]]
-  # Requests to URLs matching this pattern...
   from = "/public/images/:file"
-  # ...will resolve to this URL pattern
   to = "/.netlify/images?url=/public/images/:file"
-  # ... and the status code of 200 will make this behave as a rewrite
+  status = 200
+
+[[redirects]]
+  from = "/public/images/_mobile/:file"
+  to = "/.netlify/images/_mobile?url=/public/images/_mobile/:file"
+  status = 200
+
+[[redirects]]
+  from = "/public/images/_tablet/:file"
+  to = "/.netlify/images/_tablet?url=/public/images/_tablet/:file"
+  status = 200
+
+[[redirects]]
+  from = "/public/images/_medium/:file"
+  to = "/.netlify/images/_medium?url=/public/images/_medium/:file"
+  status = 200
+
+[[redirects]]
+  from = "/public/images/_large/:file"
+  to = "/.netlify/images/_large?url=/public/images/_large/:file"
+  status = 200
+
+[[redirects]]
+  from = "/public/images/_xlarge/:file"
+  to = "/.netlify/images/_xlarge?url=/public/images/_xlarge/:file"
   status = 200

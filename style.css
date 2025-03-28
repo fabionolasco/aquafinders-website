@@ -131,7 +131,7 @@ section {
   background: linear-gradient(rgba(0,119,182,0.1), rgba(2,62,138,0.1));
   padding: 6rem 0;
   max-width: none;
-  background-image: url('/public/images/hero-bg-big.png');
+  background-image: url('/public/images/_mobile/hero-bg-big.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -422,6 +422,11 @@ h3 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+  .hero-container {
+    background-image: url('/public/images/_tablet/hero-bg-big.png');
+  }
+
   nav {
     flex-direction: column;
     text-align: center;
@@ -614,5 +619,23 @@ h3 {
   .nav-container {
     width: 100%;
     max-width: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-container {
+    background-image: url('/public/images/_medium/hero-bg-big.png');
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .hero-container {
+    background-image: url('/public/images/_large/hero-bg-big.png');
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .hero-container {
+    background-image: url('/public/images/_xlarge/hero-bg-big.png');
   }
 }

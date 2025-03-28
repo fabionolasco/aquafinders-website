@@ -107,7 +107,20 @@
             <p>Our scientific approach combines electrical resistivity imaging and geophysics analysis to maximize your chances of finding water.</p>
           </div>
           <div class="about-image">
-            <img src="/public/images/field-work.png" alt="AquaFinders team conducting a groundwater survey" width="400" height="300">
+            <img 
+              srcset="
+                /public/images/_mobile/field-work.png   200w,
+                /public/images/_mobile/field-work.png   400w,
+                /public/images/_tablet/field-work.png   768w,
+                /public/images/_medium/field-work.png   1280w
+                /public/images/_large/field-work.png    1920w
+              "
+              sizes="(max-width: 450px) 398px,
+                    (max-width: 768px)  736px,
+                    (max-width: 1024px) 371px,
+                    (max-width: 1280px) 448px,
+                    448px"
+            src="/public/images/xlarge/field-work.png" alt="AquaFinders team conducting a groundwater survey" width="400" height="300">
           </div>
         </div>
       </section>
