@@ -348,6 +348,14 @@ h3 {
   display: none;
 }
 
+.lean {
+  font-weight: 200;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   nav {
@@ -503,6 +511,10 @@ h3 {
   .hero {
     width: 100%;
     padding: 1.5rem;
+  }
+
+  .hero p {
+    text-shadow: 1px 1px 4px rgb(0 0 0);
   }
   
   .hero::before {
