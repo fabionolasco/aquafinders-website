@@ -1,7 +1,7 @@
 :root {
   --primary-color: #0077b6;
-  --secondary-color: #023e8a;
-  --accent-color: #90e0ef;
+  --secondary-color: #126084;
+  --accent-color: #126084;
   --text-color: #333;
   --light-bg: #f8f9fa;
   --white: #ffffff;
@@ -131,7 +131,10 @@ section {
   background: linear-gradient(rgba(0,119,182,0.1), rgba(2,62,138,0.1));
   padding: 6rem 0;
   max-width: none;
-  background-image: url('/public/images/_mobile/hero-bg-big.png');
+  background-image: image-set(
+    url('/public/images/hero-bg-big-mobile.avif') type('image/avif'),
+    url('/public/images/hero-bg-big-mobile.png') type('image/png')
+  );
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -299,7 +302,7 @@ section {
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 3rem;
-  align-items: center;
+  align-items: start;
   margin-top: 2rem;
 }
 
@@ -308,8 +311,23 @@ section {
   font-size: 1.1rem;
 }
 
+.bonded-insured {
+  font-weight: 500;
+  color: var(--secondary-color);
+  border: 1px solid var(--accent-color);
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #efefef;
+}
+
+.about-image {
+  text-align: right;
+}
+
 .about-image img {
-  width: 100%;
+  width: 90%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -424,7 +442,10 @@ h3 {
 @media (max-width: 768px) {
 
   .hero-container {
-    background-image: url('/public/images/_tablet/hero-bg-big.png');
+    background-image: image-set(
+      url('/public/images/hero-bg-big-tablet.avif') type('image/avif'),
+      url('/public/images/hero-bg-big-tablet.png') type('image/png')
+    );
   }
 
   nav {
@@ -624,18 +645,27 @@ h3 {
 
 @media screen and (min-width: 1280px) {
   .hero-container {
-    background-image: url('/public/images/_medium/hero-bg-big.png');
+    background-image: image-set(
+      url('/public/images/hero-bg-big-medium.avif') type('image/avif'),
+      url('/public/images/hero-bg-big-medium.png') type('image/png')
+    );
   }
 }
 
 @media screen and (min-width: 1920px) {
   .hero-container {
-    background-image: url('/public/images/_large/hero-bg-big.png');
+    background-image: image-set(
+      url('/public/images/hero-bg-big-large.avif') type('image/avif'),
+      url('/public/images/hero-bg-big-large.png') type('image/png')
+    );
   }
 }
 
 @media screen and (min-width: 1921px) {
   .hero-container {
-    background-image: url('/public/images/_xlarge/hero-bg-big.png');
+    background-image: image-set(
+      url('/public/images/hero-bg-big-xlarge.avif') type('image/avif'),
+      url('/public/images/hero-bg-big-xlarge.png') type('image/png')
+    );
   }
 }
