@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+body, html {
+  scroll-padding-top: 100px;
+}
+
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
@@ -286,6 +290,31 @@ section {
   text-align: center;
 }
 
+/* About Us Section */
+.about-us {
+  padding: 5rem 1rem;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 /* Contact Section */
 .contact {
   text-align: center;
@@ -354,6 +383,41 @@ h3 {
 
 .bold {
   font-weight: bold;
+}
+
+/* Success Message Styling */
+.success {
+  max-width: 600px;
+  margin: 8rem auto 2rem;
+  min-height: calc(100vh - 303px);
+  padding: 2.5rem;
+  text-align: center;
+  background-color: var(--white);
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.success i {
+  font-size: 4rem;
+  color: #4CAF50; /* Green color for success */
+  margin-bottom: 1.5rem;
+}
+
+.success h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.success p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.success .cta-button {
+  margin-top: 0.5rem;
 }
 
 /* Responsive Design */
@@ -469,6 +533,20 @@ h3 {
   
   .nav-container.active {
     right: 0;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-image {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+
+  .success {
+    margin: 6rem 1rem 2rem;
+    padding: 2rem;
   }
 }
 

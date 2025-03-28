@@ -17,7 +17,9 @@
     <header>
       <nav>
         <div class="logo">
-          <img src="public/Asset 9.png" alt="AquaFinders" width="260" height="60" />
+          <a href="/">
+            <img src="public/Asset 9.png" alt="AquaFinders" width="260" height="60" />
+          </a>
         </div>
         <h1 class="_not_visible">AquaFinders - Find the best place for your water well!</h1>
         <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
@@ -34,17 +36,17 @@
       </nav>
     </header>
 
-    <main>
+    <main id="top">
       <section class="hero-container">
         <div class="hero">
           <h2>Find the best place to drill your water well!</h2>
-          <p>Dry and low-yield wells are a real risk! Besides harming your budget, it can also delay your construction! At AquaFinders, we combine cutting-edge subsurface imaging technology and expert geological analysis to reveal hidden groundwater beneath your property. We'll help you confidently select the optimal locations for drilling, significantly improving your chances of a productive well that will greatly benefit you for decades to come!</p>
+          <p>Dry and low-yield wells are a real risk! Besides harming your budget, it can also delay the construction! At AquaFinders, we combine cutting-edge subsurface imaging technology and expert geological analysis to reveal hidden groundwater beneath your site. We'll help you confidently select the optimal locations for drilling, significantly improving your chances of a productive well that will greatly benefit you for decades to come!</p>
           <a href="#contact" class="cta-button">Learn More</a>
           <a href="#contact" class="cta-button">Get a Free Consultation</a>
         </div>
       </section>
 
-      <section class="services">
+      <section id="services" class="services">
         <h3>Our Services</h3>
         <div class="service-grid">
           <div class="service-card">
@@ -83,27 +85,41 @@
         <div class="benefits-grid">
           <div class="benefit">
             <h3>Residential</h3>
-            <p>Homeowners seeking to drill wells on exising or new construction sites.</p>
+            <p>Homeowners planning to drill water wells on new construction or existing sites.</p>
           </div>
           <div class="benefit">
             <h3>Agriculture</h3>
-            <p>Farms seeking for the best places to drill wells.</p>
+            <p>Farms seeking the best places to drill high-yield water wells for crop irrigation or animal consumption.</p>
           </div>
           <div class="benefit">
             <h3>Business</h3>
-            <p>State-of-the-art geological surveying tools</p>
+            <p>Builders seeking to study the grown beneath their propety, sometime to avoid water vains (fractures).</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-us" class="about-us">
+        <h2>About Us</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>AquaFinders is a specialized groundwater location service operating throughout North and South Carolina. With our team of four experienced geologists/hydrogeologists and one forest engineer, we use cutting-edge technology to locate the best spots for drilling productive water wells.</p>
+            <p>Founded on the principle that everyone deserves access to clean, reliable water, our experts have helped hundreds of homeowners, farmers, and businesses avoid the costly mistake of drilling in the wrong location.</p>
+            <p>Our scientific approach combines electrical resistivity imaging and geophysics analysis to maximize your chances of finding water.</p>
+          </div>
+          <div class="about-image">
+            <img src="/public/leo.jpeg" alt="AquaFinders team conducting a groundwater survey" width="400" height="300">
           </div>
         </div>
       </section>
 
       <section id="contact" class="contact">
         <h2>Ready to Find Your Perfect Well Location?</h2>
-        <form class="contact-form" netlify data-netlify-recaptcha="true">
+        <form method="post" action="/success" class="contact-form" netlify data-netlify-recaptcha="true" netlify-honeypot="bot-field">
           <input type="text" placeholder="Your Name" required>
           <input type="email" placeholder="Email Address" required>
           <input type="tel" placeholder="Phone Number" required>
-          <textarea placeholder="Tell us about your property" required></textarea>
-          <button type="submit" class="cta-button">Request Free Consultation</button>
+          <textarea placeholder="Tell us about your project or questions..." required></textarea>
+          <button type="submit" class="cta-button">Submit</button>
         </form>
       </section>
     </main>
