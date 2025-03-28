@@ -1,6 +1,3 @@
-[[plugins]]
-  package = "netlify-plugin-image-optim"
-
 [[redirects]]
   from = "/public/images/:file"
   to = "/.netlify/images?url=/public/images/:file"
