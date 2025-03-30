@@ -11,12 +11,23 @@
     <link rel="manifest" href="/public/favicon/site.webmanifest" />
     <title>AquaFinders - Find the best place for your water well!</title>
     <link rel="stylesheet" href="/style.css" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NRJLRXJ2');</script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
-    <header>
-      <nav>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRJLRXJ2"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header role="banner">
+      <nav role="navigation">
         <div class="logo">
-          <a href="/">
+          <a href="/" aria-label="AquaFinders - Find the best place for your water well!">
             <img src="public/images/logo-h.png" alt="AquaFinders" width="260" height="60" />
           </a>
         </div>
@@ -35,17 +46,17 @@
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero-container">
+    <main id="top" role="main">
+      <section class="hero-container" role="region" aria-labelledby="hero-title">
         <div class="hero">
-          <h2>Find the best place to drill your water well!</h2>
+          <h2 id="hero-title">Find the best place to drill your water well!</h2>
           <p>Dry and low-yield wells are a real risk! Besides harming your budget, it can also delay the construction! At AquaFinders, we combine cutting-edge subsurface imaging technology and expert geological analysis to assess hidden groundwater beneath your site. We'll help you confidently select the optimal locations for drilling, significantly improving your chances of a productive well that will benefit you for decades to come!</p>
           <a href="#contact" class="cta-button">Get a Free Consultation</a>
         </div>
       </section>
 
-      <section id="services" class="services">
-        <h3>Our Services</h3>
+      <section id="services" class="services" role="region" aria-labelledby="services-title">
+        <h3 id="services-title">Our Services</h3>
         <div class="service-grid">
           <div class="service-card">
             <div class="service-icon" id="find-water-svg">
@@ -85,8 +96,8 @@
         </div>
       </section>
 
-      <section class="why-us">
-        <h2>Who hire us?</h2>
+      <section class="why-us" role="region" aria-labelledby="why-us-title">
+        <h2 id="why-us-title">Who hire us?</h2>
         <div class="benefits-grid">
           <div class="benefit">
             <h3>Residential</h3>
@@ -103,8 +114,8 @@
         </div>
       </section>
 
-      <section id="about-us" class="about-us">
-        <h2>About Us</h2>
+      <section id="about-us" class="about-us" role="region" aria-labelledby="about-us-title">
+        <h2 id="about-us-title">About Us</h2>
         <div class="about-content">
           <div class="about-text">
             <p>AquaFinders is a specialized groundwater location service operating throughout North and South Carolina. With our team of 4 (four) experienced geologists/hydrogeologists, 1 (one) forest engineer, and local technicians, we use cutting-edge technology to locate the best spots for drilling productive water wells.</p>
@@ -136,19 +147,26 @@
         </div>
       </section>
 
-      <section id="contact" class="contact">
-        <h2>Ready to Find Your Perfect Well Location?</h2>
+      <section id="contact" class="contact" role="region" aria-labelledby="contact-title">
+        <h2 id="contact-title">Ready to Find Your Perfect Well Location?</h2>
         <form method="post" action="/success" class="contact-form" netlify data-netlify-recaptcha="true" netlify-honeypot="bot-field">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Email Address" required>
-          <input type="tel" placeholder="Phone Number" required>
-          <textarea placeholder="Tell us about your project or questions..." required></textarea>
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Your Name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Email Address" required>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Phone Number" required>
+
+          <label for="message">Tell us about your project or questions...</label>
+          <textarea id="message" placeholder="Tell us about your project or questions..." required></textarea>
           <button type="submit" class="cta-button">Submit</button>
         </form>
       </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
       <div class="footer-content">
         <div class="footer-info">
           <h3>AquaFinders</h3>
