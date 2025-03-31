@@ -158,10 +158,10 @@ section {
   background: linear-gradient(rgba(0,119,182,0.1), rgba(2,62,138,0.1));
   padding: 1rem 0 4rem;
   max-width: none;
-  background-image: url('/public/images/hero-bg-big-mobile.png'); 
+  background-image: url('/images/hero-bg-big-mobile.png'); 
   background-image: image-set(
-    url('/public/images/hero-bg-big-mobile.avif') type('image/avif'),
-    url('/public/images/hero-bg-big-mobile.png') type('image/png')
+    url('/images/hero-bg-big-mobile.avif') type('image/avif'),
+    url('/images/hero-bg-big-mobile.png') type('image/png')
   );
   background-repeat: no-repeat;
   background-size: cover;
@@ -605,10 +605,10 @@ h3 {
 /* Large devices (desktops, 1280px and up) */
 @media (min-width: 1280px) {
   .hero-container {
-    background-image: url('/public/images/hero-bg-big-medium.png'); 
+    background-image: url('/images/hero-bg-big-medium.png'); 
     background-image: image-set(
-      url('/public/images/hero-bg-big-medium.avif') type('image/avif'),
-      url('/public/images/hero-bg-big-medium.png') type('image/png')
+      url('/images/hero-bg-big-medium.avif') type('image/avif'),
+      url('/images/hero-bg-big-medium.png') type('image/png')
     );
   }
   
@@ -621,10 +621,10 @@ h3 {
 /* Extra large devices (large desktops, 1920px and up) */
 @media (min-width: 1920px) {
   .hero-container {
-    background-image: url('/public/images/hero-bg-big-large.png'); 
+    background-image: url('/images/hero-bg-big-large.png'); 
     background-image: image-set(
-      url('/public/images/hero-bg-big-large.avif') type('image/avif'),
-      url('/public/images/hero-bg-big-large.png') type('image/png')
+      url('/images/hero-bg-big-large.avif') type('image/avif'),
+      url('/images/hero-bg-big-large.png') type('image/png')
     );
   }
 }
@@ -632,20 +632,20 @@ h3 {
 /* Extra extra large devices (wide screens, 2000 and up) */
 @media (min-width: 2000) {
   .hero-container {
-    background-image: url('/public/images/hero-bg-big-xlarge.png'); 
+    background-image: url('/images/hero-bg-big-xlarge.png'); 
     background-image: image-set(
-      url('/public/images/hero-bg-big-xlarge.avif') type('image/avif'),
-      url('/public/images/hero-bg-big-xlarge.png') type('image/png')
+      url('/images/hero-bg-big-xlarge.avif') type('image/avif'),
+      url('/images/hero-bg-big-xlarge.png') type('image/png')
     );
   }
 }
 
 @media (min-resolution: 192dpi), (min-resolution: 2dppx) { /* Retina displays */
   .hero-container {
-    background-image: url('/public/images/hero-bg-big-xlarge.png'); 
+    background-image: url('/images/hero-bg-big-xlarge.png'); 
     background-image: image-set(
-      url('/public/images/hero-bg-big-xlarge.avif') type('image/avif'),
-      url('/public/images/hero-bg-big-xlarge.png') type('image/png')
+      url('/images/hero-bg-big-xlarge.avif') type('image/avif'),
+      url('/images/hero-bg-big-xlarge.png') type('image/png')
     );
   }
 }
