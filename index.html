@@ -172,11 +172,12 @@
           <label for="phone">Phone Number</label>
           <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
 
-          <label>Preferred way of communication: <select name="preferred[]" multiple>
-            <option value="email">Email</option>
-            <option value="phoneCall">Phone Call</option>
-            <option value="phoneText">Phone Text</option>
-          </select></label>
+          <label>Preferred way of communication: </label>
+          <div>
+            <div><input type="checkbox" id="preferredEmail" name="preferred[]" value="email"> <label for="preferredEmail"> Email</label></div>
+            <div><input type="checkbox" id="preferredCall" name="preferred[]" value="phoneCall"> <label for="preferredCall"> Phone Call</label></div>
+            <div><input type="checkbox" id="preferredText" name="preferred[]" value="phoneText"> <label for="preferredText"> Phone Text</label></div>
+          </div>
 
           <label for="message">Tell us about your project or questions...</label>
           <textarea id="message" name="message" placeholder="Tell us about your project or questions..." required></textarea>
