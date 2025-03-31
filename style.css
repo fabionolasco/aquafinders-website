@@ -440,10 +440,13 @@ h3 {
   font-weight: bold;
 }
 
-/* Success Message Styling */
+.success-main {
+  min-height: calc(100vh - 300px);
+}
+
 .success {
   max-width: 600px;
-  margin: 6rem 1rem 2rem;
+  margin: 10rem auto 0;
   padding: 2rem;
   text-align: center;
   background-color: var(--white);
