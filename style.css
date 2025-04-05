@@ -470,7 +470,7 @@ h3 {
 .success p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: var(--text-color);
+  color: var (--text-color);
 }
 
 .success .cta-button {
@@ -543,6 +543,14 @@ footer a {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .hero-container {
+    background-image: url('/images/hero-bg-big-tablet.png'); 
+    background-image: image-set(
+      url('/images/hero-bg-big-tablet.avif') type('image/avif'),
+      url('/images/hero-bg-big-tablet.png') type('image/png')
+    );
+  }
+
   section {
     padding: 4rem 1rem;
     max-width: var(--max-width);
@@ -680,7 +688,7 @@ footer a {
 }
 
 /* Extra extra large devices (wide screens, 2000 and up) */
-@media (min-width: 2000) {
+@media (min-width: 2000px) {
   .hero-container {
     background-image: url('/images/hero-bg-big-xlarge.png'); 
     background-image: image-set(
