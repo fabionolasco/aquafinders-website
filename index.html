@@ -26,8 +26,8 @@
   <body>
     <!-- Language switcher -->
     <div class="language">
-      <a href="index.html" class="active">EN</a>
-      <a href="spanish.html">ES</a>
+      <a href="index.html" aria-label="English Language" class="active">EN</a>
+      <a href="spanish.html" aria-label="Spanish Language">ES</a>
     </div>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRJLRXJ2"
@@ -37,7 +37,10 @@
       <nav role="navigation">
         <div class="logo">
           <a href="/" aria-label="AquaFinders - Find the best place to drill your water well!">
-            <img src="/images/logo-h.png" alt="AquaFinders" width="260" height="60" />
+            <picture>
+              <source srcset="/images/logo-horizontal.avif" type="image/avif">
+              <img src="/images/logo-horizontal.png" alt="AquaFinders" width="200" height="43">
+            </picture>
           </a>
         </div>
         <h1 class="_not_visible">AquaFinders - Find the best place to drill your water well!</h1>
