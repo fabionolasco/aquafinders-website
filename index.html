@@ -16,15 +16,6 @@
   <link rel="manifest" href="/favicon/site.webmanifest" />
   <title>AquaFinders - Find the best place to drill your water well!</title>
   <link rel="stylesheet" href="/style.css" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJMQVSXBWK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-HJMQVSXBWK');
-  </script>
 </head>
 
 <body>
@@ -260,6 +251,31 @@
   </footer>
 
   <script>
+    // Defer Google Tag Manager and analytics loading
+    setTimeout(() => {
+      // Load Google Analytics
+      const gtagScript = document.createElement('script');
+      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-HJMQVSXBWK";
+      gtagScript.async = true;
+      document.body.appendChild(gtagScript);
+      
+      // Initialize gtag
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-HJMQVSXBWK');
+      
+      // Load Google Tag Manager iframe (noscript alternative)
+      const gtmIframe = document.createElement('iframe');
+      gtmIframe.src = "https://www.googletagmanager.com/ns.html?id=GTM-NRJLRXJ2";
+      gtmIframe.height = "0";
+      gtmIframe.width = "0";
+      gtmIframe.style.display = "none";
+      gtmIframe.style.visibility = "hidden";
+      document.body.prepend(gtmIframe);
+    }, 3000);
+
+    // Web3Forms script loading
     setTimeout(() => {
       const script = document.createElement('script');
       script.src = "https://web3forms.com/client/script.js";
