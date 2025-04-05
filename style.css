@@ -477,9 +477,59 @@ h3 {
   margin-top: 0.5rem;
 }
 
+.show-on-mobile {
+  display: inline-block;
+}
+
+.language {
+  display: none;
+  position: fixed; 
+  top: 0; 
+  right: 5px; 
+  background: #f8f9fa; 
+  border-radius: 0 0 10px 10px; 
+  z-index: 11000; 
+  font-size: .85rem;
+}
+
+.language a {
+  display: inline-block;
+  line-height: 44px;
+  padding: 0 15px;
+  text-decoration: none; 
+  border-radius: 0 0 0px 10px; 
+}
+
+.language a:first-of-type {
+  border-radius: 0 0 0px 10px; 
+}
+
+.language a:nth-of-type(2) {
+  border-radius: 0 0 10px 0px; 
+}
+
+.language a.active {
+  background-color: #bbb;
+  color: #fff;
+}
+
+a {
+  color: #0077b6;
+}
+
+footer a {
+  color: #fff;
+}
+
 /* Responsive Design - Mobile First Approach */
 /* Small devices (landscape phones, 480px and up) */
 @media (min-width: 480px) {
+  .language {
+    display: block;
+  }
+  .show-on-mobile {
+    display: none;
+  }
   .hero .cta-button {
     display: inline-block;
     margin: 0 0.5rem 1rem 0;
