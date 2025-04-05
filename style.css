@@ -545,10 +545,10 @@ footer a {
   }
 
   .hero-container {
-    background-image: url('/images/hero-bg-big-tablet.png'); 
+    background-image: url('/images/hero-bg-big-medium.png'); 
     background-image: image-set(
-      url('/images/hero-bg-big-tablet.avif') type('image/avif'),
-      url('/images/hero-bg-big-tablet.png') type('image/png')
+      url('/images/hero-bg-big-medium.avif') type('image/avif'),
+      url('/images/hero-bg-big-medium.png') type('image/png')
     );
   }
 
@@ -699,7 +699,17 @@ footer a {
   }
 }
 
-@media (min-resolution: 192dpi), (min-resolution: 2dppx) { /* Retina displays */
+@media (min-resolution: 2dppx) { /* Retina displays */
+  .hero-container {
+    background-image: url('/images/hero-bg-big-xlarge.png'); 
+    background-image: image-set(
+      url('/images/hero-bg-big-xlarge.avif') type('image/avif'),
+      url('/images/hero-bg-big-xlarge.png') type('image/png')
+    );
+  }
+}
+
+@media (min-resolution: 192dpi) { /* Retina displays */
   .hero-container {
     background-image: url('/images/hero-bg-big-xlarge.png'); 
     background-image: image-set(
