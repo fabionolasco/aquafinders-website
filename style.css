@@ -169,6 +169,10 @@ section {
   position: relative;
 }
 
+.faq .hero-container {
+  background-position: 75% 30%;
+}
+
 .hero {
   text-align: left;
   width: 100%;
@@ -360,19 +364,23 @@ section {
 
 .contact h2,
 .contact h3 {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+}
+
+.contact h2 {
   text-align: center;
 }
 
 .contact h3 {
-  margin: 0;
+  max-width: 630px;
+  margin: 0 auto;
   padding: 20px 0;
   color: var(--primary-color);
 }
 
 .contact-form {
-  max-width: 600px;
+  max-width: 630px;
   margin: 2rem auto;
   display: grid;
 }
@@ -445,7 +453,7 @@ h3 {
 }
 
 .success {
-  max-width: 600px;
+  max-width: 630px;
   margin: 10rem auto 0;
   padding: 2rem;
   text-align: center;
@@ -521,6 +529,148 @@ footer a {
   color: #fff;
 }
 
+.contact-info {
+  background-color: #f8f9fa;
+  max-width: 630px;
+  margin: 20px auto;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.contact-info h3,
+.contact-info span {
+  display: block;
+  line-height: 3rem;
+  margin: 0;
+  padding: 0 !important;
+} 
+
+/* Accordion styles */
+.faq-item {
+  margin: 1rem 0;
+}
+
+.faq-item p {
+  margin: 1rem 0;
+}
+
+.faq-item h4 {
+  cursor: pointer;
+}
+
+.faq-item h4:hover {
+  color: #0077b6;
+}
+
+.faq-content-hidden p,
+.faq-content-hidden picture {
+  display: none;
+}
+
+.faq-item h4::after {
+  content: '▼';
+  display: inline-block;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+
+.faq-item.faq-content-hidden h4::after {
+  transform: rotate(0deg);
+}
+
+.accordion {
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.accordion-item button {
+  background-color: #e6f3fb;
+}
+
+.accordion-content {
+  padding: 0 1.5rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  display: none;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+.accordion button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.accordion button:hover {
+  background-color: #f0f0f0;
+}
+
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.accordion button .icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.7rem;
+  height: 2px;
+  background-color: var(--primary-color);
+  transform: translate(-50%, -50%);
+}
+
+.accordion button .icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 0.7rem;
+  background-color: var(--primary-color);
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.accordion-item.active button .icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
 /* Responsive Design - Mobile First Approach */
 /* Small devices (landscape phones, 480px and up) */
 @media (min-width: 480px) {
@@ -537,6 +687,9 @@ footer a {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .faq .hero-container {
+    background-position: 75% top;
+  }
   .language {
     display: block;
   }

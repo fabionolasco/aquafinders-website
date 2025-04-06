@@ -13,15 +13,7 @@
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <title>AquaFinders - Find the best place to drill your water well!</title>
     <link rel="stylesheet" href="/style.css" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJMQVSXBWK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-HJMQVSXBWK');
-    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -67,9 +59,8 @@
         <div class="footer-info">
           <h3>AquaFinders</h3>
           <p>
-            <span class="lean">Expert Water Well Location Services for</span>
-            <br>
-            <span class="bold">North Carolina and South Carolina</span>
+            <span class="lean">Expert Water Well Location Services for
+            <span class="bold">North Carolina and South Carolina</span></span>
           </p>
         </div>
         <div class="footer-contact">
@@ -84,72 +75,115 @@
     </footer>
     
     <script>
-      // Mobile menu toggle functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
-        const navContainer = document.querySelector('.nav-container');
-        
-        menuToggle.addEventListener('click', function() {
-          navContainer.classList.toggle('active');
-          menuToggle.classList.toggle('active');
-        });
-        
-        // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-          link.addEventListener('click', function() {
-            navContainer.classList.remove('active');
-            menuToggle.classList.remove('active');
-          });
-        });
-      });
-    </script>
+      // Defer Google Tag Manager and analytics loading
+      setTimeout(() => {
+          // Load Google Analytics
+          const gtagScript = document.createElement('script');
+          gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-HJMQVSXBWK";
+          gtagScript.async = true;
+          document.body.appendChild(gtagScript);
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "AquaFinders",
-        "description": "Unsure where to drill a water well? AquaFinders uses advanced technology to pinpoint optimal, high-yield locations on your site.",
-        "image": "https://aquafinders.site/images/logo-h.png",
-        "@id": "https://aquafinders.site",
-        "url": "https://aquafinders.site",
-        "telephone": "+1-732-221-1202",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "957 Yellow Gate Rd",
-          "addressLocality": "York",
-          "addressRegion": "SC",
-          "postalCode": "29745",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 35.015171,
-          "longitude": -81.185071
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday"
-            ],
-            "opens": "09:00",
-            "closes": "17:00"
-          }
-        ],
-        "sameAs": [
-          "https://www.facebook.com/aquafinders"
-        ],
-        "Schedule":{
-            "@type": "Schedule",
-            "ScheduleTimezone": "America/New_York"
+          // Initialize gtag
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'G-HJMQVSXBWK');
+
+          // Load Google Tag Manager iframe (noscript alternative)
+          const gtmIframe = document.createElement('iframe');
+          gtmIframe.src = "https://www.googletagmanager.com/ns.html?id=GTM-NRJLRXJ2";
+          gtmIframe.height = "0";
+          gtmIframe.width = "0";
+          gtmIframe.style.display = "none";
+          gtmIframe.style.visibility = "hidden";
+          document.body.prepend(gtmIframe);
+      }, 4000);
+
+      // Web3Forms script loading
+      setTimeout(() => {
+          const script = document.createElement('script');
+          script.src = "https://web3forms.com/client/script.js";
+          script.async = true;
+          script.defer = true;
+          script.onload = () => {
+              const form = document.getElementById('contact-form');
+              form.addEventListener('submit', function (e) {
+                  const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+                  if (!hCaptcha) {
+                      e.preventDefault();
+                      alert("Please fill out captcha field!");
+                      return;
+                  }
+              });
+          };
+          document.body.appendChild(script);
+      }, 4000);
+
+      // Mobile menu toggle functionality
+      document.addEventListener('DOMContentLoaded', function () {
+          const menuToggle = document.querySelector('.mobile-menu-toggle');
+          const navContainer = document.querySelector('.nav-container');
+
+          menuToggle.addEventListener('click', function () {
+              navContainer.classList.toggle('active');
+              menuToggle.classList.toggle('active');
+          });
+
+          // Close menu when clicking on a link
+          const navLinks = document.querySelectorAll('.nav-links a');
+          navLinks.forEach(link => {
+              link.addEventListener('click', function () {
+                  navContainer.classList.remove('active');
+                  menuToggle.classList.remove('active');
+              });
+          });
+      });
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "AquaFinders",
+      "description": "Unsure where to drill a water well? AquaFinders uses advanced technology to pinpoint optimal, high-yield locations on your site.",
+      "image": "https://aquafinders.site/images/logo-h.png",
+      "@id": "https://aquafinders.site",
+      "url": "https://aquafinders.site",
+      "telephone": "+1-732-221-1202",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "957 Yellow Gate Rd",
+        "addressLocality": "York",
+        "addressRegion": "SC",
+        "postalCode": "29745",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.015171,
+        "longitude": -81.185071
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "17:00"
         }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/aquafinders"
+      ],
+      "Schedule":{
+          "@type": "Schedule",
+          "ScheduleTimezone": "America/New_York"
       }
-    </script>  
+    }
+    </script>
   </body>
 </html>
