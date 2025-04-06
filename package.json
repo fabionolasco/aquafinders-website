@@ -1,0 +1,19 @@
+{
+  "name": "aquafinders",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "rm -rf dist && mkdir dist",
+    "minify-html": "html-minifier --input-dir ./ --output-dir ./dist --collapse-whitespace --remove-comments --minify-css true --minify-js true --file-ext html",
+    "minify-css": "cleancss -o ./dist/style.css ./style.css",
+    "copy-assets": "cp -r images dist && cp -r favicon dist && cp sitemap.xml dist && cp robots.txt dist",
+    "build": "npm run clean && npm run minify-html && npm run minify-css && npm run copy-assets"
+  },
+  "keywords": [],
+  "author": "Fabio Nolasco",
+  "license": "ISC",
+  "description": "AquaFinder.site",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "html-minifier": "^4.0.0"
+  }
+}
