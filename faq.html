@@ -289,52 +289,52 @@
     </footer>
 
     <script>
-        // Defer Google Tag Manager and analytics loading
-        setTimeout(() => {
-            // Load Google Analytics
-            const gtagScript = document.createElement('script');
-            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-HJMQVSXBWK";
-            gtagScript.async = true;
-            document.body.appendChild(gtagScript);
-
-            // Initialize gtag
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-HJMQVSXBWK');
-
-            // Load Google Tag Manager iframe (noscript alternative)
-            const gtmIframe = document.createElement('iframe');
-            gtmIframe.src = "https://www.googletagmanager.com/ns.html?id=GTM-NRJLRXJ2";
-            gtmIframe.height = "0";
-            gtmIframe.width = "0";
-            gtmIframe.style.display = "none";
-            gtmIframe.style.visibility = "hidden";
-            document.body.prepend(gtmIframe);
-        }, 4000);
-
-        // Web3Forms script loading
-        setTimeout(() => {
-            const script = document.createElement('script');
-            script.src = "https://web3forms.com/client/script.js";
-            script.async = true;
-            script.defer = true;
-            script.onload = () => {
-                const form = document.getElementById('contact-form');
-                form.addEventListener('submit', function (e) {
-                    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
-                    if (!hCaptcha) {
-                        e.preventDefault();
-                        alert("Please fill out captcha field!");
-                        return;
-                    }
-                });
-            };
-            document.body.appendChild(script);
-        }, 4000);
-
         // Mobile menu toggle functionality
         document.addEventListener('DOMContentLoaded', function () {
+            // Defer Google Tag Manager and analytics loading
+            setTimeout(() => {
+                // Load Google Analytics
+                const gtagScript = document.createElement('script');
+                gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-HJMQVSXBWK";
+                gtagScript.async = true;
+                document.body.appendChild(gtagScript);
+
+                // Initialize gtag
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-HJMQVSXBWK');
+
+                // Load Google Tag Manager iframe (noscript alternative)
+                const gtmIframe = document.createElement('iframe');
+                gtmIframe.src = "https://www.googletagmanager.com/ns.html?id=GTM-NRJLRXJ2";
+                gtmIframe.height = "0";
+                gtmIframe.width = "0";
+                gtmIframe.style.display = "none";
+                gtmIframe.style.visibility = "hidden";
+                document.body.prepend(gtmIframe);
+            }, 4000);
+
+            // Web3Forms script loading
+            setTimeout(() => {
+                const script = document.createElement('script');
+                script.src = "https://web3forms.com/client/script.js";
+                script.async = true;
+                script.defer = true;
+                script.onload = () => {
+                    const form = document.getElementById('contact-form');
+                    form.addEventListener('submit', function (e) {
+                        const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+                        if (!hCaptcha) {
+                            e.preventDefault();
+                            alert("Please fill out captcha field!");
+                            return;
+                        }
+                    });
+                };
+                document.body.appendChild(script);
+            }, 4000);
+            
             const menuToggle = document.querySelector('.mobile-menu-toggle');
             const navContainer = document.querySelector('.nav-container');
 
@@ -351,10 +351,8 @@
                     menuToggle.classList.remove('active');
                 });
             });
-        });
 
-        // Accordion functionality
-        document.addEventListener('DOMContentLoaded', function () {
+            // Accordion functionality
             const faqItems = document.querySelectorAll('.faq-item h4');
             faqItems.forEach(faqHeader => {
                 faqHeader.addEventListener('click', function () {
