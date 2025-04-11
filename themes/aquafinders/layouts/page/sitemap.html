@@ -14,10 +14,14 @@
                 <li><a href="{{ "/#contact" | relURL }}">{{ i18n "contact_us" | default "Contact Us" }}</a></li>
             </ul>
         </li>
-        <li><a href="{{ "/faq.html" | relURL }}">{{ i18n "faq" | default "FAQ" }}</a></li>
-        <li><a href="{{ "/spanish.html" | relURL }}">{{ i18n "spanish_version" | default "Spanish Version" }}</a></li>
-        <li><a href="{{ "/success.html" | relURL }}">{{ i18n "form_submission" | default "Form Submission" }}</a></li>
-        <li><a href="{{ "/sitemap.html" | relURL }}">{{ i18n "site_map" | default "Site Map" }}</a></li>
+        <li><a href="{{ "/faq/" | relURL }}">{{ i18n "faq" | default "FAQ" }}</a></li>
+        {{ if eq $.Lang "en" }}
+        <li><a href="{{ "/es/" | relURL }}">{{ i18n "spanish_version" | default "Spanish Version" }}</a></li>
+        {{ else }}
+        <li><a href="{{ "/" | relURL }}">{{ i18n "english_version" | default "English Version" }}</a></li>
+        {{ end }}
+        <li><a href="{{ "/success/" | relURL }}">{{ i18n "form_submission" | default "Form Submission" }}</a></li>
+        <li><a href="{{ "/sitemap/" | relURL }}">{{ i18n "site_map" | default "Site Map" }}</a></li>
     </ul>
 </section>
 {{ end }}

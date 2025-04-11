@@ -135,13 +135,13 @@
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
         <label for="name">{{ i18n "your_name" | default "Your Name" }}</label>
-        <input type="text" id="name" name="name" placeholder="{{ i18n "your_name" | default "Your Name" }}" required>
+        <input type="text" id="name" name="name" data-placeholder="{{ i18n "your_name" | default "Your Name" }}" required>
 
         <label for="email">{{ i18n "email_address" | default "Email Address" }}</label>
-        <input type="email" id="email" name="email" placeholder="{{ i18n "email_address" | default "Email Address" }}" required>
+        <input type="email" id="email" name="email" data-placeholder="{{ i18n "email_address" | default "Email Address" }}" required>
 
         <label for="phone">{{ i18n "phone_number" | default "Phone Number" }}</label>
-        <input type="tel" id="phone" name="phone" placeholder="{{ i18n "phone_number" | default "Phone Number" }}" required>
+        <input type="tel" id="phone" name="phone" data-placeholder="{{ i18n "phone_number" | default "Phone Number" }}" required>
 
         <label>{{ i18n "preferred_communication" | default "Preferred way of communication:" }} </label>
         <div>
@@ -154,7 +154,7 @@
         </div>
 
         <label for="message">{{ i18n "project_questions" | default "Tell us about your project or questions..." }}</label>
-        <textarea id="message" name="message" placeholder="{{ i18n "project_questions" | default "Tell us about your project or questions..." }}"
+        <textarea id="message" name="message" data-placeholder="{{ i18n "project_questions" | default "Tell us about your project or questions..." }}"
             required></textarea>
 
         <label>{{ i18n "captcha" | default "Captcha" }}</label>

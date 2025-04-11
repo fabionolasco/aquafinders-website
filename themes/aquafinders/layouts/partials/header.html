@@ -17,13 +17,13 @@
                 <li><a href="{{ "/#top" | relLangURL }}">{{ i18n "home" | default "Home" }}</a></li>
                 <li><a href="{{ "/#services" | relLangURL }}">{{ i18n "services" | default "Services" }}</a></li>
                 <li><a href="{{ "/#about-us" | relLangURL }}">{{ i18n "about" | default "About" }}</a></li>
-                <li><a href="{{ "/faq.html" | relLangURL }}">{{ i18n "faq" | default "FAQ" }}</a></li>
+                <li><a href="{{ "/faq/" | relLangURL }}">{{ i18n "faq" | default "FAQ" }}</a></li>
                 <li><a href="{{ "/#contact" | relLangURL }}">{{ i18n "contact" | default "Contact" }}</a></li>
                 <li class="show-on-mobile">
-                    {{ if eq $.Lang "en" }}
-                    <a href="{{ "/spanish.html" | relLangURL }}">{{ i18n "spanish_version" | default "Spanish Version" }}</a>
+                    {{ if eq $.Lang "en" }}∂
+                    <a href="{{ "/es/" | relURL }}">{{ i18n "spanish_version" | default "Spanish Version" }}</a>
                     {{ else }}
-                    <a href="{{ "/" | relLangURL }}">{{ i18n "english_version" | default "English Version" }}</a>
+                    <a href="{{ "/" | relURL }}">{{ i18n "english_version" | default "English Version" }}</a>
                     {{ end }}
                 </li>
             </ul>

@@ -169,8 +169,8 @@ section {
   position: relative;
 }
 
-.faq .hero-container {
-  background-position: 75% 30%;
+.faq.hero-container {
+  background-position: 75% center;
 }
 
 .hero {
@@ -723,16 +723,37 @@ footer a {
   .logo img {
     width: 200px;
   }
+
+  .hero-container {
+    background-size: cover;
+    background-position: 75% center;
+    background-image: url('/images/hero-bg-big-medium.png'); 
+    background-image: image-set(
+      url('/images/hero-bg-big-medium.avif') type('image/avif'),
+      url('/images/hero-bg-big-medium.png') type('image/png')
+    );
+  }
+
+  .faq.hero-container {
+    background-position: 0 10% !important;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .faq .hero-container {
-    background-position: 75% top;
+  .hero-container {
+    background-size: cover;
+    background-position: 80% 10% !important;
   }
+
+  .faq.hero-container {
+    background-position: 0 10% !important;
+  }
+
   .language {
     display: block;
   }
+
   .show-on-mobile {
     display: none;
   }
@@ -813,11 +834,6 @@ footer a {
     width: 100%;
   }
   
-  .hero-container {
-    padding: 6rem 0;
-    background-position: 71%;
-  }
-  
   .hero {
     width: 80%;
   }
@@ -857,6 +873,8 @@ footer a {
 /* Large devices (desktops, 1280px and up) */
 @media (min-width: 1280px) {
   .hero-container {
+    background-size: cover;
+    background-position: 0 28% !important;
     background-image: url('/images/hero-bg-big-medium.png'); 
     background-image: image-set(
       url('/images/hero-bg-big-medium.avif') type('image/avif'),
