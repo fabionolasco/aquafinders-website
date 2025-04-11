@@ -7,3 +7,6 @@
   from = "/success"
   to = "/success.html"
   status = 200
+
+[build.environment]
+  HUGO_VERSION = "v0.146.2"
