@@ -1,0 +1,20 @@
+<footer role="contentinfo">
+    <div class="footer-content">
+        <div class="footer-info">
+            <h3>{{ .Site.Title }}</h3>
+            <p>
+                <span class="lean">{{ i18n "expert_services" | default "Expert Water Well Location Services for" }}
+                <span class="bold">{{ i18n "service_area" | default "North Carolina and South Carolina" }}</span></span>
+            </p>
+        </div>
+        <div class="footer-contact">
+            <p>{{ i18n "contact_us" | default "Contact Us" }}: <a href="tel:{{ .Site.Params.contactPhone }}">{{ .Site.Params.contactPhone }}</a></p>
+            <p>{{ i18n "email" | default "Email" }}: {{ .Site.Params.contactEmail }}</p>
+            <p><a href="{{ "/sitemap.html" | relURL }}">{{ i18n "site_map" | default "Site Map" }}</a></p>
+        </div>
+        <div class="footer-legal">
+            <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. {{ i18n "all_rights_reserved" | default "All rights reserved." }}</p>
+            <p>{{ i18n "results_vary" | default "Results may vary based on geological conditions." }}</p>
+        </div>
+    </div>
+</footer>

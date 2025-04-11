@@ -1,0 +1,36 @@
+baseURL = "https://aquafinders.site/"
+title = "AquaFinders"
+theme = "aquafinders"
+enableRobotsTXT = true
+disableHugoGeneratorInject = true
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
+
+[params]
+  siteName = "AquaFinders"
+  contactPhone = "+1-732-221-1202"
+  contactEmail = "support@aquafinders.site"
+  address = "957 Yellow Gate Rd, York, SC 29745"
+  facebook = "https://www.facebook.com/aquafinders"
+  description = "Find water and well drilling solutions"
+
+# Configure languages
+[languages]
+  [languages.en]
+    languageName = "English"
+    contentDir = "content/en"
+    languageCode = "en-us"
+    weight = 1
+  
+  [languages.es]
+    languageName = "Español"
+    contentDir = "content/es"
+    languageCode = "es-es"
+    weight = 2

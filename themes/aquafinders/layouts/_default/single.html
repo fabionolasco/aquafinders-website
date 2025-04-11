@@ -1,0 +1,8 @@
+{{ define "main" }}
+<section class="hero-container" role="region" aria-labelledby="hero-title">
+    <div class="hero">
+        {{ with .Title }}<h2 id="hero-title">{{ . }}</h2>{{ end }}
+        {{ .Content }}
+    </div>
+</section>
+{{ end }}

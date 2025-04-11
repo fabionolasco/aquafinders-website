@@ -1,0 +1,102 @@
+<script>
+    // Mobile menu toggle functionality
+    document.addEventListener('DOMContentLoaded', function () {
+        // Defer Google Tag Manager and analytics loading
+        setTimeout(() => {
+            // Load Google Analytics
+            const gtagScript = document.createElement('script');
+            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-HJMQVSXBWK";
+            gtagScript.async = true;
+            document.body.appendChild(gtagScript);
+            
+            // Initialize gtag
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-HJMQVSXBWK');
+            
+            // Load Google Tag Manager iframe (noscript alternative)
+            const gtmIframe = document.createElement('iframe');
+            gtmIframe.src = "https://www.googletagmanager.com/ns.html?id=GTM-NRJLRXJ2";
+            gtmIframe.height = "0";
+            gtmIframe.width = "0";
+            gtmIframe.style.display = "none";
+            gtmIframe.style.visibility = "hidden";
+            document.body.prepend(gtmIframe);
+        }, 4000);
+
+        // Web3Forms script loading
+        setTimeout(() => {
+            const script = document.createElement('script');
+            script.src = "https://web3forms.com/client/script.js";
+            script.async = true;
+            script.defer = true;
+            script.onload = () => {
+                const form = document.getElementById('contact-form');
+                if (form) {
+                    form.addEventListener('submit', function (e) {
+                        const hCaptcha = form.querySelector('textarea[name=h-captcha-response]')?.value;
+                        if (!hCaptcha) {
+                            e.preventDefault();
+                            alert("{{ i18n "captcha_alert" | default "Please fill out captcha field!" }}");
+                            return;
+                        }
+                    });
+                }
+            };
+            document.body.appendChild(script);
+        }, 4000);
+
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navContainer = document.querySelector('.nav-container');
+
+        if (menuToggle && navContainer) {
+            menuToggle.addEventListener('click', function () {
+                navContainer.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    navContainer.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                });
+            });
+        }
+
+        // Accordion functionality for FAQ page
+        const faqItems = document.querySelectorAll('.faq-item h4');
+        faqItems.forEach(faqHeader => {
+            faqHeader.addEventListener('click', function () {
+                const faqContent = faqHeader.parentNode;
+                if (faqContent) {
+                    faqContent.classList.toggle('faq-content-hidden');
+                }
+            });
+        });
+
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        accordionItems.forEach(item => {
+            const button = item.querySelector('button');
+            if (button) {
+                button.addEventListener('click', function () {
+                    const isOpen = item.classList.contains('active');
+
+                    // Close all accordion items
+                    accordionItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('button')?.setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Open the clicked item if it was not already open
+                    if (!isOpen) {
+                        item.classList.add('active');
+                        button.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+        });
+    });
+</script>

@@ -1,0 +1,90 @@
+# Navigation
+home: "Home"
+services: "Services"
+about: "About"
+faq: "FAQ"
+contact: "Contact"
+spanish_version: "Spanish Version"
+english_version: "English Version"
+
+# Hero section
+hero_title: "Find the best place to drill your water well!"
+hero_description: "Dry and low-yield wells are a real risk! Besides harming your budget, it can also delay the construction! At AquaFinders, we combine cutting-edge subsurface imaging technology and expert geological analysis to assess hidden groundwater beneath your site. We'll help you confidently select the optimal locations for drilling, significantly improving your chances of a productive well that will benefit you for decades to come!"
+free_consultation: "Get a Free Consultation"
+
+# Services section
+our_services: "Our Services"
+finding_water: "Finding water"
+finding_water_description: "We use advanced scientific techniques to identify prime locations for well drilling - residential, commercial, and agriculture."
+avoiding_water: "Avoiding water"
+avoiding_water_description: "Sometime you want to avoid water, like when digging deeper foundations, gas reservoirs, landfills, and so on. We can help with that too."
+soil_resistivity: "Soil resistivity"
+soil_resistivity_description: "Test required for grounding projects for substations and tramission systems, solar farms, industrial plants, etc."
+studies: "Studies"
+studies_description: "Geophysical and hydrogeophysical studies of your property, to assist in environmental, construction, and mining work."
+
+# Why us section
+who_hire_us: "Who hire us?"
+residential: "Residential"
+residential_description: "Homeowners planning to drill water wells on new construction or existing sites."
+agriculture: "Agriculture"
+agriculture_description: "Farms seeking the best places to drill high-yield water wells for crop irrigation or animal consumption."
+business: "Business"
+business_description: "Builders seeking to study the grown beneath their propety, sometime to avoid water vains (fractures)."
+
+# About us section
+about_us: "About Us"
+about_us_p1: "AquaFinders is a specialized groundwater location service operating throughout North and South Carolina. With our team of 5 experienced geologists/hydrogeologists, 1 forest engineer, 1 agriculture engineer, and local technicians, we use cutting-edge technology to locate the best spots for drilling productive water wells."
+about_us_p2: "Founded on the principle that everyone deserves access to clean, reliable water, our experts have helped hundreds of homeowners, farmers, and businesses avoid the costly mistake of drilling in the wrong location."
+about_us_p3: "Our scientific approach combines geophysical analysis with hydrogeophysical imaging—also known as Electrical Resistivity Imaging (ERI) or Electrical Resistivity Tomography (ERT)—to maximize your chances of finding water and pinpoint the areas on your site with the highest probability of strong water flow."
+bonded_insured: "We are bonded and insured!"
+peace_of_mind: "Peace of mind!"
+about_image_alt: "AquaFinders team conducting a groundwater survey"
+
+# Contact section
+ready_to_find: "Ready to Find Your Perfect Well Location?"
+contact_us: "Contact Us"
+we_speak: "We speak English / Hablamos Español"
+phone: "Phone"
+email: "Email"
+address: "Address"
+contact_form: "Contact Form"
+your_name: "Your Name"
+email_address: "Email Address"
+phone_number: "Phone Number"
+preferred_communication: "Preferred way of communication:"
+phone_call: "Phone Call"
+phone_text: "Phone Text"
+project_questions: "Tell us about your project or questions..."
+captcha: "Captcha"
+submit: "Submit"
+captcha_alert: "Please fill out captcha field!"
+
+# Footer
+expert_services: "Expert Water Well Location Services for"
+service_area: "North Carolina and South Carolina"
+all_rights_reserved: "All rights reserved."
+results_vary: "Results may vary based on geological conditions."
+site_map: "Site Map"
+
+# FAQ Page
+faq_title: "Frequently Asked Questions"
+find_best_place: "Find the best place to drill a water well"
+faq_cost_title: "1. How much does it cost?"
+faq_include_title: "2. What does it include?"
+faq_process_title: "3. What is the process?"
+faq_negative_title: "4. Is it possible to have negative results?"
+faq_refund_title: "5. Would I get a refund if the result is negative?"
+faq_guarantees_title: "6. Are there any guarantees?"
+faq_depth_title: "7. To which ground depth will the study go?"
+faq_area_title: "8. How large is the are that the study covers?"
+
+# Other sections
+sitemap_title: "Site Map"
+avoiding_water_title: "Avoiding underground water"
+resistivity_tests_title: "Resistivity Tests"
+studies_title: "Studies"
+success_title: "Thank You for Contacting Us!"
+success_message: "Your message has been successfully submitted. Our team will get back to you as soon as possible."
+back_to_home: "Back to Home"
+form_submission: "Form Submission"

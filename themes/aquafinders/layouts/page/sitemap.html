@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="hero-container" role="region" aria-labelledby="hero-title">
+    <div class="hero">
+    </div>
+</section>
+
+<section class="sitemap-content" role="region" aria-labelledby="sitemap-title">
+    <h2 id="sitemap-title">{{ i18n "sitemap_title" | default "Site Map" }}</h2>
+    <ul class="sitemap-list">
+        <li><a href="{{ "/" | relURL }}">{{ i18n "home" | default "Home" }}</a>
+            <ul>
+                <li><a href="{{ "/#services" | relURL }}">{{ i18n "our_services" | default "Our Services" }}</a></li>
+                <li><a href="{{ "/#about-us" | relURL }}">{{ i18n "about_us" | default "About Us" }}</a></li>
+                <li><a href="{{ "/#contact" | relURL }}">{{ i18n "contact_us" | default "Contact Us" }}</a></li>
+            </ul>
+        </li>
+        <li><a href="{{ "/faq.html" | relURL }}">{{ i18n "faq" | default "FAQ" }}</a></li>
+        <li><a href="{{ "/spanish.html" | relURL }}">{{ i18n "spanish_version" | default "Spanish Version" }}</a></li>
+        <li><a href="{{ "/success.html" | relURL }}">{{ i18n "form_submission" | default "Form Submission" }}</a></li>
+        <li><a href="{{ "/sitemap.html" | relURL }}">{{ i18n "site_map" | default "Site Map" }}</a></li>
+    </ul>
+</section>
+{{ end }}

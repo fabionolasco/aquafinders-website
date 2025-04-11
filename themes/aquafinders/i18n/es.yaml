@@ -1,0 +1,90 @@
+# Navigation
+home: "Inicio"
+services: "Servicios"
+about: "Acerca de"
+faq: "Preguntas Frecuentes"
+contact: "Contacto"
+spanish_version: "Versión en Español"
+english_version: "Versión en Inglés"
+
+# Hero section
+hero_title: "¡Encuentra el mejor lugar para perforar tu pozo de agua!"
+hero_description: "¡Los pozos secos o de bajo rendimiento son un riesgo real! Además de dañar tu presupuesto, también pueden retrasar la construcción. En AquaFinders, combinamos tecnología avanzada de imágenes subterráneas y análisis geológico experto para evaluar las aguas subterráneas ocultas debajo de tu terreno. Te ayudaremos a seleccionar con confianza las ubicaciones óptimas para la perforación, mejorando significativamente las posibilidades de un pozo productivo que te beneficiará durante décadas."
+free_consultation: "Obtén una Consulta Gratuita"
+
+# Services section
+our_services: "Nuestros Servicios"
+finding_water: "Encontrar agua"
+finding_water_description: "Utilizamos técnicas científicas avanzadas para identificar ubicaciones óptimas para la perforación de pozos - residencial, comercial y agricultura."
+avoiding_water: "Evitando agua"
+avoiding_water_description: "A veces quieres evitar el agua, como al excavar cimientos más profundos, depósitos de gas, vertederos, etc. También podemos ayudarte con eso."
+soil_resistivity: "Resistividad del suelo"
+soil_resistivity_description: "Prueba requerida para proyectos de conexión a tierra para subestaciones y sistemas de transmisión, granjas solares, plantas industriales, etc."
+studies: "Estudios"
+studies_description: "Estudios geofísicos e hidrogeofísicos de tu propiedad, para ayudar en trabajos ambientales, de construcción y minería."
+
+# Why us section
+who_hire_us: "¿Quién nos contrata?"
+residential: "Residencial"
+residential_description: "Propietarios que planean perforar pozos de agua en construcciones nuevas o sitios existentes."
+agriculture: "Agricultura"
+agriculture_description: "Granjas que buscan los mejores lugares para perforar pozos de agua de alto rendimiento para riego de cultivos o consumo animal."
+business: "Negocios"
+business_description: "Constructores que buscan estudiar el terreno debajo de su propiedad, a veces para evitar vetas de agua (fracturas)."
+
+# About us section
+about_us: "Sobre Nosotros"
+about_us_p1: "AquaFinders es un servicio especializado en localización de aguas subterráneas que opera en todo Carolina del Norte y Carolina del Sur. Con nuestro equipo de 5 geólogos/hidrogeólogos experimentados, 1 ingeniero forestal, 1 ingeniero agrónomo y técnicos locales, utilizamos tecnología de vanguardia para localizar los mejores lugares para perforar pozos de agua productivos."
+about_us_p2: "Fundados en el principio de que todos merecen acceso a agua limpia y confiable, nuestros expertos han ayudado a cientos de propietarios, agricultores y empresas a evitar el costoso error de perforar en el lugar equivocado."
+about_us_p3: "Nuestro enfoque científico combina análisis geofísico con imágenes hidrogeofísicas—también conocidas como Imágenes de Resistividad Eléctrica (ERI) o Tomografía de Resistividad Eléctrica (ERT)—para maximizar tus posibilidades de encontrar agua y señalar las áreas en tu sitio con la mayor probabilidad de flujo de agua fuerte."
+bonded_insured: "¡Estamos asegurados y garantizados!"
+peace_of_mind: "¡Tranquilidad garantizada!"
+about_image_alt: "Equipo de AquaFinders realizando un estudio de aguas subterráneas"
+
+# Contact section
+ready_to_find: "¿Listo para Encontrar la Ubicación Perfecta para tu Pozo?"
+contact_us: "Contáctanos"
+we_speak: "Hablamos Español / We speak English"
+phone: "Teléfono"
+email: "Correo Electrónico"
+address: "Dirección"
+contact_form: "Formulario de Contacto"
+your_name: "Tu Nombre"
+email_address: "Dirección de Correo Electrónico"
+phone_number: "Número de Teléfono"
+preferred_communication: "Forma preferida de comunicación:"
+phone_call: "Llamada Telefónica"
+phone_text: "Mensaje de Texto"
+project_questions: "Cuéntanos sobre tu proyecto o preguntas..."
+captcha: "Captcha"
+submit: "Enviar"
+captcha_alert: "¡Por favor complete el campo captcha!"
+
+# Footer
+expert_services: "Servicios Expertos de Localización de Pozos de Agua para"
+service_area: "Carolina del Norte y Carolina del Sur"
+all_rights_reserved: "Todos los derechos reservados."
+results_vary: "Los resultados pueden variar según las condiciones geológicas."
+site_map: "Mapa del Sitio"
+
+# FAQ Page
+faq_title: "Preguntas Frecuentes"
+find_best_place: "Encuentra el mejor lugar para perforar un pozo de agua"
+faq_cost_title: "1. ¿Cuánto cuesta?"
+faq_include_title: "2. ¿Qué incluye?"
+faq_process_title: "3. ¿Cuál es el proceso?"
+faq_negative_title: "4. ¿Es posible obtener resultados negativos?"
+faq_refund_title: "5. ¿Obtendría un reembolso si el resultado es negativo?"
+faq_guarantees_title: "6. ¿Hay alguna garantía?"
+faq_depth_title: "7. ¿Hasta qué profundidad del suelo llegará el estudio?"
+faq_area_title: "8. ¿Qué tan grande es el área que cubre el estudio?"
+
+# Other sections
+sitemap_title: "Mapa del Sitio"
+avoiding_water_title: "Evitando agua subterránea"
+resistivity_tests_title: "Pruebas de Resistividad"
+studies_title: "Estudios"
+success_title: "¡Gracias por Contactarnos!"
+success_message: "Tu mensaje ha sido enviado con éxito. Nuestro equipo se pondrá en contacto contigo lo antes posible."
+back_to_home: "Volver al Inicio"
+form_submission: "Envío de Formulario"

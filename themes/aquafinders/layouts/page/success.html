@@ -1,0 +1,9 @@
+{{ define "main" }}
+<section class="hero-container" role="region" aria-labelledby="hero-title">
+    <div class="hero">
+        <h2 id="hero-title">{{ i18n "success_title" | default "Thank You for Contacting Us!" }}</h2>
+        <p>{{ i18n "success_message" | default "Your message has been successfully submitted. Our team will get back to you as soon as possible." }}</p>
+        <a href="{{ "/" | relURL }}" class="cta-button">{{ i18n "back_to_home" | default "Back to Home" }}</a>
+    </div>
+</section>
+{{ end }}
