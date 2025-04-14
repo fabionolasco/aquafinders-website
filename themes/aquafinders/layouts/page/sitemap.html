@@ -14,6 +14,8 @@
                 <li><a href="{{ "/#contact" | relURL }}">{{ i18n "contact_us" | default "Contact Us" }}</a></li>
             </ul>
         </li>
+        <li><a href="{{ "/request/" | relURL }}">{{ i18n "start" | default "Start now" }}</a></li>
+        <li><a href="{{ "/process/" | relURL }}">{{ i18n "process" | default "Our process" }}</a></li>
         <li><a href="{{ "/faq/" | relURL }}">{{ i18n "faq" | default "FAQ" }}</a></li>
         {{ if eq $.Lang "en" }}
         <li><a href="{{ "/es/" | relURL }}">{{ i18n "spanish_version" | default "Spanish Version" }}</a></li>

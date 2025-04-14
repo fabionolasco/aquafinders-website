@@ -1,0 +1,91 @@
+{{ define "main" }}
+<section class="hero-container" role="region" aria-labelledby="request-title">
+    <div class="hero">
+    </div>
+</section>
+
+<section class="request" id="request" role="region" aria-labelledby="process-title">
+    <h2 id="process-title">{{ i18n "request_process_title" | default "Our Process" }}</h2>
+    <div>
+        <div class="steps-infographic">
+            <h3>{{ i18n "request_steps_title" | default "Steps:" }}</h3>
+            <div class="steps-container">
+                {{/* Step 1 */}}
+                <div class="step-item">
+                    <div class="step-marker" aria-label="Step 1">1</div>
+                    <div class="step-line"></div>
+                    <div class="step-content">
+                        <span class="actor">[Customer]</span> {{ i18n "request_step_1" | default "You fill out our New Customer Form" }}
+                        (<a href="{{ "/request/" | relLangURL }}">{{ i18n "start" | default "Start now" }}</a>)
+                    </div>
+                </div>
+        
+                {{/* Step 2 */}}
+                <div class="step-item">
+                    <div class="step-marker" aria-label="Step 2">2</div>
+                    <div class="step-line"></div>
+                    <div class="step-content">
+                        <span class="actor">[AquaFinders]</span> {{ i18n "request_step_2" | default "We contact you to learn more about your needs" }}
+                    </div>
+                </div>
+        
+                {{/* Step 3 */}}
+                <div class="step-item">
+                    <div class="step-marker" aria-label="Step 3">3</div>
+                    <div class="step-line"></div>
+                    <div class="step-content">
+                        <span class="actor">[Customer]</span> {{ i18n "request_step_3" | default "You sign the contract and perform payment" }}
+                    </div>
+                </div>
+        
+                {{/* Step 4 */}}
+                <div class="step-item">
+                    <div class="step-marker" aria-label="Step 4">4</div>
+                    <div class="step-line"></div>
+                    <div class="step-content">
+                        <span class="actor">[AquaFinders]</span> {{ i18n "request_step_4" | default "We perform geospatial, topographical, geological, hydrogeophysical, aquifer characterization, and regional well analysis" }}
+                    </div>
+                </div>
+        
+                {{/* Step 5 */}}
+                <div class="step-item">
+                    <div class="step-marker" aria-label="Step 5">5</div>
+                    <div class="step-line"></div>
+                    <div class="step-content">
+                        <span class="actor">[Together]</span> {{ i18n "request_step_5" | default "We talk about the best place for AquaFinders to perform the field test" }}
+                    </div>
+                </div>
+        
+                {{/* Step 6 */}}
+                <div class="step-item">
+                    <div class="step-marker" aria-label="Step 6">6</div>
+                    <div class="step-line"></div>
+                    <div class="step-content">
+                        <span class="actor">[AquaFinders]</span> {{ i18n "request_step_6" | default "We perform the geophysical test in your property" }}
+                    </div>
+                </div>
+        
+                {{/* Step 7 */}}
+                <div class="step-item">
+                    <div class="step-marker" aria-label="Step 7">7</div>
+                    <div class="step-content">
+                        <span class="actor">[AquaFinders]</span> {{ i18n "request_step_7" | default "We deliver your final results to you by e-mail" }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="request-form-container">
+            <h4>{{ i18n "request_notes_title" | default "Important notes:" }}</h4>
+            <ul>
+                <li>{{ i18n "request_note_1" | default "You will then pass the final report to your well driller to guide their work." }}</li>
+                <li>{{ i18n "request_note_2" | default "If everything goes well (pun-intented), the process can take as little as three weeks." }}</li>
+                <li>{{ i18n "request_note_3" | default "The usual turnaround is of five weeks." }}</li>
+                <li>{{ i18n "request_note_4" | default "We offer rush fees for emergency projects." }}</li>
+                <li>{{ i18n "request_note_5" | default "If everything goes well (pun-intented), the process can take as little as one week." }}</li>
+                <li>{{ i18n "request_note_6" | default "The process may vary based on your needs, preferences, and the weather conditions." }}</li>
+            </ul>
+        </div>
+    </div>
+</section>
+{{ end }}

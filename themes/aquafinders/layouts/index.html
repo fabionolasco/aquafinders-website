@@ -122,6 +122,7 @@
         <span>{{ i18n "phone" | default "Phone" }}: <a title="{{ i18n "phone" | default "Phone" }}" href="tel:{{ .Site.Params.contactPhone }}">{{ .Site.Params.contactPhone }}</a> (9-5 PM EST)</span>
         <span>{{ i18n "email" | default "Email" }}: <a title="{{ i18n "email" | default "Email" }}" href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a></span>
         <span>{{ i18n "address" | default "Address" }}: <a title="{{ i18n "address" | default "Address" }}" href="https://www.google.com/maps/place/957+Yellow+Gate+Rd,+York,+SC+29745/@35.0049362,-81.2643008,21725m/data=!3m1!1e3!4m6!3m5!1s0x8856f3a78d7d4135:0xda78aa4bba36846d!8m2!3d35.0154523!4d-81.1850927!16s%2Fg%2F11wx3pksp8?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank">{{ .Site.Params.address }}</a></span>
+        <span>{{ i18n "physical_address_app" | default "Physical address by appointment only" }}</span>
     </div>
     <h3>{{ i18n "contact_form" | default "Contact Form" }}</h3>
     <form method="post" id="contact-form" name="contact-form" action="https://api.web3forms.com/submit"
@@ -162,5 +163,8 @@
 
         <button type="submit" class="cta-button">{{ i18n "submit" | default "Submit" }}</button>
     </form>
+    <div class="ready">
+        <a href="{{ "/request/" | relLangURL }}">{{ i18n "ready_for_action" | default "Ready request our services?" }}</a>
+    </div>
 </section>
 {{ end }}
