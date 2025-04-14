@@ -80,6 +80,9 @@ faq_refund_title: "5. ¿Obtendría un reembolso si el resultado es negativo?"
 faq_guarantees_title: "6. ¿Hay alguna garantía?"
 faq_depth_title: "7. ¿Hasta qué profundidad del suelo llegará el estudio?"
 faq_area_title: "8. ¿Qué tan grande es el área que cubre el estudio?"
+faq_important_title: "Importante:"
+faq_important_content: "No perforamos pozos de agua. En su lugar, estudiamos las condiciones subterráneas de su propiedad para que los perforadores de pozos y las empresas de construcción puedan tomar decisiones informadas."
+
 
 # Request Page
 ready_for_action: "Solicite nuestros servicios"

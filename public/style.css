@@ -874,9 +874,6 @@ footer a {
     );
   }
 
-  .faq.hero-container {
-    background-position: 0 10% !important;
-  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -884,10 +881,6 @@ footer a {
   .hero-container {
     background-size: cover;
     background-position: 80% 10% !important;
-  }
-
-  .faq.hero-container {
-    background-position: 0 10% !important;
   }
 
   .language {
