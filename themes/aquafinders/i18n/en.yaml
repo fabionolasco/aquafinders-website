@@ -12,7 +12,7 @@ english_version: "English Version"
 hero_title: "Find the best place to drill your water well!"
 hero_description: "Dry and low-yield wells are a real risk! Besides harming your budget, it can also delay the construction! At AquaFinders, we combine cutting-edge subsurface imaging technology and expert geological analysis to assess hidden groundwater beneath your site. We'll help you confidently select the optimal locations for drilling, significantly improving your chances of a productive well that will benefit you for decades to come!"
 free_consultation: "Free Consultation"
-explanation: "We provide well drillers and builders with expert advice on the best places to dig."
+explanation: "We provide **YOUR** well drillers and builders with expert advice on the best places to dig. ✨"
 
 # Services section
 our_services: "Our Services"
@@ -65,7 +65,8 @@ captcha_alert: "Please fill out captcha field!"
 
 # Footer
 expert_services: "Expert Groundwater Location Services for"
-service_area: "North Carolina, South Carolina, Georgia, Tennessee, and Kentucky, with nationwide service available upon special request."
+service_area: "North Carolina, South Carolina, Georgia, Tennessee, and Kentucky,"
+nationwide_request: "with nationwide service available upon special request."
 all_rights_reserved: "All rights reserved."
 results_vary: "Results may vary based on geological conditions."
 site_map: "Site Map"
@@ -89,7 +90,7 @@ ready_for_action: "Request our services"
 request_title: "Request our services"
 
 # Process Page
-info_process: "More information about our process"
+info_process: "Click here to learn more information about our process..."
 request_process_title: "Our Process"
 request_steps_title: "Steps:"
 request_step_1: "You fill out our New Customer Form"

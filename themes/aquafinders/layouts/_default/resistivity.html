@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="hero-container" role="region" aria-labelledby="request-title">
+    <div class="hero">
+    </div>
+</section>
+
+<section class="request" id="request" role="region" aria-labelledby="request-title">
+    <h2 id="request-title" style="margin: 0;">{{ i18n "resistivity" | default "Resistivity" }}</h2>
+    <div class="text-center"><a class="small block mb40" style="text-decoration: none;" href="{{ "/process/" | relLangURL }}">
+        {{ i18n "info_process" | default "More information about our process" }}
+    </a></div>
+    <div width="100%">
+        <picture>
+            <source srcset="/images/slide 1.avif" type="image/avif">
+            <img src="/images/slide 1.png" alt="Geophysics" width="200" height="43">
+        </picture>
+    </div>
+</section>
+{{ end }}

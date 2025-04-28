@@ -12,7 +12,7 @@ english_version: "Versión en Inglés"
 hero_title: "¡Encuentra el mejor lugar para perforar tu pozo de agua!"
 hero_description: "¡Los pozos secos o de bajo rendimiento son un riesgo real! Además de dañar tu presupuesto, también pueden retrasar la construcción. En AquaFinders, combinamos tecnología avanzada de imágenes subterráneas y análisis geológico experto para evaluar las aguas subterráneas ocultas debajo de tu terreno. Te ayudaremos a seleccionar con confianza las ubicaciones óptimas para la perforación, mejorando significativamente las posibilidades de un pozo productivo que te beneficiará durante décadas."
 free_consultation: "Consulta Gratuita"
-explanation: "Proporcionamos a perforadores de pozos y constructores asesoramiento experto sobre los mejores lugares para excavar."
+explanation: "Proporcionamos a perforadores de pozos y constructores asesoramiento experto sobre los mejores lugares para excavar. ✨"
 
 # Services section
 our_services: "Nuestros Servicios"
@@ -66,6 +66,7 @@ captcha_alert: "¡Por favor complete el campo captcha!"
 # Footer
 expert_services: "Servicios Expertos de Localización de Pozos de Agua para"
 service_area: "Carolina del Norte y Carolina del Sur"
+nationwide_request: "con servicio disponible en todo el país previa solicitud especial."
 all_rights_reserved: "Todos los derechos reservados."
 results_vary: "Los resultados pueden variar según las condiciones geológicas."
 site_map: "Mapa del Sitio"
@@ -90,7 +91,7 @@ ready_for_action: "Solicite nuestros servicios"
 request_title: "Solicite nuestros servicios"
 
 # Process
-info_process: "Más información sobre nuestro proceso"
+info_process: "Haga clic aquí para obtener más información sobre nuestro proceso..."
 request_process_title: "Nuestro Proceso"
 request_steps_title: "Pasos:"
 request_step_1: "Complete nuestro Formulario de Nuevo Cliente"

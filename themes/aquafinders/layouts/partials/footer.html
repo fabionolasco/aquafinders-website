@@ -4,11 +4,13 @@
             <h3>{{ .Site.Title }}</h3>
             <p>
                 <span class="lean">{{ i18n "expert_services" | default "Expert Groundwater Location Services for" }}
-                <span class="bold">{{ i18n "service_area" | default "North Carolina and South Carolina" }}</span></span>
+                {{ i18n "service_area" | default "North Carolina, South Carolina, Georgia, Tennessee, and Kentucky," }}
+                <span class="bold">{{ i18n "nationwide_request" | default "with nationwide service available upon special request." }}</span></span>
             </p>
         </div>
         <div class="footer-contact">
             <p>{{ i18n "contact_us" | default "Contact Us" }}: <a href="tel:{{ .Site.Params.contactPhone }}">{{ .Site.Params.contactPhone }}</a></p>
+            <p><a href="https://wa.me/17322211202"><img src="/images/WhatsApp-icon.avif" alt="+17322211202" width="30" height="30" style="vertical-align: middle;"> {{ i18n "whatsapp" | default "Live chat on WhatsApp" }}</a></p>
             <p>{{ i18n "email" | default "Email" }}: <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a></p>
             <p>Physical location by appointment only.</p>
             <p><a href="{{ "/sitemap" | relURL }}">{{ i18n "site_map" | default "Site Map" }}</a></p>
