@@ -11,7 +11,8 @@ english_version: "Versión en Inglés"
 # Hero section
 hero_title: "¡Encuentra el mejor lugar para perforar tu pozo de agua!"
 hero_description: "¡Los pozos secos o de bajo rendimiento son un riesgo real! Además de dañar tu presupuesto, también pueden retrasar la construcción. En AquaFinders, combinamos tecnología avanzada de imágenes subterráneas y análisis geológico experto para evaluar las aguas subterráneas ocultas debajo de tu terreno. Te ayudaremos a seleccionar con confianza las ubicaciones óptimas para la perforación, mejorando significativamente las posibilidades de un pozo productivo que te beneficiará durante décadas."
-free_consultation: "Obtén una Consulta Gratuita"
+free_consultation: "Consulta Gratuita"
+explanation: "Proporcionamos a perforadores de pozos y constructores asesoramiento experto sobre los mejores lugares para excavar."
 
 # Services section
 our_services: "Nuestros Servicios"
@@ -35,7 +36,7 @@ business_description: "Constructores que buscan estudiar el terreno debajo de su
 
 # About us section
 about_us: "Sobre Nosotros"
-about_us_p1: "AquaFinders es un servicio especializado en localización de aguas subterráneas que opera en todo Carolina del Norte y Carolina del Sur. Con nuestro equipo de 5 geólogos/hidrogeólogos experimentados, 1 ingeniero forestal, 1 ingeniero agrónomo y técnicos locales, utilizamos tecnología de vanguardia para localizar los mejores lugares para perforar pozos de agua productivos."
+about_us_p1: "AquaFinders es un servicio especializado en la localización de aguas subterráneas que opera principalmente en Carolina del Norte, Carolina del Sur, Georgia, Tennessee y Kentucky, con disponibilidad de servicio en todo el país bajo solicitud. Con nuestro equipo de 5 geólogos/hidrogeólogos experimentados, 1 ingeniero forestal, 1 ingeniero agrónomo y técnicos locales, utilizamos tecnología de vanguardia para localizar los mejores lugares para perforar pozos de agua productivos."
 about_us_p2: "Fundados en el principio de que todos merecen acceso a agua limpia y confiable, nuestros expertos han ayudado a cientos de propietarios, agricultores y empresas a evitar el costoso error de perforar en el lugar equivocado."
 about_us_p3: "Nuestro enfoque científico combina análisis geofísico con imágenes hidrogeofísicas—también conocidas como Imágenes de Resistividad Eléctrica (ERI) o Tomografía de Resistividad Eléctrica (ERT)—para maximizar tus posibilidades de encontrar agua y señalar las áreas en tu sitio con la mayor probabilidad de flujo de agua fuerte."
 bonded_insured: "¡Estamos asegurados y garantizados!"

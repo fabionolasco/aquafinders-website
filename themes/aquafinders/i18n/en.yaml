@@ -11,7 +11,8 @@ english_version: "English Version"
 # Hero section
 hero_title: "Find the best place to drill your water well!"
 hero_description: "Dry and low-yield wells are a real risk! Besides harming your budget, it can also delay the construction! At AquaFinders, we combine cutting-edge subsurface imaging technology and expert geological analysis to assess hidden groundwater beneath your site. We'll help you confidently select the optimal locations for drilling, significantly improving your chances of a productive well that will benefit you for decades to come!"
-free_consultation: "Get a Free Consultation"
+free_consultation: "Free Consultation"
+explanation: "We provide well drillers and builders with expert advice on the best places to dig."
 
 # Services section
 our_services: "Our Services"
@@ -31,11 +32,11 @@ residential_description: "Homeowners planning to drill water wells on new constr
 agriculture: "Agriculture"
 agriculture_description: "Farms seeking the best places to drill high-yield water wells for crop irrigation or animal consumption."
 business: "Business"
-business_description: "Builders seeking to study the grown beneath their propety, sometime to avoid water vains (fractures)."
+business_description: "Builders seeking to study the grown beneath their propety, sometime to avoid water and fractures."
 
 # About us section
 about_us: "About Us"
-about_us_p1: "AquaFinders is a specialized groundwater location service operating throughout North and South Carolina. With our team of 5 experienced geologists/hydrogeologists, 1 forest engineer, 1 agriculture engineer, and local technicians, we use cutting-edge technology to locate the best spots for drilling productive water wells."
+about_us_p1: "AquaFinders is a specialized groundwater location service operating primarily in North Carolina, South Carolina, Georgia, Tennessee, and Kentucky, with nationwide service available upon special request. With our team of 5 experienced geologists/hydrogeologists, 1 forest engineer, 1 agriculture engineer, and local technicians, we use cutting-edge technology to locate the best spots for drilling productive water wells."
 about_us_p2: "Founded on the principle that everyone deserves access to clean, reliable water, our experts have helped hundreds of homeowners, farmers, and businesses avoid the costly mistake of drilling in the wrong location."
 about_us_p3: "Our scientific approach combines geophysical analysis with hydrogeophysical imaging—also known as Electrical Resistivity Imaging (ERI) or Electrical Resistivity Tomography (ERT)—to maximize your chances of finding water and pinpoint the areas on your site with the highest probability of strong water flow."
 bonded_insured: "We are bonded and insured!"
@@ -64,7 +65,7 @@ captcha_alert: "Please fill out captcha field!"
 
 # Footer
 expert_services: "Expert Groundwater Location Services for"
-service_area: "North Carolina, South Carolina, Tennessee, Georgia, Kentucky, and Virginia"
+service_area: "North Carolina, South Carolina, Georgia, Tennessee, and Kentucky, with nationwide service available upon special request."
 all_rights_reserved: "All rights reserved."
 results_vary: "Results may vary based on geological conditions."
 site_map: "Site Map"

@@ -4,8 +4,11 @@
         <h2 id="hero-title">{{ i18n "hero_title" | default "Find the best place to drill your water well!" }}</h2>
         <p>{{ i18n "hero_description" | default "Dry and low-yield wells are a real risk! Besides harming your budget, it can also delay the construction! At AquaFinders, we combine cutting-edge subsurface imaging technology and expert geological analysis to assess hidden groundwater beneath your site. We'll help you confidently select the optimal locations for drilling, significantly improving your chances of a productive well that will benefit you for decades to come!" }}</p>
         <a href="#contact" class="cta-button">{{ i18n "free_consultation" | default "Get a Free Consultation" }}</a>
+        <a href="{{ "/request/" | relLangURL }}" class="cta-button cta-button-now">{{ i18n "start" | default "Start Now" }}</a>
     </div>
 </section>
+
+<section class="explanation">{{ i18n "explanation" | default "We provide well drillers and builders with expert advice on the best places to dig." }}</section>
 
 <section id="services" class="services" role="region" aria-labelledby="services-title">
     <h3 id="services-title">{{ i18n "our_services" | default "Our Services" }}</h3>
@@ -79,7 +82,7 @@
         </div>
         <div class="benefit">
             <h3>{{ i18n "business" | default "Business" }}</h3>
-            <p>{{ i18n "business_description" | default "Builders seeking to study the grown beneath their propety, sometime to avoid water vains (fractures)." }}</p>
+            <p>{{ i18n "business_description" | default "Builders seeking to study the grown beneath their propety, sometime to avoid water and fractures." }}</p>
         </div>
     </div>
 </section>
@@ -88,7 +91,7 @@
     <h2 id="about-us-title">{{ i18n "about_us" | default "About Us" }}</h2>
     <div class="about-content">
         <div class="about-text">
-            <p>{{ i18n "about_us_p1" | default "AquaFinders is a specialized groundwater location service operating throughout North and South Carolina. With our team of 5 experienced geologists/hydrogeologists, 1 forest engineer, 1 agriculture engineer, and local technicians, we use cutting-edge technology to locate the best spots for drilling productive water wells." }}</p>
+            <p>{{ i18n "about_us_p1" | default "AquaFinders is a specialized groundwater location service operating primarily in North Carolina, South Carolina, Georgia, Tennessee, and Kentucky, with nationwide service available special upon request. With our team of 5 experienced geologists/hydrogeologists, 1 forest engineer, 1 agriculture engineer, and local technicians, we use cutting-edge technology to locate the best spots for drilling productive water wells." }}</p>
             <p>{{ i18n "about_us_p2" | default "Founded on the principle that everyone deserves access to clean, reliable water, our experts have helped hundreds of homeowners, farmers, and businesses avoid the costly mistake of drilling in the wrong location." }}</p>
             <p>{{ i18n "about_us_p3" | default "Our scientific approach combines geophysical analysis with hydrogeophysical imaging—also known as Electrical Resistivity Imaging (ERI) or Electrical Resistivity Tomography (ERT)—to maximize your chances of finding water and pinpoint the areas on your site with the highest probability of strong water flow." }}</p>
             <p class="bonded-insured">&#9989; &nbsp; {{ i18n "bonded_insured" | default "We are bonded and insured!" }}</p>
