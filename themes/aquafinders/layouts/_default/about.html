@@ -1,0 +1,37 @@
+{{ define "main" }}
+<section class="hero-container" role="region" aria-labelledby="request-title">
+    <div class="hero">
+    </div>
+</section>
+
+<section id="about-us" class="about-us" role="region" aria-labelledby="about-us-title">
+    <h2 id="about-us-title">{{ i18n "about_us" | default "About Us" }}</h2>
+    <div class="about-content">
+        <div class="about-text">
+            <p>{{ i18n "about_us_p1" | default "AquaFinders is a specialized groundwater location service operating primarily in North Carolina, South Carolina, Georgia, Tennessee, and Kentucky, with nationwide service available special upon request. With our team of 5 experienced geologists/hydrogeologists, 1 forest engineer, 1 agriculture engineer, and local technicians, we use cutting-edge technology to locate the best spots for drilling productive water wells." }}</p>
+            <p>{{ i18n "about_us_p2" | default "Founded on the principle that everyone deserves access to clean, reliable water, our experts have helped hundreds of homeowners, farmers, and businesses avoid the costly mistake of drilling in the wrong location." }}</p>
+            <p>{{ i18n "about_us_p3" | default "Our scientific approach combines geophysical analysis with hydrogeophysical imaging—also known as Electrical Resistivity Imaging (ERI) or Electrical Resistivity Tomography (ERT)—to maximize your chances of finding water and pinpoint the areas on your site with the highest probability of strong water flow." }}</p>
+            <p class="bonded-insured">&#9989; &nbsp; {{ i18n "bonded_insured" | default "We are bonded and insured!" }}</p>
+            <p>{{ i18n "peace_of_mind" | default "Peace of mind!" }}</p>
+        </div>
+        <div class="about-image">
+            <picture>
+                <source type="image/avif" srcset="
+                    /images/field-work-mobile.avif   200w,
+                    /images/field-work-mobile.avif   400w,
+                    /images/field-work-tablet.avif   768w,
+                    /images/field-work-medium.avif   1280w
+                    /images/field-work-large.avif    1920w
+                    " sizes="(max-width: 450px) 398px,
+                        (max-width: 768px)  448px,
+                        (max-width: 1024px) 371px,
+                        (max-width: 1280px) 448px,
+                        448px" alt="{{ i18n "about_image_alt" | default "AquaFinders team conducting a groundwater survey" }}">
+                <img src="/images/field-work-xlarge.png" alt="{{ i18n "about_image_alt" | default "AquaFinders team conducting a groundwater survey" }}" width="448"
+                height="672" loading="lazy">
+            </picture>
+        </div>
+    </div>
+</section>
+{{ end }}
+

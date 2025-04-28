@@ -9,16 +9,17 @@
             </p>
         </div>
         <div class="footer-contact">
+            <p><a href="{{ "/contact" | relURL }}">{{ i18n "contact_form" | default "Contact Form" }}</a></p>
             <p>{{ i18n "contact_us" | default "Contact Us" }}: <a href="tel:{{ .Site.Params.contactPhone }}">{{ .Site.Params.contactPhone }}</a></p>
             <p><a href="https://wa.me/17322211202"><img src="/images/WhatsApp-icon.avif" alt="+17322211202" width="30" height="30" style="vertical-align: middle;"> {{ i18n "whatsapp" | default "Live chat on WhatsApp" }}</a></p>
             <p>{{ i18n "email" | default "Email" }}: <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a></p>
-            <p>Physical location by appointment only.</p>
-            <p><a href="{{ "/sitemap" | relURL }}">{{ i18n "site_map" | default "Site Map" }}</a></p>
+            
         </div>
         <div class="footer-legal">
             <p>AquaFinders ™ (Trademark In Progress)</p>
             <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. {{ i18n "all_rights_reserved" | default "All rights reserved." }}</p>
             <p>{{ i18n "results_vary" | default "Results may vary based on geological conditions." }}</p>
+            <p><a href="{{ "/sitemap" | relURL }}">{{ i18n "site_map" | default "Site Map" }}</a></p>
         </div>
     </div>
 </footer>
