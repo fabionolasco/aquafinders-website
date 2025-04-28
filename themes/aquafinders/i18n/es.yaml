@@ -92,6 +92,7 @@ request_title: "Solicite nuestros servicios"
 
 # Process
 info_process: "Haga clic aquí para obtener más información sobre nuestro proceso..."
+resistivity: "Resistividad del Suelo"
 request_process_title: "Nuestro Proceso"
 request_steps_title: "Pasos:"
 request_step_1: "Complete nuestro Formulario de Nuevo Cliente"
