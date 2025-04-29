@@ -5,25 +5,25 @@
 </section>
 
 <section class="sitemap-content" role="region" aria-labelledby="sitemap-title">
-    <h2 id="sitemap-title">{{ i18n "sitemap_title" | default "Site Map" }}</h2>
+    <h2 id="sitemap-title">{{ i18n "sitemap_title" }}</h2>
     <ul class="sitemap-list">
-        <li><a href="{{ "/" | relURL }}">{{ i18n "home" | default "Home" }}</a>
+        <li><a href="{{ "/" | relURL }}">{{ i18n "home" }}</a>
             <ul>
-                <li><a href="{{ "/#services" | relURL }}">{{ i18n "our_services" | default "Our Services" }}</a></li>
-                <li><a href="{{ "/#about-us" | relURL }}">{{ i18n "about_us" | default "About Us" }}</a></li>
-                <li><a href="{{ "/#contact" | relURL }}">{{ i18n "contact_us" | default "Contact Us" }}</a></li>
+                <li><a href="{{ "/#services" | relURL }}">{{ i18n "our_services" }}</a></li>
+                <li><a href="{{ "/#about-us" | relURL }}">{{ i18n "about_us" }}</a></li>
+                <li><a href="{{ "/#contact" | relURL }}">{{ i18n "contact_us" }}</a></li>
             </ul>
         </li>
-        <li><a href="{{ "/request/" | relURL }}">{{ i18n "start" | default "Start now" }}</a></li>
-        <li><a href="{{ "/process/" | relURL }}">{{ i18n "process" | default "Our process" }}</a></li>
-        <li><a href="{{ "/faq/" | relURL }}">{{ i18n "faq" | default "FAQ" }}</a></li>
+        <li><a href="{{ "/request/" | relURL }}">{{ i18n "start" }}</a></li>
+        <li><a href="{{ "/process/" | relURL }}">{{ i18n "process" }}</a></li>
+        <li><a href="{{ "/faq/" | relURL }}">{{ i18n "faq" }}</a></li>
         {{ if eq $.Lang "en" }}
-        <li><a href="{{ "/es/" | relURL }}">{{ i18n "spanish_version" | default "Spanish Version" }}</a></li>
+        <li><a href="{{ "/es/" | relURL }}">{{ i18n "spanish_version" }}</a></li>
         {{ else }}
-        <li><a href="{{ "/" | relURL }}">{{ i18n "english_version" | default "English Version" }}</a></li>
+        <li><a href="{{ "/" | relURL }}">{{ i18n "english_version" }}</a></li>
         {{ end }}
-        <li><a href="{{ "/success/" | relURL }}">{{ i18n "form_submission" | default "Form Submission" }}</a></li>
-        <li><a href="{{ "/sitemap/" | relURL }}">{{ i18n "site_map" | default "Site Map" }}</a></li>
+        <li><a href="{{ "/success/" | relURL }}">{{ i18n "form_submission" }}</a></li>
+        <li><a href="{{ "/sitemap/" | relURL }}">{{ i18n "site_map" }}</a></li>
     </ul>
 </section>
 {{ end }}

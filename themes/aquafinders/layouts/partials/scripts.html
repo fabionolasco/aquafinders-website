@@ -38,7 +38,7 @@
                         const hCaptcha = form.querySelector('textarea[name=h-captcha-response]')?.value;
                         if (!hCaptcha) {
                             e.preventDefault();
-                            alert("{{ i18n "captcha_alert" | default "Please fill out captcha field!" }}");
+                            alert("{{ i18n "captcha_alert" }}");
                             return;
                         }
                     });

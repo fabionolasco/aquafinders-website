@@ -14,17 +14,17 @@
         </button>
         <div class="nav-container">
             <ul class="nav-links">
-                <li><a href="{{ "/services" | relLangURL }}">{{ i18n "services" | default "Services" }}</a></li>
-                <li><a href="{{ "/process" | relLangURL }}">{{ i18n "pricing" | default "Pricing" }}</a></li>
-                <li><a href="{{ "/about" | relLangURL }}">{{ i18n "about" | default "About" }}</a></li>
-                <li><a href="{{ "/request/" | relLangURL }}">{{ i18n "start" | default "Start now" }}</a></li>
-                <li><a href="{{ "/faq/" | relLangURL }}">{{ i18n "faq" | default "FAQ" }}</a></li>
-                <li><a href="{{ "/contact" | relLangURL }}">{{ i18n "contact" | default "Contact" }}</a></li>
+                <li><a href="{{ "/services" | relLangURL }}">{{ i18n "services" }}</a></li>
+                <li><a href="{{ "/process" | relLangURL }}">{{ i18n "pricing" }}</a></li>
+                <li><a href="{{ "/about" | relLangURL }}">{{ i18n "about" }}</a></li>
+                <li><a href="{{ "/request/" | relLangURL }}">{{ i18n "start" }}</a></li>
+                <li><a href="{{ "/faq/" | relLangURL }}">{{ i18n "faq" }}</a></li>
+                <li><a href="{{ "/contact" | relLangURL }}">{{ i18n "contact" }}</a></li>
                 <li class="show-on-mobile">
                     {{ if eq $.Lang "en" }}
-                    <a href="{{ "/es/" | relURL }}">{{ i18n "spanish_version" | default "Spanish Version" }}</a>
+                    <a href="{{ "/es/" | relURL }}">{{ i18n "spanish_version" }}</a>
                     {{ else }}
-                    <a href="{{ "/" | relURL }}">{{ i18n "english_version" | default "English Version" }}</a>
+                    <a href="{{ "/" | relURL }}">{{ i18n "english_version" }}</a>
                     {{ end }}
                 </li>
             </ul>

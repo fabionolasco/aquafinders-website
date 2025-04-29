@@ -9,7 +9,7 @@
     <div width="100%">
         <div id="contact" class="contact" role="region" aria-labelledby="contact-title">
             <div class="contact-form">
-                <h3>{{ i18n "contact_form" | default "Contact Form" }}</h3>
+                <h3>{{ i18n "contact_form" }}</h3>
                 <form method="post" id="contact-form" name="contact-form" action="https://api.web3forms.com/submit"
                     class="contact-form">
             
@@ -20,43 +20,43 @@
                     <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
                     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             
-                    <label for="name">{{ i18n "your_name" | default "Your Name" }}</label>
-                    <input type="text" id="name" name="name" data-placeholder="{{ i18n "your_name" | default "Your Name" }}" required>
+                    <label for="name">{{ i18n "your_name" }}</label>
+                    <input type="text" id="name" name="name" data-placeholder="{{ i18n "your_name" }}" required>
             
-                    <label for="email">{{ i18n "email_address" | default "Email Address" }}</label>
-                    <input type="email" id="email" name="email" data-placeholder="{{ i18n "email_address" | default "Email Address" }}" required>
+                    <label for="email">{{ i18n "email_address" }}</label>
+                    <input type="email" id="email" name="email" data-placeholder="{{ i18n "email_address" }}" required>
             
-                    <label for="phone">{{ i18n "phone_number" | default "Phone Number" }}</label>
-                    <input type="tel" id="phone" name="phone" data-placeholder="{{ i18n "phone_number" | default "Phone Number" }}" required>
+                    <label for="phone">{{ i18n "phone_number" }}</label>
+                    <input type="tel" id="phone" name="phone" data-placeholder="{{ i18n "phone_number" }}" required>
             
-                    <label>{{ i18n "preferred_communication" | default "Preferred way of communication:" }} </label>
+                    <label>{{ i18n "preferred_communication" }} </label>
                     <div>
                         <div><input type="checkbox" id="preferredEmail" name="preferred[]" value="email"> <label for="preferredEmail">
-                            {{ i18n "email" | default "Email" }}</label></div>
+                            {{ i18n "email" }}</label></div>
                         <div><input type="checkbox" id="preferredCall" name="preferred[]" value="phoneCall"> <label
-                            for="preferredCall"> {{ i18n "phone_call" | default "Phone Call" }}</label></div>
+                            for="preferredCall"> {{ i18n "phone_call" }}</label></div>
                         <div><input type="checkbox" id="preferredText" name="preferred[]" value="phoneText"> <label
-                            for="preferredText"> {{ i18n "phone_text" | default "Phone Text" }}</label></div>
+                            for="preferredText"> {{ i18n "phone_text" }}</label></div>
                     </div>
             
-                    <label for="message">{{ i18n "project_questions" | default "Tell us about your project or questions..." }}</label>
-                    <textarea id="message" name="message" data-placeholder="{{ i18n "project_questions" | default "Tell us about your project or questions..." }}"
+                    <label for="message">{{ i18n "project_questions" }}</label>
+                    <textarea id="message" name="message" data-placeholder="{{ i18n "project_questions" }}"
                         required></textarea>
             
-                    <label>{{ i18n "captcha" | default "Captcha" }}</label>
+                    <label>{{ i18n "captcha" }}</label>
                     <div class="h-captcha" data-captcha="true"></div>
             
-                    <button type="submit" class="cta-button">{{ i18n "submit" | default "Submit" }}</button>
+                    <button type="submit" class="cta-button">{{ i18n "submit" }}</button>
                 </form>
             </div>
             <div class="contact-data">
                 <div class="contact-info">
-                    <h2 id="request-title">{{ i18n "ready_to_find" | default "Ready to Find Your Perfect Well Location?" }}</h2>
-                    <span>{{ i18n "we_speak" | default "We speak English / Hablamos Español" }}</span>
-                    <span>{{ i18n "phone" | default "Phone" }}: <a title="{{ i18n "phone" | default "Phone" }}" href="tel:{{ .Site.Params.contactPhone }}">{{ .Site.Params.contactPhone }}</a> (9-5 PM EST)</span>
-                    <span>{{ i18n "email" | default "Email" }}: <a title="{{ i18n "email" | default "Email" }}" href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a></span>
-                    <span>{{ i18n "address" | default "Address" }}: <a title="{{ i18n "address" | default "Address" }}" href="https://www.google.com/maps/place/957+Yellow+Gate+Rd,+York,+SC+29745/@35.0049362,-81.2643008,21725m/data=!3m1!1e3!4m6!3m5!1s0x8856f3a78d7d4135:0xda78aa4bba36846d!8m2!3d35.0154523!4d-81.1850927!16s%2Fg%2F11wx3pksp8?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank">{{ .Site.Params.address }}</a></span>
-                    <span>{{ i18n "physical_address_app" | default "Physical address by appointment only" }}</span>
+                    <h2 id="request-title">{{ i18n "ready_to_find" }}</h2>
+                    <span>{{ i18n "we_speak" }}</span>
+                    <span>{{ i18n "phone" }}: <a title="{{ i18n "phone" }}" href="tel:{{ .Site.Params.contactPhone }}">{{ .Site.Params.contactPhone }}</a> (9-5 PM EST)</span>
+                    <span>{{ i18n "email" }}: <a title="{{ i18n "email" }}" href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a></span>
+                    <span>{{ i18n "address" }}: <a title="{{ i18n "address" }}" href="https://www.google.com/maps/place/957+Yellow+Gate+Rd,+York,+SC+29745/@35.0049362,-81.2643008,21725m/data=!3m1!1e3!4m6!3m5!1s0x8856f3a78d7d4135:0xda78aa4bba36846d!8m2!3d35.0154523!4d-81.1850927!16s%2Fg%2F11wx3pksp8?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank">{{ .Site.Params.address }}</a></span>
+                    <span>{{ i18n "physical_address_app" }}</span>
                 </div>
             </div>
         </div>
@@ -64,10 +64,10 @@
 </div>
 <div class="text-center" role="region" aria-labelledby="contact-title">
     <div style="margin: 40px auto;">
-        <p class="bonded-insured">&#9989; &nbsp; {{ i18n "bonded_insured" | default "We are bonded and insured!" }}</p>
+        <p class="bonded-insured">&#9989; &nbsp; {{ i18n "bonded_insured" }}</p>
     </div>
     <div class="ready text-center">
-        <a href="{{ "/request/" | relLangURL }}" class="cta-button cta-button-now">&nbsp; &nbsp; {{ i18n "start" | default "Start Now" }} &nbsp; &nbsp; </a>
+        <a href="{{ "/request/" | relLangURL }}" class="cta-button cta-button-now">&nbsp; &nbsp; {{ i18n "start" }} &nbsp; &nbsp; </a>
     </div>
 </div>
 {{ end }}

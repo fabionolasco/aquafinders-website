@@ -620,6 +620,14 @@ footer a {
   display: none;
 }
 
+.faq-item.faq-content-hidden .faq-content {
+  margin-bottom: 0px !important;
+}
+
+.faq-item .faq-content {
+  margin-bottom: 80px;
+}
+
 .faq-item h4::after {
   content: '▼';
   display: inline-block;

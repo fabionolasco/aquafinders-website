@@ -2,16 +2,16 @@
 <section class="hero-container" role="region" aria-labelledby="hero-title">
     <div class="hero">
         <h2 id="hero-title">{{ i18n "hero_title" }}</h2>
-        <p>{{ i18n "hero_description" | default "Dry and low-yield wells are a real risk! Besides harming your budget, it can also delay the construction! At AquaFinders, we combine cutting-edge subsurface imaging technology and expert geological analysis to assess hidden groundwater beneath your site. We'll help you confidently select the optimal locations for drilling, significantly improving your chances of a productive well that will benefit you for decades to come!" }}</p>
-        <a href="#contact" class="cta-button">{{ i18n "free_consultation" | default "Get a Free Consultation" }}</a>
-        <a href="{{ "/request/" | relLangURL }}" class="cta-button cta-button-now">{{ i18n "start" | default "Start Now" }}</a>
+        <p>{{ i18n "hero_description" }}</p>
+        <a href="#contact" class="cta-button">{{ i18n "free_consultation" }}</a>
+        <a href="{{ "/request/" | relLangURL }}" class="cta-button cta-button-now">{{ i18n "start" }}</a>
     </div>
 </section>
 
-<section class="explanation">{{ i18n "explanation" | default "We provide **YOUR** well drillers and builders with expert advice on the best places to dig. ✨" | markdownify }}</section>
+<section class="explanation">{{ i18n "explanation" | markdownify }}</section>
 
 <section id="services" class="services" role="region" aria-labelledby="services-title">
-    <h3 id="services-title">{{ i18n "our_services" | default "Our Services" }}</h3>
+    <h3 id="services-title">{{ i18n "our_services" }}</h3>
     <div class="service-grid">
         <div class="service-card">
             <a href="{{ "/find-water" | relLangURL }}">
@@ -26,8 +26,8 @@
                     </g>
                     </svg>
                 </div>
-                <h3>{{ i18n "finding_water" | default "Finding water" }}</h3>
-                <p>{{ i18n "finding_water_description" | default "We use advanced scientific techniques to identify prime locations for well drilling - residential, commercial, and agriculture." }}</p>
+                <h3>{{ i18n "finding_water" }}</h3>
+                <p>{{ i18n "finding_water_description" }}</p>
             </a>
         </div>
         <div class="service-card">
@@ -43,8 +43,8 @@
                     </g>
                     </svg>
                 </div>
-                <h3>{{ i18n "avoiding_water" | default "Avoiding water" }}</h3>
-                <p>{{ i18n "avoiding_water_description" | default "Sometime you want to avoid water, like when digging deeper foundations, gas reservoirs, landfills, and so on. We can help with that too." }}</p>
+                <h3>{{ i18n "avoiding_water" }}</h3>
+                <p>{{ i18n "avoiding_water_description" }}</p>
             </a>
         </div>
         <div class="service-card service-card-soil">
@@ -55,8 +55,8 @@
                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
                     </svg>
                 </div>
-                <h3>{{ i18n "soil_resistivity" | default "Soil resistivity" }}</h3>
-                <p>{{ i18n "soil_resistivity_description" | default "Test required for grounding projects for substations and tramission systems, solar farms, industrial plants, etc." }}</p>
+                <h3>{{ i18n "soil_resistivity" }}</h3>
+                <p>{{ i18n "soil_resistivity_description" }}</p>
             </a>
         </div>
         <div class="service-card service-card-studies">
@@ -70,37 +70,37 @@
                     <line x1="9" y1="16" x2="15" y2="16"></line>
                     </svg>
                 </div>
-                <h3>{{ i18n "studies" | default "Studies" }}</h3>
-                <p>{{ i18n "studies_description" | default "Geophysical and hydrogeophysical studies of your property, to assist in environmental, construction, and mining work." }}</p>
+                <h3>{{ i18n "studies" }}</h3>
+                <p>{{ i18n "studies_description" }}</p>
             </a>
         </div>
     </div>
 </section>
 
 <section class="why-us" role="region" aria-labelledby="why-us-title">
-    <h2 id="why-us-title">{{ i18n "who_hire_us" | default "Who hire us?" }}</h2>
+    <h2 id="why-us-title">{{ i18n "who_hire_us" }}</h2>
     <div class="benefits-grid">
         <div class="benefit">
-            <h3>{{ i18n "residential" | default "Residential" }}</h3>
-            <p>{{ i18n "residential_description" | default "Homeowners planning to drill water wells on new construction or existing sites." }}</p>
+            <h3>{{ i18n "residential" }}</h3>
+            <p>{{ i18n "residential_description" }}</p>
         </div>
         <div class="benefit">
-            <h3>{{ i18n "agriculture" | default "Agriculture" }}</h3>
-            <p>{{ i18n "agriculture_description" | default "Farms seeking the best places to drill high-yield water wells for crop irrigation or animal consumption." }}</p>
+            <h3>{{ i18n "agriculture" }}</h3>
+            <p>{{ i18n "agriculture_description" }}</p>
         </div>
         <div class="benefit">
-            <h3>{{ i18n "business" | default "Business" }}</h3>
-            <p>{{ i18n "business_description" | default "Builders seeking to study the grown beneath their propety, sometime to avoid water and fractures." }}</p>
+            <h3>{{ i18n "business" }}</h3>
+            <p>{{ i18n "business_description" }}</p>
         </div>
     </div>
 </section>
 
 <div class="text-center" role="region" aria-labelledby="contact-title">
     <div style="margin: 40px auto;">
-        <p class="bonded-insured">&#9989; &nbsp; {{ i18n "bonded_insured" | default "We are bonded and insured!" }}</p>
+        <p class="bonded-insured">&#9989; &nbsp; {{ i18n "bonded_insured" }}</p>
     </div>
     <div class="ready text-center">
-        <a href="{{ "/request/" | relLangURL }}" class="cta-button cta-button-now">&nbsp; &nbsp; {{ i18n "start" | default "Start Now" }} &nbsp; &nbsp; </a>
+        <a href="{{ "/request/" | relLangURL }}" class="cta-button cta-button-now">&nbsp; &nbsp; {{ i18n "start" }} &nbsp; &nbsp; </a>
     </div>
 </div>
 {{ end }}

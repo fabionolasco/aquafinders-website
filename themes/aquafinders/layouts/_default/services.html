@@ -4,7 +4,7 @@
     </div>
 </section>
 
-<h2 id="services-title" style="margin: 40px auto;">{{ i18n "services" | default "Our Services" }}</h2>
+<h2 id="services-title" style="margin: 40px auto;">{{ i18n "services" }}</h2>
 
 <section class="request" style="padding: 1rem;" role="region" aria-labelledby="services-title">
 
@@ -86,10 +86,10 @@
 </section>
 <div class="text-center" role="region" aria-labelledby="contact-title">
     <div style="margin: 40px auto;">
-        <p class="bonded-insured">&#9989; &nbsp; {{ i18n "bonded_insured" | default "We are bonded and insured!" }}</p>
+        <p class="bonded-insured">&#9989; &nbsp; {{ i18n "bonded_insured" }}</p>
     </div>
     <div class="ready text-center">
-        <a href="{{ "/request/" | relLangURL }}" class="cta-button cta-button-now">&nbsp; &nbsp; {{ i18n "start" | default "Start Now" }} &nbsp; &nbsp; </a>
+        <a href="{{ "/request/" | relLangURL }}" class="cta-button cta-button-now">&nbsp; &nbsp; {{ i18n "start" }} &nbsp; &nbsp; </a>
     </div>
 </div>
 {{ end }}
