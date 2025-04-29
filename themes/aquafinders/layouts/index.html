@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="hero-container" role="region" aria-labelledby="hero-title">
     <div class="hero">
-        <h2 id="hero-title">{{ i18n "hero_title" | default "Find the best place to drill your water well!" }}</h2>
+        <h2 id="hero-title">{{ i18n "hero_title" }}</h2>
         <p>{{ i18n "hero_description" | default "Dry and low-yield wells are a real risk! Besides harming your budget, it can also delay the construction! At AquaFinders, we combine cutting-edge subsurface imaging technology and expert geological analysis to assess hidden groundwater beneath your site. We'll help you confidently select the optimal locations for drilling, significantly improving your chances of a productive well that will benefit you for decades to come!" }}</p>
         <a href="#contact" class="cta-button">{{ i18n "free_consultation" | default "Get a Free Consultation" }}</a>
         <a href="{{ "/request/" | relLangURL }}" class="cta-button cta-button-now">{{ i18n "start" | default "Start Now" }}</a>
