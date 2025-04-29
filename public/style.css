@@ -395,7 +395,8 @@ section {
 
 /* Contact Section */
 .contact {
-  margin: 20px 0;
+  max-width: 1024px; 
+  margin: 40px auto;
   text-align: left;
   display: grid;
   grid-template-columns: 1fr;
@@ -409,6 +410,7 @@ section {
 }
 
 .contact .contact-data {
+  padding: 1rem;
 }
 
 .contact h2,
@@ -630,6 +632,32 @@ footer a {
   transform: rotate(0deg);
 }
 
+.price {
+  display: grid;
+  grid-template-columns: 100px auto;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.price div {
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.price div h5,
+.price div p {
+  width: 100%;
+}
+
+.price > div:first-child {
+  background-color: #c3fbcb;
+  font-weight: bold;
+
+}
+
 .accordion {
   max-width: 800px;
   margin: 2rem auto;
@@ -811,7 +839,7 @@ footer a {
   top: 40px;
   left: 20px;
   width: 2px;
-  height: calc(100% + 10px);
+  height: calc(100% + 40px);
   background-color: var(--primary-color);
   opacity: 0.5;
   z-index: 1;
@@ -847,6 +875,10 @@ footer a {
 
 .sitemap-content li li {
   margin-left: 30px;
+}
+
+.step-item .step-marker-final {
+  background-color: rgb(21, 176, 21) !important;
 }
 
 .actor {

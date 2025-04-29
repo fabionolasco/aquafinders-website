@@ -5,11 +5,38 @@
 </section>
 
 <section class="request" id="request" role="region" aria-labelledby="process-title">
-    <h2 id="process-title">{{ i18n "request_process_title" | default "Our Process" }}</h2>
+    <h2 id="process-title">{{ i18n "request_process_title" | default "Process and Pricing" }}</h2>
     <div>
         <div class="steps-infographic">
-            <h3>{{ i18n "request_steps_title" | default "Steps:" }}</h3>
-            <div class="steps-container">
+            <h3>{{ i18n "how_works" | default "How it works:" }}</h3>
+            <p>Our service are divided in two parts:</p>
+
+            <div class="price">
+                <div>$500</div>
+                <div>
+                    <h5 style="margin-top: 1rem;">(A) {{ i18n "geo_study" | default "Geological Study" }}</h5>
+                    <p>{{ i18n "geo_study_description" | default "We conduct a comprehensive evaluation that includes the analysis of multiple satellite images, detailed topographic assessments, thorough geological studies, and in-depth hydrogeological investigations. This multi-layered approach enables us to identify the areas with the highest water potential on your property." }}</p>
+                </div>
+            </div>
+
+            <div class="price">
+                <div>$700</div>
+                <div>
+                    <h5 style="margin-top: 1rem;">(B) {{ i18n "eri_study" | default "Electrical Resistivity Imaging" }}</h5>
+                    <p>
+                        {{ i18n "eri_study_description" | default "Geophysical field survey utilizing Electrical Resistivity Imaging (ERI) technology, followed by comprehensive data analysis, professional interpretation of results (multiple geologists), detailed report generation, and a clear explanation of the findings to ensure full understanding and practical application. This report will be used by your well driller/builder in their decision-making." }}
+                    </p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 1rem;">
+                The Geological Study must always be completed before an ERI survey.
+            </p>
+
+
+            <h3 style="margin-top: 3rem;">{{ i18n "geo_steps" | default "(A) Steps - Geological Study:" }}</h3>
+
+            <div class="steps-container" style="margin-top: 40px;">
                 {{/* Step 1 */}}
                 <div class="step-item">
                     <div class="step-marker" aria-label="Step 1">1</div>
@@ -34,7 +61,7 @@
                     <div class="step-marker" aria-label="Step 3">3</div>
                     <div class="step-line"></div>
                     <div class="step-content">
-                        <span class="actor">[Customer]</span> {{ i18n "request_step_3" | default "You sign the contract and perform payment" }}
+                        <span class="actor">[Customer]</span> {{ i18n "request_step_3" | default "You sign the contract and perform payment ($500)" }}
                     </div>
                 </div>
         
@@ -52,38 +79,59 @@
                     <div class="step-marker" aria-label="Step 5">5</div>
                     <div class="step-line"></div>
                     <div class="step-content">
-                        <span class="actor">[Together]</span> {{ i18n "request_step_5" | default "We talk about the best place for AquaFinders to perform the field test" }}
+                        <span class="actor">[AquaFinders]</span> {{ i18n "request_step_5" | default "We present your report and provide a clear recommendation on whether or not you should proceed with the next step: the Geophysics (ERI) survey." }}
                     </div>
                 </div>
+
+                <h3 style="margin-top: 3rem;">{{ i18n "eri_steps" | default "(B) Steps - Geophysical (ERI) Survey:" }}</h3>
         
                 {{/* Step 6 */}}
                 <div class="step-item">
                     <div class="step-marker" aria-label="Step 6">6</div>
                     <div class="step-line"></div>
                     <div class="step-content">
-                        <span class="actor">[AquaFinders]</span> {{ i18n "request_step_6" | default "We perform the geophysical test in your property" }}
+                        <span class="actor">[Together]</span> {{ i18n "request_step_6" | default "Based on the data collected, we will help decide whether the Geophysical Survey is the right choice for you." }}
                     </div>
                 </div>
         
                 {{/* Step 7 */}}
                 <div class="step-item">
                     <div class="step-marker" aria-label="Step 7">7</div>
+                    <div class="step-line"></div>
                     <div class="step-content">
-                        <span class="actor">[AquaFinders]</span> {{ i18n "request_step_7" | default "We deliver your final results to you by e-mail" }}
+                        <span class="actor">[Customer]</span> {{ i18n "request_step_7" | default "You perform payment for this second study ($700)" }}
+                    </div>
+                </div>
+        
+                {{/* Step 8 */}}
+                <div class="step-item">
+                    <div class="step-marker" aria-label="Step 8">8</div>
+                    <div class="step-line"></div>
+                    <div class="step-content">
+                        <span class="actor">[AquaFinders]</span> {{ i18n "request_step_8" | default "We perform the geophysical survey on your property" }}
+                    </div>
+                </div>
+        
+                {{/* Step 9 */}}
+                <div class="step-item">
+                    <div class="step-marker step-marker-final" aria-label="Step 9">9</div>
+                    <div class="step-line"></div>
+                    <div class="step-content">
+                        <span class="actor">[AquaFinders]</span> {{ i18n "request_step_9" | default "We deliver your final results to you by e-mail, so you can forward it to your well drilling company or builder." }}
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="request-form-container">
+        <div class="request-form-container" style="margin-top: 100px;">
             <h4>{{ i18n "request_notes_title" | default "Important notes:" }}</h4>
-            <ul>
-                <li>{{ i18n "request_note_1" | default "You will then pass the final report to your well driller to guide their work." }}</li>
+            <ul style="padding-left: 20px;">
                 <li>{{ i18n "request_note_2" | default "If everything goes well (pun-intented), the process can take as little as three weeks." }}</li>
-                <li>{{ i18n "request_note_3" | default "The usual turnaround is of five weeks." }}</li>
-                <li>{{ i18n "request_note_4" | default "We offer rush fees for emergency projects." }}</li>
-                <li>{{ i18n "request_note_5" | default "If everything goes well (pun-intented), the process can take as little as one week." }}</li>
-                <li>{{ i18n "request_note_6" | default "The process may vary based on your needs, preferences, and the weather conditions." }}</li>
+                <li>{{ i18n "request_note_3" | default "The usual turnaround is about five weeks." }}</li>
+                <li>{{ i18n "request_note_4" | default "We offer rush services for emergency projects (extra fees may apply)." }}</li>
+                <li>{{ i18n "request_note_5" | default "Please note that the process and steps may vary depending on your needs, preferences, and weather conditions." }}</li>
+                <li>{{ i18n "request_note_6" | default "We offer discounts for larger projects that require multiple studies." }}</li>
+                <li>{{ i18n "request_note_7" | default "Sales taxes are not included on prices shown on this website." }}</li>
             </ul>
         </div>
     </div>
