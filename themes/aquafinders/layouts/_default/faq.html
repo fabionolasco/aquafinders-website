@@ -127,4 +127,12 @@
         <p>{{ i18n "faq_important_content" | default "We do not drill water wells. Instead, we study the subsurface conditions of your property so that well drillers and construction companies can make informed decisions." }}</p>
     </div>
 </section>
+<div class="text-center" role="region" aria-labelledby="contact-title">
+    <div style="margin: 40px auto;">
+        <p class="bonded-insured">&#9989; &nbsp; {{ i18n "bonded_insured" | default "We are bonded and insured!" }}</p>
+    </div>
+    <div class="ready text-center">
+        <a href="{{ "/request/" | relLangURL }}" class="cta-button cta-button-now">&nbsp; &nbsp; {{ i18n "start" | default "Start Now" }} &nbsp; &nbsp; </a>
+    </div>
+</div>
 {{ end }}
