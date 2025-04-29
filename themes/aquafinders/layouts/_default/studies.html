@@ -33,6 +33,13 @@
         <a href="{{ "/gallery/" | relLangURL }}">Image Gallery</a>
     </p>
 
-
 </section>
+<div class="text-center" role="region" aria-labelledby="contact-title">
+    <div style="margin: 40px auto;">
+        <p class="bonded-insured">&#9989; &nbsp; {{ i18n "bonded_insured" | default "We are bonded and insured!" }}</p>
+    </div>
+    <div class="ready text-center">
+        <a href="{{ "/request/" | relLangURL }}" class="cta-button cta-button-now">&nbsp; &nbsp; {{ i18n "start" | default "Start Now" }} &nbsp; &nbsp; </a>
+    </div>
+</div>
 {{ end }}

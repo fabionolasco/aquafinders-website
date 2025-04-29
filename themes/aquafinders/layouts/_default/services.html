@@ -1,91 +1,81 @@
 {{ define "main" }}
-<section class="hero-container" role="region" aria-labelledby="request-title">
+<section class="hero-container" role="region" aria-labelledby="services-title">
     <div class="hero">
     </div>
 </section>
 
-<h2 id="request-title" style="margin: 40px auto;">{{ i18n "services" | default "Services" }}</h2>
+<h2 id="services-title" style="margin: 40px auto;">{{ i18n "services" | default "Our Services" }}</h2>
 
-<section class="request" id="request" style="padding: 1rem;" role="region" aria-labelledby="request-title">
+<section class="request" style="padding: 1rem;" role="region" aria-labelledby="services-title">
 
-    <h3>Finding the best place for water wells</h3>
-    <p>
-        At AquaFinders, we specialize in non-invasive geophysical surveys to pinpoint the best locations for drilling wells. Using a combination of advanced techniques — including satellite imagery analysis, topographic assessment, hydrogeological research, and on-site electrical resistivity studies — we deliver a clear, detailed understanding of your property's subsurface conditions.
-
-        Our science-backed approach dramatically reduces the risk of drilling dry wells, saving you time, money, and resources. 
-        <br>
-        <br>
-        Our geophysical surveys are designed to be cost-effective and environmentally friendly. By using non-invasive techniques, we minimize the impact on the surrounding environment while providing accurate and reliable data for well drilling. Trust AquaFinders to help you locate water more efficiently, with greater accuracy and peace of mind.
-        <br>
-        <br>
-        <a class="small block mb40" style="text-decoration: none;" href="{{ "/process/" | relLangURL }}">
-            {{ i18n "info_process" | default "More information about our process" }}
-        </a>
-    </p>
+    <h3>Find the Best Location for Your Water Well</h3>
+    <h4>AquaFinders can help...</h4>
+    <a href="{{ "/find-water/" | relLangURL }}" style="text-decoration: none;">
+        <ul style="padding-left: 20px;">
+            <li>Homeowners looking to find the best place to drill a well and maximize their investment</li>
+            <li>Homesteaders aiming to optimize their land's water potential for farming, gardening, and livestock</li>
+            <li>Land buyers to be confident that the land they are purchasing can produce the water they need</li>
+            <li>Well drilling companies aiming to increase their success rate and customer satisfaction</li>
+            <li>Builders seeking to minimize construction delays and reduce unpredictable expenses</li>
+            <li>Farmers needing a reliable water source for irrigation and livestock operations</li>
+            <li>Developers planning subdivisions or commercial projects that require multiple wells</li>
+            <li>Landowners preparing for future construction, farming, or increasing resale value</li>
+        </ul>
+    </a>
     
 </section>
 
-<section class="request" id="request" style="padding: 1rem;" role="region" aria-labelledby="request-title">
+<section class="request" style="padding: 1rem; margin-top: 2rem;" role="region" aria-labelledby="services-title">
 
-    <h3>Avoiding fractures and water</h3>
-
-    <p>
-        At AquaFinders, we can also help you avoid drilling in areas with fractures or water. Our non-invasive geophysical surveys are designed to identify potential issues before you start drilling, ensuring that you can make informed decisions.
-        Using a combination of advanced techniques — including satellite imagery analysis, topographic assessment, hydrogeological research, and on-site electrical resistivity studies — we deliver a clear, detailed understanding of your property's subsurface conditions.
-
-        Our science-backed approach dramatically reduces the risk of drilling dry wells, saving you time, money, and resources.
-        <br>
-        <br>
-        Builders and contractors can benefit from our services by avoiding costly mistakes and ensuring that their projects are completed on time and within budget. Our geophysical surveys are designed to be cost-effective and environmentally friendly. By using non-invasive techniques, we minimize the impact on the surrounding environment while providing accurate and reliable data.
-        Trust AquaFinders to help you dig confidently, use your resources more efficiently, and achieve peace of mind.
-        <br>
-        <br>
-        <a class="small block mb40" style="text-decoration: none;" href="{{ "/process/" | relLangURL }}">
-            {{ i18n "info_process" | default "More information about our process" }}
-        </a>
-    </p>
+    <h3>Avoid Underground Fractures and Unexpected Water During Construction</h3>
+    <h4>AquaFinders can help...</h4>
+    <a href="{{ "/avoid-water/" | relLangURL }}" style="text-decoration: none;">
+        <ul style="padding-left: 20px;">
+            <li>Builders needing to avoid costly surprises like underground fractures, caves, or unexpected water during foundation work</li>
+            <li>Engineers planning deep footings, retaining walls, or basements, ensuring soil and rock stability</li>
+            <li>Contractors installing large poles, towers, or fences requiring safe, dry drilling conditions</li>
+            <li>Land developers aiming to prevent delays and minimize construction risks</li>
+            <li>Homeowners planning pools or major landscaping projects where subsurface conditions matter</li>
+            <li>Utility companies and municipalities installing underground pipelines, cables, or infrastructure</li>
+        </ul>
+    </a>
 
 </section>
 
-<section class="request" id="request" style="padding: 1rem;" role="region" aria-labelledby="request-title">
+<section class="request" style="padding: 1rem; margin-top: 2rem;" role="region" aria-labelledby="services-title">
 
-    <h3>Soil Resistivity</h3>
-
-    <p>
-        Our Soil Resistivity studies are often necessary for power stations, landfills, and other projects that requires this type of environmental studies.
-        It can also be used to evaluate possible spills and contamination in the soil.
-        <br>
-        <br>
-        We use the latest technology to provide you with the best results.
-        Our team of experts will conduct a thorough analysis of your site, using advanced techniques to measure the resistivity of the soil.
-        This information is crucial for understanding the subsurface conditions of your site, including possible chemical infiltration that already happened or the possibility of future contamination of waterbeds.
-        <br>
-        <br>
-        <a class="small block mb40" style="text-decoration: none;" href="{{ "/process/" | relLangURL }}">
-            {{ i18n "info_process" | default "More information about our process" }}
-        </a>
-    </p>
+    <h3>Soil Resistivity Studies for Safer and Smarter Projects</h3>
+    <h4>AquaFinders can help...</h4>
+    <a href="{{ "/resistivity/" | relLangURL }}" style="text-decoration: none;">
+        <ul style="padding-left: 20px;">
+            <li>Engineers and contractors needing soil resistivity data for power stations, substations, and grounding system designs</li>
+            <li>Environmental consultants assessing landfills, waste disposal sites, or hazardous material storage areas</li>
+            <li>Project managers overseeing industrial developments where spill risks or soil contamination are concerns</li>
+            <li>Landowners investigating possible soil contamination before purchasing or developing property</li>
+            <li>Companies evaluating chemical infiltration risks that could threaten waterbeds and groundwater sources</li>
+            <li>Municipalities conducting environmental impact studies for infrastructure expansion</li>
+        </ul>
+    </a>
 
 </section>
 
-<section class="request" id="request" style="padding: 1rem;" role="region" aria-labelledby="request-title">
+<section class="request" style="padding: 1rem; margin-top: 2rem;" role="region" aria-labelledby="services-title">
 
-    <h3>Mining and Environmental Studies</h3>
-
-    <p>
-        Many endeavors require a thorough understanding of the subsurface conditions. Our team can perform a range of studies, including geological, hydrogeological, and resistivity, which are often necessary for mining and environmental projects.
-        <br>
-        <br>
-        Contact us to learn more about our services and how we can help you with your project.
-        <br>
-        <br>
-        <a class="small block mb40" style="text-decoration: none;" href="{{ "/process/" | relLangURL }}">
-            {{ i18n "info_process" | default "More information about our process" }}
-        </a>
-    </p>
+    <h3>Mining and Environmental Studies for Safer and Smarter Development</h3>
+    <h4>AquaFinders can help...</h4>
+    <a href="{{ "/studies/" | relLangURL }}" style="text-decoration: none;">
+        <ul style="padding-left: 20px;">
+            <li>For mining companies needing detailed geological and hydrogeological studies before exploration or excavation</li>
+            <li>For environmental consultants conducting site assessments, impact studies, or land restoration projects</li>
+            <li>For developers seeking to understand subsurface risks before investing in large-scale projects</li>
+            <li>For landowners evaluating the environmental safety and resource potential of their property</li>
+            <li>For government agencies requiring site evaluations for compliance, remediation, or conservation efforts</li>
+            <li>For engineers planning tunnels, quarries, or earthworks where subsurface stability is critical</li>
+        </ul>
+    </a>
 
     <br>
-    <h3>Sample a resistivity imaging</h3>
+    <h3 style="margin-top: 2rem;">Sample a resistivity imaging</h3>
     <div width="100%">
         <picture>
             <source srcset="/images/slide 1.avif" type="image/avif">
@@ -94,4 +84,12 @@
     </div>
 
 </section>
+<div class="text-center" role="region" aria-labelledby="contact-title">
+    <div style="margin: 40px auto;">
+        <p class="bonded-insured">&#9989; &nbsp; {{ i18n "bonded_insured" | default "We are bonded and insured!" }}</p>
+    </div>
+    <div class="ready text-center">
+        <a href="{{ "/request/" | relLangURL }}" class="cta-button cta-button-now">&nbsp; &nbsp; {{ i18n "start" | default "Start Now" }} &nbsp; &nbsp; </a>
+    </div>
+</div>
 {{ end }}
