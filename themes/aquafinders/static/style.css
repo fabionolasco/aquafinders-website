@@ -659,6 +659,20 @@ footer a {
 
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.gallery * {
+  width: 100%;
+  height: auto;
+}
+
 .accordion {
   max-width: 800px;
   margin: 2rem auto;
@@ -790,8 +804,6 @@ footer a {
 .site-map a:hover {
   text-decoration: underline;
 }
-
-/* ...existing code... */
 
 /* Steps Infographic Styles */
 .steps-infographic {
@@ -932,8 +944,6 @@ footer a {
     font-size: 1.1rem;
   }
 }
-
-/* ...existing code... */
 
 /* Responsive Design - Mobile First Approach */
 /* Small devices (landscape phones, 480px and up) */
