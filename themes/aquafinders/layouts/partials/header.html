@@ -21,7 +21,7 @@
                 <li><a href="{{ "/faq/" | relLangURL }}">{{ i18n "faq" | default "FAQ" }}</a></li>
                 <li><a href="{{ "/contact" | relLangURL }}">{{ i18n "contact" | default "Contact" }}</a></li>
                 <li class="show-on-mobile">
-                    {{ if eq $.Lang "en" }}∂
+                    {{ if eq $.Lang "en" }}
                     <a href="{{ "/es/" | relURL }}">{{ i18n "spanish_version" | default "Spanish Version" }}</a>
                     {{ else }}
                     <a href="{{ "/" | relURL }}">{{ i18n "english_version" | default "English Version" }}</a>
