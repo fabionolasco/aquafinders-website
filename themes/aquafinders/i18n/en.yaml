@@ -118,6 +118,9 @@ geo_study: "Geological Study"
 geo_study_description: "We conduct a comprehensive evaluation of your property that includes the analysis of multiple satellite images, detailed topographic assessments, thorough geological studies, and in-depth hydrogeological investigations. This multi-layered approach enables us to identify the areas with the highest water potential. This study also helps reduce your costs by directing us to the best location for field tests, eliminating the need for multiple expensive tests."
 eri_study: "Electrical Resistivity Imaging"
 eri_study_description: "We perform a Geophysical Field Survey at your property utilizing Electrical Resistivity Imaging (ERI) technology, followed by comprehensive data analysis, professional interpretation of results (with multiple geologists), detailed report generation, and a clear explanation of the findings to ensure full understanding and practical application. This report will be used by your well driller/builder in their decision-making."
+geo_steps: "Steps"
+whatsapp: "Contact us via WhatsApp"
+physical_address: "Physical address by appointment only."
 
 # Other sections
 sitemap_title: "Site Map"
