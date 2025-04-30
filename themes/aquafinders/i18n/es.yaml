@@ -9,29 +9,29 @@ spanish_version: "Versión en Español"
 english_version: "Versión en Inglés"
 
 # Hero section
-hero_title: "¡Encuentra el mejor lugar para perforar tu pozo de agua!"
-hero_description: "¡Los pozos secos o de bajo rendimiento son un riesgo real! Además de dañar tu presupuesto, también pueden retrasar la construcción. En AquaFinders, combinamos tecnología avanzada de imágenes subterráneas y análisis geológico experto para evaluar las aguas subterráneas ocultas debajo de tu terreno. Te ayudaremos a seleccionar con confianza las ubicaciones óptimas para la perforación, mejorando significativamente las posibilidades de un pozo productivo que te beneficiará durante décadas."
+hero_title: "¡Encuentre el mejor lugar para perforar su pozo de agua!"
+hero_description: "¡Los pozos secos o de bajo rendimiento son un gran riesgo! Aparte de arruinar su presupuesto, también pueden retrasar su proyecto de construcción. En AquaFinders, combinamos tecnología avanzada de imágenes subterráneas y análisis geológico experto para evaluar las aguas subterráneas ocultas debajo de su terreno. Le ayudaremos a seleccionar con confianza la ubicación óptima para la perforación, mejorando significativamente las posibilidades de un pozo productivo que le beneficiará por mucho tiempo."
 free_consultation: "Consulta Gratuita"
-explanation: "Proporcionamos a perforadores de pozos y constructores asesoramiento experto sobre los mejores lugares para excavar. ✨"
+explanation: "✨ Proporcionamos a perforadores de pozos y constructores asesoramiento experto para identificar los mejores lugares donde perforar. ✨"
 
 # Services section
 our_services: "Nuestros Servicios"
-finding_water: "Encontrar agua"
-finding_water_description: "Utilizamos técnicas científicas avanzadas para identificar ubicaciones óptimas para la perforación de pozos - residencial, comercial y agricultura."
-avoiding_water: "Evitando agua"
+finding_water: "Encontrar Agua"
+finding_water_description: "Utilizamos técnicas científicas avanzadas para identificar ubicaciones óptimas para la perforación de pozos - residencial, comercial y agricultural."
+avoiding_water: "Evitar Agua"
 avoiding_water_description: "A veces quieres evitar el agua, como al excavar cimientos más profundos, depósitos de gas, vertederos, etc. También podemos ayudarte con eso."
-soil_resistivity: "Resistividad del suelo"
+soil_resistivity: "Resistividad Subterránea"
 soil_resistivity_description: "Prueba requerida para proyectos de conexión a tierra para subestaciones y sistemas de transmisión, granjas solares, plantas industriales, etc."
 studies: "Estudios"
-studies_description: "Estudios geofísicos e hidrogeofísicos de tu propiedad, para ayudar en trabajos ambientales, de construcción y minería."
+studies_description: "Estudios geofísicos e hidrogeofísicos de su propiedad, para asistir en el manejo de trabajos ambientales, de construcción y minería."
 
 # Why us section
 who_hire_us: "¿Quién nos contrata?"
 residential: "Residencial"
 residential_description: "Propietarios que planean perforar pozos de agua en construcciones nuevas o sitios existentes."
-agriculture: "Agricultura"
+agriculture: "Agricultural"
 agriculture_description: "Granjas que buscan los mejores lugares para perforar pozos de agua de alto rendimiento para riego de cultivos o consumo animal."
-business: "Negocios"
+business: "Comercial"
 business_description: "Constructores que buscan estudiar el terreno debajo de su propiedad, a veces para evitar vetas de agua (fracturas)."
 
 # About us section
