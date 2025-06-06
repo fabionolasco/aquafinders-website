@@ -7,7 +7,7 @@ faq: "Preguntas Frecuentes"
 contact: "Contacto"
 spanish_version: "Versión en Español"
 english_version: "Versión en Inglés"
-podcast: "podcast-es.mp4"
+podcast: "/podcast-es.mp4"
 
 # Hero section
 hero_title: "¡Encuentre el mejor lugar para perforar su pozo de agua!"
