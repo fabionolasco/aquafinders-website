@@ -10,5 +10,6 @@
   "license": "ISC",
   "description": "AquaFinder.site",
   "devDependencies": {
+    "hugo": "0.145.0"
   }
 }
