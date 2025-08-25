@@ -4,6 +4,11 @@
   status = 200
 
 [[redirects]]
+  from = "/promo-request"
+  to = "/en/promo-request"
+  status = 200
+
+[[redirects]]
   from = "/success"
   to = "/success.html"
   status = 200

@@ -1,6 +1,6 @@
 ---
-title: "AquaFinders - Soluciones para Pozos de Agua"
-description: "Servicios expertos de localización de pozos de agua en Carolina del Norte y Carolina del Sur. Nuestro análisis geológico te ayuda a encontrar la ubicación óptima para perforar."
+title: "AquaFinders - Encuentra el mejor lugar para perforar un pozo de agua"
+description: "Servicios expertos en localización de aguas subterráneas. ¡Ahorra miles de dólares encontrando el lugar perfecto para perforar tu pozo de agua!"
 date: 2025-04-11
 draft: false
 ---

@@ -1,0 +1,243 @@
+{{ define "main" }}
+<section class="hero-container" role="region" aria-labelledby="request-title">
+    <div class="hero">
+    </div>
+</section>
+
+<div style="width: 100%; padding: 40px 0px; display: flex; flex-wrap: wrap; gap: 20px;">
+
+    <section class="request" id="request" role="region" aria-labelledby="request-title"
+        style="width: 45%; margin-left: 15%; display: inline-block; min-width: 500px; max-width: 800px;">
+        <h2 id="request-title" style="display: inline-block; text-align: left;">$150 Gift Card {{ i18n "promotion" }}
+        </h2>
+
+        <p style="margin-bottom: 30px;">
+            Use this form to redeem your complimentary satellite-based hydrogeological study, a $150 service that evaluates the groundwater potential across different areas of your property.
+        </p>
+
+        <div class="rules-container">
+            <h4 class="rules-title" onclick="toggleRules()" style="cursor: pointer;">
+                <span class="rules-icon collapsed" id="rulesIcon">▼</span>
+                Promotion Rules
+            </h4>
+            <ol class="rules-list collapsed" id="rulesList">
+                <li>This form is intended only for participants who own a valid AquaFinders $150 Gift Card.</li>
+                <li>The service covered by this card is: One hydrogeological analysis of a single property using
+                    satellite imagery.</li>
+                <li>This service may take several days to be completed. We will contact you once work it is done.</li>
+                <li>This service does <strong>not</strong> include any other AquaFinders services (such as on-site
+                    visits, drilling guidance, or follow-up analysis), which must be purchased separately.</li>
+                <li>The card is valued at $150 and will be fully applied to the service described above. No partial
+                    credit, refund, or cash value is available.</li>
+                <li>Each card may be used only once. Lost, stolen, or duplicated cards will not be honored.</li>
+                <li>The service is subject to availability and will be scheduled on a first-come, first-served
+                    basis.</li>
+                <li>AquaFinders reserves the right to refuse service, revoke service, and cancel this promotion by any
+                    reason or no reason.</li>
+                <li>Expired cards may not be honored.</li>
+                <li>The Geologists working on this service can be licensed and reside in any country.</li>
+                <li>By submitting this form, you consent to being contacted by AquaFinders regarding your service
+                    request and related promotions.</li>
+                <li>All form fields must be completed accurately. Incomplete or false submissions may result in
+                    cancellation of the request.</li>
+                <li>AquaFinders is not responsible for technical errors, service interruptions, or circumstances
+                    beyond our control that may affect redemption.</li>
+                <li><strong>No Guarantee of Water:</strong> The hydrogeological satellite analysis is an important
+                    but preliminary step in the water-finding process. Results are based on scientific indicators
+                    and probabilities, but AquaFinders cannot guarantee that water will be present, accessible, or
+                    suitable for use on your property. Additional studies, surveys, or drilling may be required.
+                </li>
+                <li><strong>Limitation of Liability:</strong> AquaFinders shall not be held liable for any decisions, actions, costs, or damages resulting from the use or interpretation of the report provided. The report is for informational purposes only and should not be relied upon as a sole basis for drilling, construction, or financial decisions.</li>
+                <li>Use of this card constitutes acceptance of these rules. AquaFinders reserves the right to update
+                    these terms at any time without prior notice.</li>
+            </ol>
+        </div>
+
+        <style>
+            .rules-container {
+                background: #f8f9fa;
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                padding: 20px;
+                max-width: 800px;
+            }
+
+            .rules-title {
+                color: #2c3e50;
+                margin-bottom: 15px;
+                font-size: 1.2em;
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .rules-icon {
+                transition: transform 0.3s ease;
+                font-size: 0.8em;
+            }
+
+            .rules-icon.collapsed {
+                transform: rotate(-90deg);
+            }
+
+            .rules-list {
+                counter-reset: rule-counter;
+                padding-left: 0;
+                transition: max-height 0.3s ease, opacity 0.3s ease;
+                overflow: hidden;
+            }
+
+            .rules-list.collapsed {
+                max-height: 0;
+                opacity: 0;
+                margin: 0;
+            }
+
+            .rules-list li {
+                counter-increment: rule-counter;
+                margin-bottom: 12px;
+                padding: 10px 15px 10px 30px;
+                background: white;
+                line-height: 1.5;
+                position: relative;
+                list-style: none;
+            }
+
+            .rules-list li::before {
+                content: counter(rule-counter);
+                position: absolute;
+                left: 0px;
+                top: 10px;
+                color: #3498db;
+                width: 25px;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 0.9em;
+            }
+
+            .rules-list li strong {
+                color: #e74c3c;
+            }
+        </style>
+
+        <script>
+            function toggleRules() {
+                const rulesList = document.getElementById('rulesList');
+                const rulesIcon = document.getElementById('rulesIcon');
+
+                rulesList.classList.toggle('collapsed');
+                rulesIcon.classList.toggle('collapsed');
+            }
+        </script>
+
+        <div style="width: 100%;">
+            <h3 style="margin: 20px 0;">Fill out the form to redeem the card</h3>
+
+            <form method="post" id="contact-form" name="contact-form" action="https://api.web3forms.com/submit"
+                class="contact-form">
+
+                <input type="hidden" name="from_name" value="{{ .Site.Title }} Contact">
+                <input type="hidden" name="subject" value="{{ .Site.Title }} Website Contact">
+                <input type="hidden" name="redirect" value="{{ .Site.BaseURL }}success">
+                <input type="hidden" name="access_key" value="38605c7d-f8ee-4232-bf07-d8a8f4b639fa">
+                <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <div style="margin: 10px 0 30px 0;">
+                    <div><input type="checkbox" id="preferredEmail" name="preferred[]" value="email"> <label
+                            for="preferredEmail">I agree and accept the Promotion Rules</label></div>
+                </div>
+
+                <label for="name">{{ i18n "promo_card" }}*</label>
+                <input type="text" id="promo_card" name="promo_card" 
+                    required>
+
+                <label for="name">Full Name*</label>
+                <input type="text" id="name" name="name"  required>
+
+                <label for="email">{{ i18n "email" }}*</label>
+                <input type="email" id="email" name="email"  required>
+
+                <label for="phone">{{ i18n "phone_number" }}*</label>
+                <input type="tel" id="phone" name="phone"  required>
+
+                <label>{{ i18n "preferred_communication" }}</label>
+                <div>
+                    <div><input type="checkbox" id="preferredEmail" name="preferred[]" value="email"> <label
+                            for="preferredEmail">
+                            {{ i18n "email" }}</label></div>
+                    <div><input type="checkbox" id="preferredCall" name="preferred[]" value="phoneCall"> <label
+                            for="preferredCall"> {{ i18n "phone_call" }}</label></div>
+                    <div><input type="checkbox" id="preferredText" name="preferred[]" value="phoneText"> <label
+                            for="preferredText"> {{ i18n "phone_text" }}</label></div>
+                </div>
+
+                <h3 style="margin-top: 40px;">Info of the property to be evaluated:</h3>
+
+                <label for="prop_address">Address*</label>
+                <input type="text" id="prop_address" name="prop_address"  required>
+
+                <label for="prop_city">City*</label>
+                <input type="text" id="prop_city" name="prop_city"  required>
+
+                <label for="prop_state">State*</label>
+                <input type="text" id="prop_state" name="prop_state"  required>
+
+                <label for="prop_zipcode">Zipcode*</label>
+                <input type="text" id="prop_zipcode" name="prop_zipcode"  required>
+
+                <label for="prop_size">Property Size (acres)*</label>
+                <input type="text" id="prop_size" name="prop_size"  required>
+
+                <label for="prop_owner">Full Name of the Property Owner</label>
+                <input type="text" id="prop_owner" name="prop_owner"  required>
+
+                <h3 style="margin-top: 40px;">In case your property already have a well:</h3>
+
+                <label for="well_gallons">How many gallons per minute does it produce?</label>
+                <input type="text" id="well_gallons" name="well_gallons"  required>
+
+                <label for="well_depth">Well Depth?</label>
+                <input type="text" id="well_depth" name="well_depth"  required>
+
+                <label for="when_dug">When was the well dug?</label>
+                <input type="text" id="when_dug" name="when_dug"  required>
+
+                <label for="issues_water">Any issues with the water?</label>
+                <input type="text" id="issues_water" name="issues_water"  required>
+
+                <h3 style="margin-top: 40px;">Comments:</h3>
+
+                <label for="message">Any additional comments or questions?</label>
+                <textarea id="message" name="message" 
+                    required></textarea>
+
+                <label>{{ i18n "captcha" }}</label>
+                <div class="h-captcha" data-captcha="true"></div>
+
+                <p style="margin-top: 30px;">This service may take several days to be completed. We will contact you
+                    once work it is done. A full report will be also sent to your email.</p>
+
+                <button type="submit" class="cta-button">{{ i18n "submit" }} Request</button>
+            </form>
+
+        </div>
+    </section>
+
+    <section id="adv" style="width: 25%; margin-right: 15%; min-width: 300px;">
+        <h4 style="text-align: center;">Learn about out other services:</h4>
+        <a href="{{ "/services" | relLangURL }}" style="height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <img src="/images/slide 1.avif" alt="We are insured" style="max-width: 300px; height: auto; ">
+        </a>
+        <div style="height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <img src="/images/we-are-insured.png" alt="We are insured" style="max-width: 300px; height: auto; ">
+        </div>
+    </section>
+</div>
+
+{{ end }}
