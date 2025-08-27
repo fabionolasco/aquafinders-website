@@ -1,17 +1,200 @@
 {{ define "main" }}
+
+<style>
+    .main-container {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .main-container section {
+        padding: 20px 0 !important;
+    }
+
+    .request {
+        flex: 1;
+        min-width: 300px;
+        max-width: 800px;
+    }
+
+    #request-title {
+        display: block;
+        text-align: left;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .rules-container {
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .rules-title {
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-size: 1.1em;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .rules-icon {
+        transition: transform 0.3s ease;
+        font-size: 0.8em;
+    }
+
+    .rules-icon.collapsed {
+        transform: rotate(-90deg);
+    }
+
+    .rules-list {
+        counter-reset: rule-counter;
+        padding-left: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        overflow: hidden;
+    }
+
+    .rules-list.collapsed {
+        max-height: 0;
+        opacity: 0;
+        margin: 0;
+    }
+
+    .rules-list li {
+        counter-increment: rule-counter;
+        margin-bottom: 12px;
+        padding: 10px 15px 10px 30px;
+        background: white;
+        line-height: 1.5;
+        position: relative;
+        list-style: none;
+        font-size: 0.9rem;
+    }
+
+    .rules-list li::before {
+        content: counter(rule-counter);
+        position: absolute;
+        left: 0px;
+        top: 10px;
+        color: #3498db;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+
+    .rules-list li strong {
+        color: #e74c3c;
+    }
+
+    #adv {
+        flex: 0 0 300px;
+        min-width: 250px;
+    }
+
+    .adv-content {
+        text-align: center;
+    }
+
+    .adv-image-container {
+        height: 150px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .adv-image-container img {
+        max-width: 100%;
+        height: auto;
+        max-height: 150px;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+
+        .main-container section {
+            padding: 20px !important;
+        }
+
+        .main-container {
+            padding: 10px;
+            flex-direction: column;
+        }
+
+        .request {
+            min-width: unset;
+        }
+
+        #adv {
+            flex: none;
+            min-width: unset;
+            order: 1;
+        }
+
+        #request-title {
+            font-size: 1.3rem;
+        }
+
+        .rules-container {
+            padding: 10px;
+        }
+
+        .rules-list li {
+            padding: 8px 12px 8px 25px;
+            font-size: 0.85rem;
+        }
+
+        .adv-image-container {
+            height: 120px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .main-container {
+            padding: 5px;
+        }
+
+        #request-title {
+            font-size: 1.2rem;
+        }
+
+        .rules-list li {
+            padding: 6px 10px 6px 20px;
+            font-size: 0.8rem;
+        }
+
+        .rules-list li::before {
+            width: 18px;
+            height: 18px;
+            font-size: 0.8em;
+        }
+    }
+</style>
+
 <section class="hero-container" role="region" aria-labelledby="request-title">
     <div class="hero">
     </div>
 </section>
 
-<div style="width: 100%; padding: 40px 0px; display: flex; flex-wrap: wrap; gap: 20px;">
+<div class="main-container">
+    <section class="request" id="request" role="region" aria-labelledby="request-title">
+        <h2 id="request-title">$150 Gift Card {{ i18n "promotion" }}</h2>
 
-    <section class="request" id="request" role="region" aria-labelledby="request-title"
-        style="width: 45%; margin-left: 15%; display: inline-block; min-width: 500px; max-width: 800px;">
-        <h2 id="request-title" style="display: inline-block; text-align: left;">$150 Gift Card {{ i18n "promotion" }}
-        </h2>
-
-        <p style="margin-bottom: 30px;">
+        <p style="margin-bottom: 20px;">
             Use this form to redeem your complimentary satellite-based hydrogeological study, a $150 service that evaluates the groundwater potential across different areas of your property.
         </p>
 
@@ -22,108 +205,23 @@
             </h4>
             <ol class="rules-list collapsed" id="rulesList">
                 <li>This form is intended only for participants who own a valid AquaFinders $150 Gift Card.</li>
-                <li>The service covered by this card is: One hydrogeological analysis of a single property using
-                    satellite imagery.</li>
+                <li>The service covered by this card is: One hydrogeological analysis of a single property using satellite imagery.</li>
                 <li>This service may take several days to be completed. We will contact you once work it is done.</li>
-                <li>This service does <strong>not</strong> include any other AquaFinders services (such as on-site
-                    visits, drilling guidance, or follow-up analysis), which must be purchased separately.</li>
-                <li>The card is valued at $150 and will be fully applied to the service described above. No partial
-                    credit, refund, or cash value is available.</li>
+                <li>This service does <strong>not</strong> include any other AquaFinders services (such as on-site visits, drilling guidance, or follow-up analysis), which must be purchased separately.</li>
+                <li>The card is valued at $150 and will be fully applied to the service described above. No partial credit, refund, or cash value is available.</li>
                 <li>Each card may be used only once. Lost, stolen, or duplicated cards will not be honored.</li>
-                <li>The service is subject to availability and will be scheduled on a first-come, first-served
-                    basis.</li>
-                <li>AquaFinders reserves the right to refuse service, revoke service, and cancel this promotion by any
-                    reason or no reason.</li>
+                <li>The service is subject to availability and will be scheduled on a first-come, first-served basis.</li>
+                <li>AquaFinders reserves the right to refuse service, revoke service, and cancel this promotion by any reason or no reason.</li>
                 <li>Expired cards may not be honored.</li>
                 <li>The Geologists working on this service can be licensed and reside in any country.</li>
-                <li>By submitting this form, you consent to being contacted by AquaFinders regarding your service
-                    request and related promotions.</li>
-                <li>All form fields must be completed accurately. Incomplete or false submissions may result in
-                    cancellation of the request.</li>
-                <li>AquaFinders is not responsible for technical errors, service interruptions, or circumstances
-                    beyond our control that may affect redemption.</li>
-                <li><strong>No Guarantee of Water:</strong> The hydrogeological satellite analysis is an important
-                    but preliminary step in the water-finding process. Results are based on scientific indicators
-                    and probabilities, but AquaFinders cannot guarantee that water will be present, accessible, or
-                    suitable for use on your property. Additional studies, surveys, or drilling may be required.
-                </li>
+                <li>By submitting this form, you consent to being contacted by AquaFinders regarding your service request and related promotions.</li>
+                <li>All form fields must be completed accurately. Incomplete or false submissions may result in cancellation of the request.</li>
+                <li>AquaFinders is not responsible for technical errors, service interruptions, or circumstances beyond our control that may affect redemption.</li>
+                <li><strong>No Guarantee of Water:</strong> The hydrogeological satellite analysis is an important but preliminary step in the water-finding process. Results are based on scientific indicators and probabilities, but AquaFinders cannot guarantee that water will be present, accessible, or suitable for use on your property. Additional studies, surveys, or drilling may be required.</li>
                 <li><strong>Limitation of Liability:</strong> AquaFinders shall not be held liable for any decisions, actions, costs, or damages resulting from the use or interpretation of the report provided. The report is for informational purposes only and should not be relied upon as a sole basis for drilling, construction, or financial decisions.</li>
-                <li>Use of this card constitutes acceptance of these rules. AquaFinders reserves the right to update
-                    these terms at any time without prior notice.</li>
+                <li>Use of this card constitutes acceptance of these rules. AquaFinders reserves the right to update these terms at any time without prior notice.</li>
             </ol>
         </div>
-
-        <style>
-            .rules-container {
-                background: #f8f9fa;
-                border: 1px solid #dee2e6;
-                border-radius: 8px;
-                padding: 20px;
-                max-width: 800px;
-            }
-
-            .rules-title {
-                color: #2c3e50;
-                margin-bottom: 15px;
-                font-size: 1.2em;
-                border-bottom: 2px solid #3498db;
-                padding-bottom: 8px;
-                display: flex;
-                align-items: center;
-                gap: 8px;
-            }
-
-            .rules-icon {
-                transition: transform 0.3s ease;
-                font-size: 0.8em;
-            }
-
-            .rules-icon.collapsed {
-                transform: rotate(-90deg);
-            }
-
-            .rules-list {
-                counter-reset: rule-counter;
-                padding-left: 0;
-                transition: max-height 0.3s ease, opacity 0.3s ease;
-                overflow: hidden;
-            }
-
-            .rules-list.collapsed {
-                max-height: 0;
-                opacity: 0;
-                margin: 0;
-            }
-
-            .rules-list li {
-                counter-increment: rule-counter;
-                margin-bottom: 12px;
-                padding: 10px 15px 10px 30px;
-                background: white;
-                line-height: 1.5;
-                position: relative;
-                list-style: none;
-            }
-
-            .rules-list li::before {
-                content: counter(rule-counter);
-                position: absolute;
-                left: 0px;
-                top: 10px;
-                color: #3498db;
-                width: 25px;
-                height: 25px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: bold;
-                font-size: 0.9em;
-            }
-
-            .rules-list li strong {
-                color: #e74c3c;
-            }
-        </style>
 
         <script>
             function toggleRules() {
@@ -168,8 +266,8 @@
 
                 <label>{{ i18n "preferred_communication" }}</label>
                 <div>
-                    <div><input type="checkbox" id="preferredEmail" name="preferred[]" value="email"> <label
-                            for="preferredEmail">
+                    <div><input type="checkbox" id="preferredEmail2" name="preferred[]" value="email"> <label
+                            for="preferredEmail2">
                             {{ i18n "email" }}</label></div>
                     <div><input type="checkbox" id="preferredCall" name="preferred[]" value="phoneCall"> <label
                             for="preferredCall"> {{ i18n "phone_call" }}</label></div>
@@ -229,13 +327,17 @@
         </div>
     </section>
 
-    <section id="adv" style="width: 25%; margin-right: 15%; min-width: 300px;">
-        <h4 style="text-align: center;">Learn about out other services:</h4>
-        <a href="{{ "/services" | relLangURL }}" style="height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-            <img src="/images/slide 1.avif" alt="We are insured" style="max-width: 300px; height: auto; ">
-        </a>
-        <div style="height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-            <img src="/images/we-are-insured.png" alt="We are insured" style="max-width: 300px; height: auto; ">
+    <section id="adv">
+        <div class="adv-content">
+            <h4>Learn about our other services:</h4>
+            <a href="{{ "/services" | relLangURL }}">
+                <div class="adv-image-container">
+                    <img src="/images/slide 1.avif" alt="Our services">
+                </div>
+            </a>
+            <div class="adv-image-container">
+                <img src="/images/we-are-insured.png" alt="We are insured">
+            </div>
         </div>
     </section>
 </div>
