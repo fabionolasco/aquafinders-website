@@ -783,6 +783,7 @@ footer a {
   display: block;
   width: 100%;
   margin-bottom: 2rem;
+  vertical-align: top;
 }
 
 .box-left {
@@ -974,6 +975,26 @@ footer a {
 
 .mb40 {
   margin-bottom: 40px;
+}
+
+.all-services {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.services-section {
+  padding: 2rem;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}
+
+.services-section li {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+  line-height: 21px;
 }
 
 /* Responsive adjustments for the steps */
