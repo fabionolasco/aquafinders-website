@@ -773,6 +773,50 @@ footer a {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
+/* Find Water page styles */
+.request {
+  width: 100%;
+}
+
+.box-left,
+.box-right {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.box-left {
+  margin-right: 0;
+}
+
+.box-left a {
+  text-decoration: none;
+}
+
+.ready-section {
+  margin: 40px auto;
+}
+
+/* Responsive styles for box layout */
+@media (min-width: 768px) {
+  .box-left,
+  .box-right {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .box-left {
+    width: 50%;
+    margin-right: 10%;
+    margin-bottom: 0;
+  }
+  
+  .box-right {
+    width: 30%;
+    margin-bottom: 0;
+  }
+}
+
 /* Sitemap styles */
 .site-map {
   max-width: 800px;

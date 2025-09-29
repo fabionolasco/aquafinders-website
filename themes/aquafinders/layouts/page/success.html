@@ -3,13 +3,15 @@
     <div class="hero">
         <h2 id="hero-title">{{ i18n "success_title" }}</h2>
         <p>{{ i18n "success_message" }}</p>
-        <a href="{{ "/" | relURL }}" class="cta-button">{{ i18n "back_to_home" }}</a>
-
-        <div class="text-center"><a class="small block mb40" style="text-decoration: none;" href="{{ "/process/" | relLangURL }}">
-            {{ i18n "info_process" }}
-        </a></div>
-        <br>
-        &nbsp;
+        <a href="{{ " /" | relURL }}" class="cta-button">{{ i18n "back_to_home" }}</a>
     </div>
 </section>
+
+<div class="text-center" style="margin: 100px;">
+    <h3>{{ i18n "success_title" }}</h3>
+    <div><a class="small block mb40" style="text-decoration: none;" href="{{ " /process/" |
+            relLangURL }}">
+            {{ i18n "info_process" }}
+        </a></div>
+</div>
 {{ end }}
