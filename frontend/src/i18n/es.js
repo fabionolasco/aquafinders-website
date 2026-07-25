@@ -1,38 +1,9 @@
-// Spanish content dictionary. Sections that were English on the original site
-// are intentionally reused from the English dictionary to keep the two language
-// versions visually identical, while everything the original translated is
-// provided in Spanish here.
-
-import en from "./en";
-
-const esFaqSectionTitles = [
-  "Encuentre el mejor lugar para perforar un pozo de agua",
-  "Evitando agua subterránea",
-  "Pruebas de Resistividad",
-  "Estudios",
-];
-
-const esFaqQuestions = [
-  [
-    "1. ¿Cual es el costo?",
-    "2. ¿Qué incluye?",
-    "3. ¿Cuál es el proceso?",
-    "4. ¿Es posible obtener resultados negativos?",
-    "5. ¿Obtendría un reembolso si el resultado es negativo?",
-    "6. ¿Hay alguna garantía?",
-    "7. ¿Hasta qué profundidad llegará el estudio?",
-    "8. ¿Qué tan grande es el área que cubre el estudio?",
-  ],
-  ["1. ¿Cual es el costo?"],
-  ["1. ¿Cual es el costo?"],
-  ["1. ¿Cual es el costo?"],
-];
+// Spanish content dictionary (fully translated).
 
 const es = {
   meta: {
     home: {
-      title:
-        "Encuentra el mejor lugar para perforar un pozo de agua",
+      title: "Encuentra el mejor lugar para perforar un pozo de agua",
       description:
         "Servicios expertos en localización de aguas subterráneas. ¡Ahorra miles de dólares encontrando el lugar perfecto para perforar tu pozo de agua!",
     },
@@ -120,8 +91,8 @@ const es = {
     weAreInsured: "¡Estamos asegurados!",
     startNow: "Comenzar ahora",
     freeConsultation: "Consulta Gratuita",
-    imageGallery: "Image Gallery",
-    sampleResistivity: "Sample a resistivity imaging",
+    imageGallery: "Galería de Imágenes",
+    sampleResistivity: "Ejemplo de imagen de resistividad",
     infoProcess:
       "Haga clic aquí para obtener más información sobre nuestro proceso...",
     skipToContent: "Saltar al contenido principal",
@@ -199,17 +170,107 @@ const es = {
     imageAlt: "Equipo de AquaFinders realizando un estudio de aguas subterráneas",
   },
 
-  // Service detail pages were English on the original ES site — reuse verbatim.
-  servicePages: en.servicePages,
+  servicePages: {
+    findWater: {
+      heading: "Descubra Agua con Confianza",
+      body: [
+        "En AquaFinders, nos especializamos en estudios geofísicos no invasivos para identificar las mejores ubicaciones para perforar pozos. Utilizando una combinación de técnicas avanzadas —incluyendo el análisis de imágenes satelitales, la evaluación topográfica, la investigación hidrogeológica y estudios de resistividad eléctrica en el sitio— le ofrecemos una comprensión clara y detallada de las condiciones subterráneas de su propiedad. Nuestro enfoque respaldado por la ciencia reduce drásticamente el riesgo de perforar pozos secos, ahorrándole tiempo, dinero y recursos.",
+        "Nuestros estudios geofísicos están diseñados para ser rentables y respetuosos con el medio ambiente. Al utilizar técnicas no invasivas, minimizamos el impacto sobre el entorno mientras proporcionamos datos precisos y confiables para la perforación de pozos. Confíe en AquaFinders para localizar agua de manera más eficiente, con mayor precisión y tranquilidad.",
+      ],
+    },
+    avoidWater: {
+      heading: "Evitando fracturas y agua",
+      body: [
+        "En AquaFinders, también podemos ayudarle a evitar perforar en áreas con fracturas o agua. Nuestros estudios geofísicos no invasivos están diseñados para identificar posibles problemas antes de que comience a perforar, garantizando que pueda tomar decisiones informadas. Utilizando una combinación de técnicas avanzadas —incluyendo el análisis de imágenes satelitales, la evaluación topográfica, la investigación hidrogeológica y estudios de resistividad eléctrica en el sitio— le ofrecemos una comprensión clara y detallada de las condiciones subterráneas de su propiedad. Nuestro enfoque respaldado por la ciencia reduce drásticamente el riesgo de perforar pozos secos, ahorrándole tiempo, dinero y recursos.",
+        "Los constructores y contratistas pueden beneficiarse de nuestros servicios al evitar errores costosos y asegurar que sus proyectos se completen a tiempo y dentro del presupuesto. Nuestros estudios geofísicos están diseñados para ser rentables y respetuosos con el medio ambiente. Al utilizar técnicas no invasivas, minimizamos el impacto sobre el entorno mientras proporcionamos datos precisos y confiables. Confíe en AquaFinders para excavar con confianza, usar sus recursos de manera más eficiente y lograr tranquilidad.",
+      ],
+    },
+    resistivity: {
+      heading: "Resistividad del Suelo",
+      body: [
+        "Nuestros estudios de Resistividad del Suelo suelen ser necesarios para centrales eléctricas, vertederos y otros proyectos que requieren este tipo de estudios ambientales. También pueden utilizarse para evaluar posibles derrames y contaminación en el suelo.",
+        "Utilizamos la tecnología más reciente para brindarle los mejores resultados. Nuestro equipo de expertos realizará un análisis exhaustivo de su sitio, utilizando técnicas avanzadas para medir la resistividad del suelo. Esta información es crucial para comprender las condiciones subterráneas de su sitio, incluyendo posibles infiltraciones químicas que ya ocurrieron o la posibilidad de contaminación futura de los mantos acuíferos.",
+      ],
+    },
+    studies: {
+      heading: "Estudios Mineros y Ambientales",
+      body: [
+        "Muchos proyectos requieren una comprensión profunda de las condiciones subterráneas. Nuestro equipo puede realizar una variedad de estudios, incluyendo geológicos, hidrogeológicos y de resistividad, que a menudo son necesarios para proyectos mineros y ambientales.",
+        "Contáctenos para obtener más información sobre nuestros servicios y cómo podemos ayudarle con su proyecto.",
+      ],
+    },
+  },
+
   servicesList: {
-    ...en.servicesList,
     heading: "Servicios",
+    sampleHeading: "Ejemplo de imagen de resistividad",
+    sampleDescription:
+      "La imagen de resistividad muestra una vista en sección transversal del subsuelo a lo largo de una línea recta. Las zonas de baja resistividad (colores cálidos como el rojo y el amarillo) pueden indicar suelo húmedo o acuíferos, mientras que las zonas de alta resistividad (colores fríos como el azul y el verde) suelen representar roca, suelo seco o capas impermeables.",
+    cards: [
+      {
+        key: "findWater",
+        title: "Encontrar Agua",
+        subtitle: "Encuentre la mejor ubicación para su pozo de agua",
+        items: [
+          "Propietarios que buscan el mejor lugar para perforar un pozo y maximizar su inversión",
+          "Personas que desean optimizar el potencial de agua de su terreno para cultivos, jardinería y ganado",
+          "Compradores de terrenos que quieren tener la certeza de que la tierra que adquieren puede producir el agua que necesitan",
+          "Empresas de perforación de pozos que buscan aumentar su tasa de éxito y la satisfacción del cliente",
+          "Constructores que buscan minimizar los retrasos en la construcción y reducir gastos imprevistos",
+          "Agricultores que necesitan una fuente de agua confiable para el riego y el ganado",
+          "Desarrolladores que planifican subdivisiones o proyectos comerciales que requieren múltiples pozos",
+          "Terratenientes que se preparan para futuras construcciones, agricultura o para aumentar el valor de reventa",
+        ],
+      },
+      {
+        key: "avoidWater",
+        title: "Evitar Agua",
+        subtitle:
+          "Evite fracturas subterráneas y agua inesperada durante la construcción",
+        items: [
+          "Constructores que necesitan evitar sorpresas costosas como fracturas subterráneas, cavidades o agua inesperada durante los trabajos de cimentación",
+          "Ingenieros que planifican zapatas profundas, muros de contención o sótanos, asegurando la estabilidad del suelo y la roca",
+          "Contratistas que instalan postes grandes, torres o cercas que requieren condiciones de perforación seguras y secas",
+          "Desarrolladores de terrenos que buscan prevenir retrasos y minimizar los riesgos de construcción",
+          "Propietarios que planifican piscinas o grandes proyectos de paisajismo donde las condiciones subterráneas son importantes",
+          "Empresas de servicios públicos y municipios que instalan tuberías, cables o infraestructura subterránea",
+        ],
+      },
+      {
+        key: "resistivity",
+        title: "Resistividad del Suelo",
+        subtitle:
+          "Estudios de resistividad del suelo para proyectos más seguros e inteligentes",
+        items: [
+          "Ingenieros y contratistas que necesitan datos de resistividad del suelo para centrales eléctricas, subestaciones y diseños de sistemas de conexión a tierra",
+          "Consultores ambientales que evalúan vertederos, sitios de eliminación de residuos o áreas de almacenamiento de materiales peligrosos",
+          "Gerentes de proyecto que supervisan desarrollos industriales donde los riesgos de derrames o la contaminación del suelo son preocupaciones",
+          "Terratenientes que investigan posible contaminación del suelo antes de comprar o desarrollar una propiedad",
+          "Empresas que evalúan riesgos de infiltración química que podrían amenazar los mantos acuíferos y las fuentes de agua subterránea",
+          "Municipios que realizan estudios de impacto ambiental para la expansión de infraestructura",
+        ],
+      },
+      {
+        key: "studies",
+        title: "Minería y Medio Ambiente",
+        subtitle:
+          "Estudios mineros y ambientales para un desarrollo más seguro e inteligente",
+        items: [
+          "Empresas mineras que necesitan estudios geológicos e hidrogeológicos detallados antes de la exploración o excavación",
+          "Consultores ambientales que realizan evaluaciones de sitios, estudios de impacto o proyectos de restauración de terrenos",
+          "Desarrolladores que buscan comprender los riesgos del subsuelo antes de invertir en proyectos a gran escala",
+          "Terratenientes que evalúan la seguridad ambiental y el potencial de recursos de su propiedad",
+          "Agencias gubernamentales que requieren evaluaciones de sitios para cumplimiento, remediación o esfuerzos de conservación",
+          "Ingenieros que planifican túneles, canteras o movimientos de tierra donde la estabilidad del subsuelo es crítica",
+        ],
+      },
+    ],
   },
 
   process: {
     title: "Proceso y Precios",
-    subtitle: "For finding the best place to drill a water well",
-    intro: "Our services are divided into two parts:",
+    subtitle: "Para encontrar el mejor lugar para perforar un pozo de agua",
+    intro: "Nuestros servicios se dividen en dos partes:",
     prices: [
       {
         amount: "$150",
@@ -234,17 +295,18 @@ const es = {
         amount: "$725",
         amountExtra: "extra",
         muted: true,
-        title: "(B.1) Possibility (in some cases)",
+        title: "(B.1) Posibilidad (en algunos casos)",
         description:
-          "Properties on a sedimentary geological formation, may require the Schlumberger SEV survey, which is more labor intensive, and therefore requires an additional $725 fee. Contact us for more information or to discover if this feel would be applicable to your property.",
+          "Las propiedades sobre una formación geológica sedimentaria pueden requerir el estudio Schlumberger SEV, que es más laborioso y, por lo tanto, requiere una tarifa adicional de $725. Contáctenos para obtener más información o para averiguar si esta tarifa sería aplicable a su propiedad.",
       },
     ],
-    note1: "Note 1: These values do not include local taxes.",
-    note2: "Note 2: The Geological Study must always be completed before an ERI survey.",
+    note1: "Nota 1: Estos valores no incluyen los impuestos locales.",
+    note2:
+      "Nota 2: El Estudio Geológico siempre debe completarse antes de un estudio ERI.",
     stepsHeading: "Así es como normalmente funciona:",
     steps: [
       {
-        actor: "[Customer]",
+        actor: "[Cliente]",
         text: "Usted completa nuestro Formulario de Nuevo Cliente",
         link: true,
       },
@@ -253,7 +315,7 @@ const es = {
         text: "Nos ponemos en contacto con usted para conocer mejor sus necesidades",
       },
       {
-        actor: "[Customer]",
+        actor: "[Cliente]",
         text: "Usted firma el contrato y realiza el pago ($500)",
       },
       {
@@ -265,11 +327,11 @@ const es = {
         text: "Presentamos su informe y le damos una recomendación clara sobre si debe proceder o no con el siguiente paso: el estudio Geofísico (ERI).",
       },
       {
-        actor: "[Together]",
+        actor: "[Juntos]",
         text: "Según los datos recopilados, le ayudaremos a decidir si el Estudio Geofísico es la opción adecuada para usted.",
       },
       {
-        actor: "[Customer]",
+        actor: "[Cliente]",
         text: "Usted realiza el pago para este segundo estudio ($700)",
       },
       {
@@ -286,7 +348,7 @@ const es = {
     notes: [
       "Si todo va bien, el proceso puede tomar tan solo tres semanas.",
       "El tiempo de entrega habitual es de aproximadamente cinco semanas.",
-      "Ofrecemos servicios urgentes para proyectos de emergencia (pueden aplicarsen tarifas adicionales).",
+      "Ofrecemos servicios urgentes para proyectos de emergencia (pueden aplicarse tarifas adicionales).",
       "Tenga en cuenta que el proceso y los pasos pueden variar según sus necesidades, preferencias, condiciones climáticas y condiciones de su terreno.",
       "Ofrecemos descuentos para proyectos más grandes que requieran múltiples estudios.",
       "Los impuestos de venta no están incluidos en los precios mostrados en este sitio web.",
@@ -334,21 +396,118 @@ const es = {
 
   faq: {
     title: "Preguntas Frecuentes",
-    sections: en.faq.sections.map((section, si) => ({
-      ...section,
-      title: esFaqSectionTitles[si],
-      items: section.items.map((item, ii) => ({
-        ...item,
-        q: esFaqQuestions[si][ii],
-      })),
-    })),
-    costLinkPrefix: en.faq.costLinkPrefix,
-    costLinkText: en.faq.costLinkText,
-    costLinkSuffix: en.faq.costLinkSuffix,
-    usgsPrefix: en.faq.usgsPrefix,
-    usgsText: en.faq.usgsText,
-    usgsSuffix: en.faq.usgsSuffix,
-    ertAlt: "Ejemplo de un informe de Tomografía de Resistividad Eléctrica (ERT)",
+    sections: [
+      {
+        title: "Encuentre el mejor lugar para perforar un pozo de agua",
+        intro: null,
+        items: [
+          {
+            q: "1. ¿Cuál es el costo?",
+            a: [
+              { type: "process-link" },
+              "Nuestros servicios se dividen en dos partes: un Estudio Geológico y un estudio Geofísico (Imágenes de Resistividad Eléctrica - ERI). La primera parte cuesta $500 y es un requisito previo para el segundo estudio, que cuesta $700. Sin embargo, algunas propiedades en los EE. UU. se encuentran sobre formaciones geológicas sedimentarias, lo que requiere el estudio Schlumberger SEV, que es más laborioso y, por lo tanto, requiere la adición de $725 en tarifas adicionales. Contáctenos para saber si su propiedad está o no sobre una formación geológica sedimentaria.",
+              "También ofrecemos descuentos para proyectos más grandes que requieran múltiples estudios.",
+            ],
+          },
+          {
+            q: "2. ¿Qué incluye?",
+            a: [
+              { type: "usgs" },
+              "En la práctica, producimos dos informes clave. El primero es un Análisis Geofísico de su propiedad, que nos ayuda a identificar las áreas con el mayor potencial de agua subterránea. Con base en esos hallazgos, realizamos una prueba de Tomografía de Resistividad Eléctrica (ERT) específica en la ubicación más prometedora. Los datos recopilados se procesan y analizan cuidadosamente de forma científica, dando como resultado el segundo y último informe, que incluye imágenes detalladas y una evaluación clara del potencial de agua de su propiedad.",
+              "Ejemplo de imagen:",
+              { type: "ert-image" },
+            ],
+          },
+          {
+            q: "3. ¿Cuál es el proceso?",
+            a: [
+              "El mejor momento para contratar nuestros servicios es antes de contactar a un perforador de pozos, o incluso antes de comprar una propiedad.",
+              "Sin embargo, si ya compró el terreno o un perforador de pozos ha presentado una solicitud de permiso, aún podemos realizar nuestro estudio. En algunos casos, esto puede requerir pasos adicionales para modificar el permiso antes de que comience la perforación.",
+              "Una vez que nuestro contrato está activo, comenzamos estudiando su propiedad de forma remota, lo que da como resultado un informe inicial. Luego revisaremos esos hallazgos con usted para determinar la ubicación ideal para la segunda fase del estudio, que se realiza en el sitio. Durante esta visita, nuestro equipo realiza pruebas en persona y recopila una amplia gama de datos geológicos y ambientales.",
+              "Nuestros geólogos expertos analizan minuciosamente todos los datos y preparan un informe final detallado. Este informe identifica la ubicación exacta con el mayor potencial para un pozo exitoso, lo que le permite dirigir con confianza a su empresa de perforación preferida para que perfore en el lugar óptimo.",
+            ],
+          },
+          {
+            q: "4. ¿Es posible obtener resultados negativos?",
+            a: [
+              "Sí. Aunque utilizamos la mejor ciencia y experiencia disponibles, no podemos garantizar que su propiedad contenga agua o que el flujo de agua satisfaga sus necesidades específicas. Nuestro objetivo es identificar la ubicación con el mayor potencial para un pozo exitoso según las condiciones geológicas existentes de su terreno.",
+            ],
+          },
+          {
+            q: "5. ¿Obtendría un reembolso si el resultado es negativo?",
+            a: [
+              "Lamentablemente, no. El mismo proceso que utilizamos para localizar el mejor lugar para perforar también se usa para determinar si su propiedad tiene bajo o incluso ningún potencial de agua. Esto puede ahorrarle miles de dólares en futuros pozos infructuosos.",
+            ],
+          },
+          {
+            q: "6. ¿Hay alguna garantía?",
+            a: [
+              "Garantizamos que realizaremos un estudio geofísico e hidrogeofísico profesional de su propiedad utilizando métodos y equipos estándar de la industria. Sin embargo, los resultados que obtengamos dependerán completamente de las condiciones geológicas naturales de su propiedad. Estas condiciones pueden afectar el rendimiento de la prueba, incluyendo la profundidad que el equipo puede alcanzar, la precisión de las lecturas y el margen de error general. Nuestro compromiso es entregar datos precisos y basados en la ciencia para ayudarle a tomar la decisión más informada posible.",
+            ],
+          },
+          {
+            q: "7. ¿Hasta qué profundidad llegará el estudio?",
+            a: [
+              "Garantizamos un estudio geofísico e hidrogeofísico profesional de su propiedad utilizando herramientas y métodos estándar de la industria. Sin embargo, la profundidad y la precisión de nuestro análisis dependen de las condiciones geológicas naturales de su sitio. En condiciones favorables —que también pueden verse influenciadas por el clima reciente— nuestro equipo puede permitirnos estudiar profundidades de hasta 600 pies. Independientemente de las condiciones, nuestro objetivo es proporcionarle el informe más preciso y basado en la ciencia para guiar sus decisiones de perforación de pozos.",
+            ],
+          },
+          {
+            q: "8. ¿Qué tan grande es el área que cubre el estudio?",
+            a: [
+              "El estudio geofísico estándar está diseñado para propiedades de hasta 50 acres de tamaño (se aplican tarifas adicionales para propiedades más grandes). Sin embargo, es importante tener en cuenta que la prueba de Tomografía de Resistividad Eléctrica (ERT) no se basa en la cobertura de área. En cambio, produce una imagen vertical en sección transversal del subsuelo a lo largo de una sola línea recta. Nuestra configuración estándar de ERT abarca típicamente aproximadamente 1,181 pies lineales, con la profundidad de penetración determinada por las condiciones geológicas locales.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Evitando agua subterránea",
+        intro: null,
+        items: [
+          {
+            q: "1. ¿Cuál es el costo?",
+            a: [
+              "El costo estándar de la prueba de Tomografía de Resistividad Eléctrica (ERT) es de $1200 (mil doscientos dólares). Pueden aplicarse tarifas adicionales para propiedades ubicadas fuera de nuestro rango de servicio estándar.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Pruebas de Resistividad",
+        intro:
+          "Las pruebas de resistividad son un pilar de la metodología de AquaFinders. Al medir la resistencia eléctrica del terreno, podemos mapear las capas geológicas del subsuelo e identificar formaciones portadoras de agua. Esta técnica no invasiva nos permite determinar la profundidad, el espesor y la calidad del agua de posibles acuíferos, proporcionando datos valiosos para centrales eléctricas, proyectos de vertederos, etc.",
+        items: [
+          {
+            q: "1. ¿Cuál es el costo?",
+            a: [
+              "El costo estándar de la prueba de Tomografía de Resistividad Eléctrica (ERT) es de $1200 (mil doscientos dólares). Pueden aplicarse tarifas adicionales para propiedades ubicadas fuera de nuestro rango.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Estudios",
+        intro:
+          "AquaFinders realiza estudios geofísicos e hidrogeológicos integrales para proyectos ambientales.",
+        items: [
+          {
+            q: "1. ¿Cuál es el costo?",
+            a: [
+              "El costo estándar de la prueba de Tomografía de Resistividad Eléctrica (ERT) es de $1200 (mil doscientos dólares). Pueden aplicarse tarifas adicionales para propiedades ubicadas fuera de nuestro rango de servicio estándar.",
+            ],
+          },
+        ],
+      },
+    ],
+    costLinkPrefix: "Para más detalles, consulte la página de ",
+    costLinkText: "Precios y Proceso",
+    costLinkSuffix: ".",
+    usgsPrefix:
+      "Nuestro trabajo combina el análisis de datos geológicos existentes, imágenes geoespaciales, registros históricos de pozos, mapas topográficos del ",
+    usgsText: "USGS",
+    usgsSuffix:
+      " y patrones climáticos locales para desarrollar una comprensión integral del potencial de agua de su propiedad.",
+    ertAlt:
+      "Ejemplo de un informe de Tomografía de Resistividad Eléctrica (ERT)",
     importantTitle: "Importante:",
     importantText:
       "No perforamos pozos de agua. En su lugar, estudiamos las condiciones subterráneas de su propiedad para que los perforadores de pozos y las empresas de construcción puedan tomar decisiones informadas.",
@@ -356,7 +515,18 @@ const es = {
 
   gallery: {
     title: "Galería",
-    imageAlts: en.gallery.imageAlts,
+    imageAlts: [
+      "Estudio de campo de AquaFinders — trabajo de resistividad geofísica (1)",
+      "Estudio de campo de AquaFinders — trabajo de resistividad geofísica (2)",
+      "Estudio de campo de AquaFinders — trabajo de resistividad geofísica (3)",
+      "Estudio de campo de AquaFinders — trabajo de resistividad geofísica (4)",
+      "Estudio de campo de AquaFinders — trabajo de resistividad geofísica (5)",
+      "Estudio de campo de AquaFinders — trabajo de resistividad geofísica (6)",
+      "Estudio de campo de AquaFinders — trabajo de resistividad geofísica (7)",
+      "Estudio de campo de AquaFinders — trabajo de resistividad geofísica (8)",
+      "Estudio de campo de AquaFinders — trabajo de resistividad geofísica (9)",
+      "Sección transversal de imagen de resistividad de muestra",
+    ],
   },
 
   request: {

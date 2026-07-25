@@ -27,6 +27,6 @@ Contact, FAQ (nested accordion), Gallery, Request (Google Form), Success, Sitema
 
 ## Next / Backlog
 - **P1 SEO**: For crawler-grade SEO parity with the original static Hugo site, add pre-rendering/SSG (e.g. react-snap or migrate to Next.js) so meta/content are in the initial HTML. Current SPA sets tags client-side via Helmet.
-- **P2**: Fully translate the few ES service-detail/FAQ bodies that remain in English (matches original today).
-- **P2**: Generate a static `sitemap.xml` for all EN/ES routes; re-add analytics (GA/GTM) if desired.
+- **DONE (2026-06)**: Fully translated all remaining ES service-detail, services-list, FAQ and process copy into Spanish. Added a maintainable sitemap generator (`scripts/generate-sitemap.js`, `yarn sitemap`) producing `public/sitemap.xml` (26 URLs, EN+ES, with hreflang alternates).
+- **P2**: Re-add analytics (GA/GTM) if desired.
 - **P2**: Optionally wire the contact form to the user's own Web3Forms key confirmation / success routing.
