@@ -36,8 +36,8 @@ export default function ServiceDetail({ pageKey }) {
             {ICONS[pageKey]}
           </div>
           <h2 id="service-title">{content.heading}</h2>
-          {content.body.map((p, i) => (
-            <p key={i}>{p}</p>
+          {content.body.map((p) => (
+            <p key={p.slice(0, 40)}>{p}</p>
           ))}
           <p>
             <LangLink page="process" className="small block mb40">{t.common.infoProcess}</LangLink>

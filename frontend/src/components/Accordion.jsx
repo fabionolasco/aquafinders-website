@@ -12,7 +12,7 @@ export default function Accordion({ items, defaultOpen = 0 }) {
         const btnId = `accordion-button-${i + 1}`;
         const panelId = `accordion-panel-${i + 1}`;
         return (
-          <div className={`accordion-item${isOpen ? " active" : ""}`} key={i}>
+          <div className={`accordion-item${isOpen ? " active" : ""}`} key={item.title}>
             <button
               id={btnId}
               aria-expanded={isOpen}

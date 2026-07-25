@@ -1,6 +1,7 @@
 import React from "react";
 import Seo from "../seo/Seo";
-import LangLink from "../components/LangLink";
+import PriceRow from "../components/PriceRow";
+import ProcessStep from "../components/ProcessStep";
 import { useLang, useT } from "../i18n";
 
 export default function Process() {
@@ -24,17 +25,8 @@ export default function Process() {
           <div className="steps-infographic">
             <p>{p.intro}</p>
 
-            {p.prices.map((price, i) => (
-              <div className="price" key={i}>
-                <div style={price.muted ? { backgroundColor: "#eee" } : undefined}>
-                  {price.amount}
-                  {price.amountExtra && (<><br />{price.amountExtra}</>)}
-                </div>
-                <div>
-                  <h5 style={{ marginTop: "1rem" }}>{price.title}</h5>
-                  <p>{price.description}</p>
-                </div>
-              </div>
+            {p.prices.map((price) => (
+              <PriceRow price={price} key={price.title} />
             ))}
 
             <p style={{ marginTop: "1rem" }}>{p.note1}</p>
@@ -43,16 +35,7 @@ export default function Process() {
             <h3 style={{ marginTop: "3rem" }}>{p.stepsHeading}</h3>
             <div className="steps-container" style={{ marginTop: "40px" }}>
               {p.steps.map((step, i) => (
-                <div className="step-item" key={i}>
-                  <div className={`step-marker${step.final ? " step-marker-final" : ""}`} aria-hidden="true">{i + 1}</div>
-                  <div className="step-line"></div>
-                  <div className="step-content">
-                    <span className="actor">{step.actor}</span> {step.text}
-                    {step.link && (
-                      <> (<LangLink page="request">{t.common.startNow}</LangLink>)</>
-                    )}
-                  </div>
-                </div>
+                <ProcessStep step={step} number={i + 1} key={`${i + 1}-${step.actor}`} />
               ))}
             </div>
           </div>
@@ -60,7 +43,7 @@ export default function Process() {
           <div className="request-form-container" style={{ marginTop: "100px" }}>
             <h4>{p.notesTitle}</h4>
             <ul style={{ paddingLeft: "20px" }}>
-              {p.notes.map((n, i) => <li key={i}>{n}</li>)}
+              {p.notes.map((n) => <li key={n.slice(0, 40)}>{n}</li>)}
             </ul>
           </div>
 

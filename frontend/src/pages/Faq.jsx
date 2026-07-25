@@ -49,7 +49,7 @@ function FaqItem({ item, t }) {
         {item.q}
       </button>
       <div className="faq-content" id={panelId} hidden={!open}>
-        {item.a.map((part, i) => <AnswerPart key={i} part={part} t={t} />)}
+        {item.a.map((part) => <AnswerPart key={typeof part === "string" ? part.slice(0, 24) : part.type} part={part} t={t} />)}
       </div>
     </div>
   );
@@ -64,7 +64,7 @@ export default function Faq() {
     content: (
       <div className="faq-list">
         {section.intro && <div className="faq-item">{section.intro}</div>}
-        {section.items.map((item, i) => <FaqItem key={i} item={item} t={t} />)}
+        {section.items.map((item) => <FaqItem key={item.q} item={item} t={t} />)}
       </div>
     ),
   }));

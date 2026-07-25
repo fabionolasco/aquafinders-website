@@ -21,8 +21,8 @@ export default function About() {
         <h2 id="about-us-title">{a.heading}</h2>
         <div className="about-content">
           <div className="about-text">
-            {a.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
-            {a.closing.map((c, i) => <p key={`c${i}`}>{c}</p>)}
+            {a.paragraphs.map((p) => <p key={p.slice(0, 40)}>{p}</p>)}
+            {a.closing.map((c) => <p key={c.slice(0, 40)}>{c}</p>)}
             <InsuredCta />
           </div>
           <div className="about-image">

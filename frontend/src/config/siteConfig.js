@@ -19,6 +19,22 @@ export const GOOGLE_FORM_URL =
 export const LANGUAGES = ["en", "es"];
 export const DEFAULT_LANG = "en";
 
+// Google Analytics (GA4) + Google Tag Manager IDs (from the original site).
+export const ANALYTICS = {
+  gaId: "G-HJMQVSXBWK",
+  gtmId: "GTM-NRJLRXJ2",
+};
+
+// Analytics only loads on the production domain (or when explicitly enabled via
+// REACT_APP_ENABLE_ANALYTICS=true) so the preview never pollutes real metrics.
+export function analyticsEnabled() {
+  if (process.env.REACT_APP_ENABLE_ANALYTICS === "true") return true;
+  if (typeof window !== "undefined") {
+    return window.location.hostname.endsWith("aquafinders.site");
+  }
+  return false;
+}
+
 // Route keys map to a slug per language. EN lives at the root, ES under /es.
 export const PAGES = {
   home: { slug: "" },

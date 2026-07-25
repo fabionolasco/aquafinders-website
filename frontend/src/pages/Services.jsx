@@ -39,7 +39,7 @@ export default function Services() {
             </LangLink>
             <LangLink page={card.key} style={{ textDecoration: "none" }}>
               <ul style={{ paddingLeft: "20px" }}>
-                {card.items.map((it, i) => <li key={i}>{it}</li>)}
+                {card.items.map((it) => <li key={it}>{it}</li>)}
               </ul>
             </LangLink>
           </section>
