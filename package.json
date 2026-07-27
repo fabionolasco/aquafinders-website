@@ -1,19 +1,39 @@
 {
-  "name": "aquafinders",
+  "name": "aquafinders-react",
   "version": "1.0.0",
-  "scripts": {
-    "clean": "rm -rf dist && mkdir dist",
-    "minify-html": "html-minifier --input-dir ./ --output-dir ./dist --collapse-whitespace --remove-comments --minify-css true --minify-js true --file-ext html",
-    "minify-css": "cleancss -o ./dist/style.css ./style.css",
-    "copy-assets": "cp -r images dist && cp -r favicon dist && cp sitemap.xml dist && cp robots.txt dist",
-    "build": "npm run clean && npm run minify-html && npm run minify-css && npm run copy-assets"
+  "private": true,
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^6.26.2",
+    "react-scripts": "5.0.1"
   },
-  "keywords": [],
-  "author": "Fabio Nolasco",
-  "license": "ISC",
-  "description": "AquaFinder.site",
+  "scripts": {
+    "start": "craco start",
+    "prebuild": "node scripts/generate-sitemap.js",
+    "build": "craco build",
+    "test": "craco test",
+    "sitemap": "node scripts/generate-sitemap.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
-    "clean-css-cli": "^5.6.3",
-    "html-minifier": "^4.0.0"
+    "@craco/craco": "^7.1.0"
   }
 }

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://aquafinders.site/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/services</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/services"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/find-water</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/find-water"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/find-water"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/find-water"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/avoid-water</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/avoid-water"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/avoid-water"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/avoid-water"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/resistivity</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/resistivity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/resistivity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/resistivity"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/studies</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/studies"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/studies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/studies"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/process</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/process"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/process"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/process"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/about</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/about"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/contact</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/contact"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/faq</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/faq"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/gallery</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/gallery"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/gallery"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/request</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/request"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/request"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/request"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/sitemap</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/sitemap"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/es</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/es/services</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/services"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/es/find-water</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/find-water"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/find-water"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/find-water"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/es/avoid-water</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/avoid-water"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/avoid-water"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/avoid-water"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/es/resistivity</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/resistivity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/resistivity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/resistivity"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/es/studies</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/studies"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/studies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/studies"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/es/process</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/process"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/process"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/process"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/es/about</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/about"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/es/contact</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/contact"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/es/faq</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/faq"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/es/gallery</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/gallery"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/gallery"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/es/request</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/request"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/request"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/request"/>
+  </url>
+  <url>
+    <loc>https://aquafinders.site/es/sitemap</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquafinders.site/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aquafinders.site/es/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aquafinders.site/sitemap"/>
+  </url>
+</urlset>
