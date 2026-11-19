@@ -1,0 +1,3 @@
+{{- /* {{< button url="/request/" label="..." style="primary|secondary" track="event_name" >}} */ -}}
+{{- $style := .Get "style" | default "primary" -}}
+<p class="actions"><a class="btn btn-{{ $style }}" href="{{ .Get "url" | relLangURL }}"{{ with .Get "track" }} data-track="{{ . }}"{{ else }}{{ if eq $style "primary" }} data-track="primary_cta_click" data-track-label="inline"{{ end }}{{ end }}>{{ .Get "label" }}</a></p>

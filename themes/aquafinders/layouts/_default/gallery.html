@@ -1,64 +1,14 @@
 {{ define "main" }}
-<section class="hero-container" role="region" aria-labelledby="request-title">
-    <div class="hero">
+{{- partial "components/page-header.html" . }}
+<div class="section">
+    <div class="container">
+        <div class="prose narrow-text">{{ .Content }}</div>
+        <div class="gallery-grid">
+            {{- range .Params.photos }}
+            {{ partial "components/picture.html" (dict "src" (printf "/images/%s.avif" .file) "alt" .alt "w" .w "h" .h "caption" .caption) }}
+            {{- end }}
+        </div>
     </div>
-</section>
-
-<section class="request" id="request" role="region" aria-labelledby="request-title">
-    <h2 id="request-title" style="margin: 0 0 40px;">{{ i18n "gallery" }}</h2>
-
-    <div class="gallery">
-
-        <picture>
-            <source srcset="/images/photo001.avif" type="image/avif">
-            <img src="/images/photo001.png" alt="Geophysics" loading="lazy" width="400">
-        </picture>
-
-        <picture>
-            <source srcset="/images/photo004.avif" type="image/avif">
-            <img src="/images/photo004.png" alt="Geophysics" loading="lazy" width="400">
-        </picture>
-
-        <picture>
-            <source srcset="/images/photo005.avif" type="image/avif">
-            <img src="/images/photo005.png" alt="Geophysics" loading="lazy" width="400">
-        </picture>
-
-        <picture>
-            <source srcset="/images/photo006.avif" type="image/avif">
-            <img src="/images/photo006.png" alt="Geophysics" loading="lazy" width="400">
-        </picture>
-
-        <picture>
-            <source srcset="/images/photo002.avif" type="image/avif">
-            <img src="/images/photo002.png" alt="Geophysics" loading="lazy" width="400">
-        </picture>
-
-        <picture>
-            <source srcset="/images/photo003.avif" type="image/avif">
-            <img src="/images/photo003.png" alt="Geophysics" loading="lazy" width="400">
-        </picture>
-
-        <picture>
-            <source srcset="/images/photo007.avif" type="image/avif">
-            <img src="/images/photo007.png" alt="Geophysics" loading="lazy" width="400">
-        </picture>
-
-        <picture>
-            <source srcset="/images/photo008.avif" type="image/avif">
-            <img src="/images/photo008.png" alt="Geophysics" loading="lazy" width="400">
-        </picture>
-
-        <picture>
-            <source srcset="/images/photo009.avif" type="image/avif">
-            <img src="/images/photo009.png" alt="Geophysics" loading="lazy" width="400">
-        </picture>
-
-        <picture>
-            <source srcset="/images/slide 1.avif" type="image/avif">
-            <img src="/images/slide 1.png" alt="Geophysics" loading="lazy" width="400">
-        </picture>
-    </div>
-    
-</section>
+</div>
+{{- partial "components/cta-band.html" (dict "page" .) }}
 {{ end }}

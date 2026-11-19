@@ -1,0 +1,16 @@
+{{- /* Context: dict "faqs" (slice of {q,a}) "title" "..." "id" "..." */ -}}
+{{- with .faqs }}
+<section class="section faq-section"{{ with $.id }} id="{{ . }}"{{ end }}>
+    <div class="container narrow">
+        {{- with $.title }}<h2>{{ . }}</h2>{{ end }}
+        <div class="faq-list">
+            {{- range . }}
+            <details class="faq-item">
+                <summary>{{ .q }}</summary>
+                <div class="faq-answer">{{ .a | markdownify }}</div>
+            </details>
+            {{- end }}
+        </div>
+    </div>
+</section>
+{{- end }}

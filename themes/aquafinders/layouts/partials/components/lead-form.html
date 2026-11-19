@@ -1,0 +1,113 @@
+{{- /* "Check My Property" lead form → Web3Forms. Works without JS as one form; JS splits it into two steps. */ -}}
+{{- $success := "/success/" | relLangURL | absURL -}}
+<form id="lead-form" class="form" method="post" action="https://api.web3forms.com/submit" data-w3 data-contact-rule="either">
+    <input type="hidden" name="access_key" value="{{ site.Params.web3formsKey }}">
+    <input type="hidden" name="subject" value="{{ i18n "lead_subject" }}">
+    <input type="hidden" name="from_name" value="AquaFinders website">
+    <input type="hidden" name="redirect" value="{{ $success }}">
+    <input type="hidden" name="language" value="{{ .Lang }}">
+    <input type="hidden" name="reference" value="">
+    <input type="hidden" name="submitted_from" value="{{ .RelPermalink }}">
+    {{- range slice "landing_page" "referrer" "first_seen" "utm_source" "utm_medium" "utm_campaign" "utm_term" "utm_content" "gclid" }}
+    <input type="hidden" name="{{ . }}" value="">
+    {{- end }}
+    <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <p class="form-errors" role="alert" hidden></p>
+
+    <fieldset data-step="1">
+        <legend><span class="step-pill">{{ i18n "form_step" (dict "N" 1) }}</span> {{ i18n "form_step1_title" }}</legend>
+
+        <div class="field">
+            <label for="lf-name">{{ i18n "form_name" }} <span class="req">*</span></label>
+            <input id="lf-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field-row">
+            <div class="field">
+                <label for="lf-email">{{ i18n "form_email" }}</label>
+                <input id="lf-email" name="email" type="email" autocomplete="email" inputmode="email" aria-describedby="lf-contact-hint">
+            </div>
+            <div class="field">
+                <label for="lf-phone">{{ i18n "form_phone" }}</label>
+                <input id="lf-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="lf-contact-hint">
+            </div>
+        </div>
+        <p class="hint" id="lf-contact-hint">{{ i18n "form_contact_hint" }}</p>
+
+        <div class="field">
+            <label for="lf-location">{{ i18n "form_location" }} <span class="req">*</span></label>
+            <input id="lf-location" name="property_location" type="text" autocomplete="street-address" required aria-describedby="lf-location-hint">
+            <p class="hint" id="lf-location-hint">{{ i18n "form_location_hint" }}</p>
+        </div>
+        <div class="field-row">
+            <div class="field">
+                <label for="lf-state">{{ i18n "form_state" }} <span class="req">*</span></label>
+                <select id="lf-state" name="property_state" required>
+                    <option value="">{{ i18n "form_select" }}</option>
+                    {{- range site.Params.serviceStates }}<option>{{ . }}</option>{{ end }}
+                    <option value="Other">{{ i18n "form_state_other" }}</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="lf-type">{{ i18n "form_type" }} <span class="req">*</span></label>
+                <select id="lf-type" name="project_type" required>
+                    <option value="">{{ i18n "form_select" }}</option>
+                    <option value="new_well">{{ i18n "form_type_new" }}</option>
+                    <option value="low_yield_well">{{ i18n "form_type_low" }}</option>
+                    <option value="buying_land">{{ i18n "form_type_land" }}</option>
+                    <option value="farm">{{ i18n "form_type_farm" }}</option>
+                    <option value="professional">{{ i18n "form_type_pro" }}</option>
+                    <option value="other">{{ i18n "form_type_other" }}</option>
+                </select>
+            </div>
+        </div>
+    </fieldset>
+
+    <button type="button" class="btn btn-primary btn-lg" data-next hidden>{{ i18n "form_continue" }}</button>
+
+    <fieldset data-step="2">
+        <legend tabindex="-1"><span class="step-pill">{{ i18n "form_step" (dict "N" 2) }}</span> {{ i18n "form_step2_title" }}</legend>
+        <p class="hint">{{ i18n "form_step2_hint" }}</p>
+        <div class="field-row">
+            <div class="field">
+                <label for="lf-acres">{{ i18n "form_acres" }}</label>
+                <input id="lf-acres" name="acres" type="text" inputmode="decimal">
+            </div>
+            <div class="field">
+                <label for="lf-timeframe">{{ i18n "form_timeframe" }}</label>
+                <select id="lf-timeframe" name="timeframe">
+                    <option value="">{{ i18n "form_select" }}</option>
+                    <option value="asap">{{ i18n "form_tf_asap" }}</option>
+                    <option value="1-3 months">{{ i18n "form_tf_3m" }}</option>
+                    <option value="3-12 months">{{ i18n "form_tf_12m" }}</option>
+                    <option value="researching">{{ i18n "form_tf_research" }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="field-row">
+            <div class="field">
+                <label for="lf-depth">{{ i18n "form_well_depth" }}</label>
+                <input id="lf-depth" name="existing_well_depth" type="text">
+            </div>
+            <div class="field">
+                <label for="lf-yield">{{ i18n "form_well_yield" }}</label>
+                <input id="lf-yield" name="existing_well_yield" type="text">
+            </div>
+        </div>
+        <fieldset class="field inline-options">
+            <legend>{{ i18n "form_preferred" }}</legend>
+            <label><input type="radio" name="preferred_contact" value="email"> {{ i18n "form_pref_email" }}</label>
+            <label><input type="radio" name="preferred_contact" value="call"> {{ i18n "form_pref_call" }}</label>
+            <label><input type="radio" name="preferred_contact" value="text"> {{ i18n "form_pref_text" }}</label>
+        </fieldset>
+        <div class="field">
+            <label for="lf-message">{{ i18n "form_message" }}</label>
+            <textarea id="lf-message" name="message" rows="4"></textarea>
+        </div>
+        <div class="field">
+            <div class="h-captcha" data-captcha="true"></div>
+        </div>
+        <p class="hint">{{ i18n "form_consent" | safeHTML }}</p>
+        <button type="submit" class="btn btn-primary btn-lg">{{ i18n "form_submit" }}</button>
+    </fieldset>
+</form>

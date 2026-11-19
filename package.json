@@ -2,13 +2,13 @@
   "name": "aquafinders",
   "version": "1.0.0",
   "scripts": {
-    "start": "hugo serve",
-    "build": "hugo"
+    "start": "hugo server",
+    "build": "hugo --gc --minify",
+    "check": "hugo --gc --minify && python3 scripts/check_site.py"
   },
   "keywords": [],
   "author": "Fabio Nolasco",
   "license": "ISC",
-  "description": "AquaFinder.site",
-  "devDependencies": {
-  }
+  "description": "AquaFinders static website (Hugo)",
+  "devDependencies": {}
 }

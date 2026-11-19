@@ -1,0 +1,9 @@
+{{- /* Responsive image with AVIF + fallback, intrinsic size and lazy loading.
+  Context: dict "src" "/images/x.png" "avif" "/images/x.avif" "alt" "..." "w" 1200 "h" 675 "caption" "..." "eager" false */ -}}
+<figure class="figure">
+    <picture>
+        {{- with .avif }}<source srcset="{{ . }}" type="image/avif">{{ end }}
+        <img src="{{ .src }}" alt="{{ .alt }}" width="{{ .w }}" height="{{ .h }}"{{ if not .eager }} loading="lazy" decoding="async"{{ end }}>
+    </picture>
+    {{- with .caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>

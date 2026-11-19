@@ -1,0 +1,16 @@
+{{- /* Final call to action. Context: dict "page" . "title" "..." "text" "..." */ -}}
+<section class="cta-band">
+    <div class="container narrow">
+        <h2>{{ .title | default (i18n "cta_band_title") }}</h2>
+        <p>{{ .text | default (i18n "cta_band_text") }}</p>
+        <div class="actions">
+            <a class="btn btn-primary btn-lg" href="{{ "/request/" | relLangURL }}" data-track="primary_cta_click" data-track-label="cta_band">{{ i18n "cta_request_review" }}</a>
+        </div>
+        <p class="cta-alt">
+            {{ i18n "or_contact" }}
+            <a href="tel:{{ site.Params.contactPhone }}" data-track="phone_click">{{ site.Params.contactPhoneDisplay }}</a> ·
+            <a href="mailto:{{ site.Params.contactEmail }}">{{ site.Params.contactEmail }}</a> ·
+            <a href="https://wa.me/{{ site.Params.whatsapp }}" data-track="whatsapp_click" rel="noopener">WhatsApp</a>
+        </p>
+    </div>
+</section>

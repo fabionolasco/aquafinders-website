@@ -1,0 +1,17 @@
+{{- /* Interior page header: breadcrumb, eyebrow, the page's single H1, lead and CTAs. */ -}}
+<section class="page-header">
+    <div class="container narrow">
+        {{- partial "components/breadcrumb.html" . }}
+        {{- with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+        <h1>{{ .Params.h1 | default .Title }}</h1>
+        {{- with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+        {{- if not .Params.hideHeaderCta }}
+        <div class="actions">
+            <a class="btn btn-primary" href="{{ .Params.ctaUrl | default "/request/" | relLangURL }}" data-track="primary_cta_click" data-track-label="page_header">{{ .Params.ctaLabel | default (i18n "cta_request_review") }}</a>
+            {{- with .Params.secondaryCta }}
+            <a class="btn btn-secondary" href="{{ .url | relLangURL }}"{{ with .track }} data-track="{{ . }}"{{ end }}>{{ .label }}</a>
+            {{- end }}
+        </div>
+        {{- end }}
+    </div>
+</section>

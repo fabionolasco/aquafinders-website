@@ -1,25 +1,44 @@
-<footer role="contentinfo">
-    <div class="footer-content">
-        <div class="footer-info">
-            <h3>{{ .Site.Title }}</h3>
-            <p>
-                <span class="lean">{{ i18n "expert_services" }}
-                {{ i18n "service_area" }}
-                <span class="bold">{{ i18n "nationwide_request" }}</span></span>
-            </p>
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <p class="footer-brand">{{ site.Title }}</p>
+            <p>{{ i18n "footer_about" }}</p>
+            <p class="footer-small">{{ i18n "footer_no_drill" }}</p>
         </div>
-        <div class="footer-contact">
-            <p><a href="{{ "/contact" | relURL }}">{{ i18n "contact_form" }}</a></p>
-            <p>{{ i18n "contact_us" }}: <a href="tel:{{ .Site.Params.contactPhone }}">{{ .Site.Params.contactPhone }}</a></p>
-            <p><a href="https://wa.me/17322211202"><img src="/images/WhatsApp-icon.avif" alt="+17322211202" width="30" height="30" style="vertical-align: middle;"> {{ i18n "whatsapp" }}</a></p>
-            <p>{{ i18n "email" }}: <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a></p>
-            <p><a href="https://www.facebook.com/people/AquaFinders-Find-the-best-place-to-drill-a-water-well/61577105078190/" target="_blank"><img src="/images/facebook.avif" style="filter: grayscale(100%) contrast(4); vertical-align: middle;" alt="AquaFinders" width="30" height="30"> Facebook</a></p>
+        <div>
+            <p class="footer-heading">{{ i18n "footer_services" }}</p>
+            <ul>
+                <li><a href="{{ "/find-water/" | relLangURL }}">{{ i18n "nav_find_water" }}</a></li>
+                <li><a href="{{ "/low-yield-well/" | relLangURL }}">{{ i18n "nav_low_yield" }}</a></li>
+                <li><a href="{{ "/groundwater-survey/" | relLangURL }}">{{ i18n "nav_survey" }}</a></li>
+                <li><a href="{{ "/how-it-works/" | relLangURL }}">{{ i18n "nav_how" }}</a></li>
+                <li><a href="{{ "/pricing/" | relLangURL }}">{{ i18n "nav_pricing" }}</a></li>
+                <li><a href="{{ "/services/" | relLangURL }}">{{ i18n "nav_all_services" }}</a></li>
+            </ul>
         </div>
-        <div class="footer-legal">
-            <p>AquaFinders ™ (Trademark In Progress)</p>
-            <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. {{ i18n "all_rights_reserved" }}</p>
-            <p>{{ i18n "results_vary" }}</p>
-            <p><a href="{{ "/sitemap" | relURL }}">{{ i18n "site_map" }}</a></p>
+        <div>
+            <p class="footer-heading">{{ i18n "footer_contact" }}</p>
+            <ul>
+                <li><a href="tel:{{ site.Params.contactPhone }}" data-track="phone_click">{{ site.Params.contactPhoneDisplay }}</a></li>
+                <li><a href="https://wa.me/{{ site.Params.whatsapp }}" data-track="whatsapp_click" rel="noopener">WhatsApp</a></li>
+                <li><a href="mailto:{{ site.Params.contactEmail }}">{{ site.Params.contactEmail }}</a></li>
+                <li><a href="{{ site.Params.facebook }}" rel="noopener">Facebook</a></li>
+                <li>{{ i18n "we_speak" }}</li>
+            </ul>
         </div>
+        <div>
+            <p class="footer-heading">{{ i18n "footer_area" }}</p>
+            <p>{{ i18n "based_in" }}. {{ i18n "serving_states" }}</p>
+            <ul>
+                <li><a href="{{ "/about/" | relLangURL }}">{{ i18n "nav_about" }}</a></li>
+                <li><a href="{{ "/faq/" | relLangURL }}">{{ i18n "nav_faq" }}</a></li>
+                <li><a href="{{ "/gallery/" | relLangURL }}">{{ i18n "nav_gallery" }}</a></li>
+                <li><a href="{{ "/privacy/" | relLangURL }}">{{ i18n "nav_privacy" }}</a></li>
+                <li><a href="{{ "/sitemap/" | relLangURL }}">{{ i18n "site_map" }}</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container footer-legal">
+        <p>&copy; {{ now.Format "2006" }} AquaFinders™. {{ i18n "all_rights_reserved" }} {{ i18n "results_vary" }}</p>
     </div>
 </footer>

@@ -1,33 +1,33 @@
-<header role="banner">
-    <nav role="navigation">
-        <div class="logo">
-            <a href="{{ "/" | relLangURL }}" aria-label="{{ .Site.Title }} - {{ .Site.Params.description }}">
-                <picture>
-                    <source srcset="/images/logo-horizontal.avif" type="image/avif">
-                    <img src="/images/logo-horizontal.png" alt="{{ .Site.Title }}" width="200" height="43">
-                </picture>
-            </a>
+{{- $current := . -}}
+<header class="site-header">
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <span class="topbar-note">{{ i18n "topbar_note" }}</span>
+            <span class="topbar-links">
+                <a href="tel:{{ site.Params.contactPhone }}" data-track="phone_click">{{ site.Params.contactPhoneDisplay }}</a>
+                {{- partial "language-switcher.html" . -}}
+            </span>
         </div>
-        <h1 class="_not_visible">{{ .Site.Title }} - {{ .Site.Params.description }}</h1>
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-            <span></span>
+    </div>
+    <nav class="container nav" aria-label="{{ i18n "main_navigation" }}">
+        <a class="logo" href="{{ "/" | relLangURL }}">
+            <picture>
+                <source srcset="/images/logo-horizontal.avif" type="image/avif">
+                <img src="/images/logo-horizontal.png" alt="{{ site.Title }} {{ i18n "home" }}" width="280" height="61">
+            </picture>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+            <span class="menu-toggle-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">{{ i18n "menu" }}</span>
         </button>
-        <div class="nav-container">
-            <ul class="nav-links">
-                <li><a href="{{ "/services" | relLangURL }}">{{ i18n "services" }}</a></li>
-                <li><a href="{{ "/process" | relLangURL }}">{{ i18n "pricing" }}</a></li>
-                <li><a href="{{ "/about" | relLangURL }}">{{ i18n "about" }}</a></li>
-                <li><a href="{{ "/request/" | relLangURL }}">{{ i18n "start" }}</a></li>
-                <li><a href="{{ "/faq/" | relLangURL }}">{{ i18n "faq" }}</a></li>
-                <li><a href="{{ "/contact" | relLangURL }}">{{ i18n "contact" }}</a></li>
-                <li class="show-on-mobile">
-                    {{ if eq $.Lang "en" }}
-                    <a href="{{ "/es/" | relURL }}">{{ i18n "spanish_version" }}</a>
-                    {{ else }}
-                    <a href="{{ "/" | relURL }}">{{ i18n "english_version" }}</a>
-                    {{ end }}
-                </li>
+        <div class="menu" id="primary-menu">
+            <ul class="menu-links">
+                {{- range site.Menus.main }}
+                {{- $active := and .Page (eq .Page.RelPermalink $current.RelPermalink) }}
+                <li><a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+                {{- end }}
             </ul>
+            <a class="btn btn-primary menu-cta" href="{{ "/request/" | relLangURL }}" data-track="primary_cta_click" data-track-label="header">{{ i18n "cta_check_property" }}</a>
         </div>
     </nav>
 </header>

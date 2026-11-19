@@ -1,102 +1,80 @@
+{{- /* Vanilla JS only. The page content never depends on it. */ -}}
 <script>
-    // Mobile menu toggle functionality
-    document.addEventListener('DOMContentLoaded', function () {
-        // Defer Google Tag Manager and analytics loading
-        setTimeout(() => {
-            // Load Google Analytics
-            const gtagScript = document.createElement('script');
-            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-HJMQVSXBWK";
-            gtagScript.async = true;
-            document.body.appendChild(gtagScript);
-            
-            // Initialize gtag
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-HJMQVSXBWK');
-            
-            // Load Google Tag Manager iframe (noscript alternative)
-            const gtmIframe = document.createElement('iframe');
-            gtmIframe.src = "https://www.googletagmanager.com/ns.html?id=GTM-NRJLRXJ2";
-            gtmIframe.height = "0";
-            gtmIframe.width = "0";
-            gtmIframe.style.display = "none";
-            gtmIframe.style.visibility = "hidden";
-            document.body.prepend(gtmIframe);
-        }, 4000);
+(function () {
+  'use strict';
+  var GA_ID = {{ site.Params.ga4 }};
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', GA_ID);
 
-        // Web3Forms script loading
-        setTimeout(() => {
-            const script = document.createElement('script');
-            script.src = "https://web3forms.com/client/script.js";
-            script.async = true;
-            script.defer = true;
-            script.onload = () => {
-                const form = document.getElementById('contact-form');
-                if (form) {
-                    form.addEventListener('submit', function (e) {
-                        const hCaptcha = form.querySelector('textarea[name=h-captcha-response]')?.value;
-                        if (!hCaptcha) {
-                            e.preventDefault();
-                            alert("{{ i18n "captcha_alert" }}");
-                            return;
-                        }
-                    });
-                }
-            };
-            document.body.appendChild(script);
-        }, 4000);
+  // Load GA4 on first interaction or when the browser is idle, so it never competes with page rendering.
+  var gaLoaded = false;
+  function loadGA() {
+    if (gaLoaded) return; gaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+  ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (e) {
+    window.addEventListener(e, loadGA, { once: true, passive: true });
+  });
+  window.addEventListener('load', function () {
+    if ('requestIdleCallback' in window) { requestIdleCallback(loadGA, { timeout: 4000 }); } else { setTimeout(loadGA, 3000); }
+  });
 
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
-        const navContainer = document.querySelector('.nav-container');
+  function track(name, params) { try { gtag('event', name, params || {}); } catch (e) {} }
+  window.afTrack = track;
 
-        if (menuToggle && navContainer) {
-            menuToggle.addEventListener('click', function () {
-                navContainer.classList.toggle('active');
-                menuToggle.classList.toggle('active');
-            });
+  // Safe storage helpers (storage can be unavailable in private modes).
+  function store(kind) { try { return window[kind]; } catch (e) { return null; } }
+  function get(kind, k) { var s = store(kind); try { return s ? s.getItem(k) : null; } catch (e) { return null; } }
+  function set(kind, k, v) { var s = store(kind); try { if (s) s.setItem(k, v); } catch (e) {} }
+  window.afStore = { get: get, set: set };
 
-            // Close menu when clicking on a link
-            const navLinks = document.querySelectorAll('.nav-links a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    navContainer.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                });
-            });
-        }
+  // First-touch attribution: kept for the visitor's session so the lead form can report it.
+  (function () {
+    if (get('localStorage', 'af_first_touch')) return;
+    var p = new URLSearchParams(location.search), data = {};
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'].forEach(function (k) { if (p.get(k)) data[k] = p.get(k); });
+    data.landing_page = location.pathname;
+    data.referrer = document.referrer || '(direct)';
+    data.first_seen = new Date().toISOString();
+    set('localStorage', 'af_first_touch', JSON.stringify(data));
+  })();
 
-        // Accordion functionality for FAQ page
-        const faqItems = document.querySelectorAll('.faq-item h4');
-        faqItems.forEach(faqHeader => {
-            faqHeader.addEventListener('click', function () {
-                const faqContent = faqHeader.parentNode;
-                if (faqContent) {
-                    faqContent.classList.toggle('faq-content-hidden');
-                }
-            });
-        });
+  // Click tracking: [data-track] elements plus all tel: and WhatsApp links.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a, button');
+    if (!a) return;
+    var name = a.getAttribute('data-track');
+    var href = a.getAttribute('href') || '';
+    if (!name && href.indexOf('tel:') === 0) name = 'phone_click';
+    if (!name && href.indexOf('wa.me') !== -1) name = 'whatsapp_click';
+    if (name) track(name, { label: a.getAttribute('data-track-label') || '', page: location.pathname });
+  });
 
-        const accordionItems = document.querySelectorAll('.accordion-item');
-        accordionItems.forEach(item => {
-            const button = item.querySelector('button');
-            if (button) {
-                button.addEventListener('click', function () {
-                    const isOpen = item.classList.contains('active');
+  {{- if .Params.trackView }}
+  track({{ .Params.trackView }}, { page: location.pathname });
+  {{- end }}
 
-                    // Close all accordion items
-                    accordionItems.forEach(otherItem => {
-                        otherItem.classList.remove('active');
-                        otherItem.querySelector('button')?.setAttribute('aria-expanded', 'false');
-                    });
-
-                    // Open the clicked item if it was not already open
-                    if (!isOpen) {
-                        item.classList.add('active');
-                        button.setAttribute('aria-expanded', 'true');
-                    }
-                });
-            }
-        });
+  // Mobile menu
+  var toggle = document.querySelector('.menu-toggle');
+  var menu = document.getElementById('primary-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', function () {
+      var open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('is-open', !open);
     });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menu.classList.contains('is-open')) {
+        toggle.setAttribute('aria-expanded', 'false'); menu.classList.remove('is-open'); toggle.focus();
+      }
+    });
+  }
+})();
 </script>
+{{- if .Params.hasForm }}
+{{- partial "form-script.html" . }}
+{{- end }}

@@ -1,0 +1,35 @@
+{{- /* Shared SEO head: title, description, canonical, robots, hreflang, Open Graph, Twitter. */ -}}
+{{- $title := .Params.seoTitle | default (printf "%s | %s" .Title site.Title) -}}
+{{- $desc := .Description | default (i18n "default_description") -}}
+{{- $noindex := .Params.noindex -}}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{- if $noindex }}
+<meta name="robots" content="noindex, follow">
+{{- else }}
+<meta name="robots" content="index, follow, max-image-preview:large">
+{{- /* hreflang only between indexable, genuinely translated equivalents (reciprocal by construction). */ -}}
+{{- $alts := slice }}
+{{- range .AllTranslations }}{{ if not .Params.noindex }}{{ $alts = $alts | append . }}{{ end }}{{ end }}
+{{- if gt (len $alts) 1 }}
+{{- range $alts }}
+<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+{{- end }}
+{{- range $alts }}{{ if eq .Lang "en" }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}{{ end }}
+{{- end }}
+{{- end }}
+{{- $img := .Params.ogImage | default "/images/hero-bg-big-large.png" }}
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ .Params.ogTitle | default $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="{{ replace .Language.LanguageCode "-" "_" }}">
+<meta property="og:image" content="{{ $img | absURL }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Params.ogTitle | default $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $img | absURL }}">

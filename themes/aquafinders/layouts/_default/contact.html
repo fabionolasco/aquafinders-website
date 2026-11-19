@@ -1,72 +1,57 @@
 {{ define "main" }}
-<section class="hero-container" role="region" aria-labelledby="request-title">
-    <div class="hero">
-    </div>
-</section>
-
-<div>
-
-    <div width="100%">
-        <div id="contact" class="contact" role="region" aria-labelledby="contact-title">
-            <div class="contact-form">
-                <h3>{{ i18n "contact_form" }}</h3>
-                <form method="post" id="contact-form" name="contact-form" action="https://api.web3forms.com/submit"
-                    class="contact-form">
-            
-                    <input type="hidden" name="from_name" value="{{ .Site.Title }} Contact">
-                    <input type="hidden" name="subject" value="{{ .Site.Title }} Website Contact">
-                    <input type="hidden" name="redirect" value="{{ .Site.BaseURL }}success">
-                    <input type="hidden" name="access_key" value="38605c7d-f8ee-4232-bf07-d8a8f4b639fa">
-                    <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-            
-                    <label for="name">{{ i18n "your_name" }}</label>
-                    <input type="text" id="name" name="name" data-placeholder="{{ i18n "your_name" }}" required>
-            
-                    <label for="email">{{ i18n "email_address" }}</label>
-                    <input type="email" id="email" name="email" data-placeholder="{{ i18n "email_address" }}" required>
-            
-                    <label for="phone">{{ i18n "phone_number" }}</label>
-                    <input type="tel" id="phone" name="phone" data-placeholder="{{ i18n "phone_number" }}" required>
-            
-                    <label>{{ i18n "preferred_communication" }} </label>
-                    <div>
-                        <div><input type="checkbox" id="preferredEmail" name="preferred[]" value="email"> <label for="preferredEmail">
-                            {{ i18n "email" }}</label></div>
-                        <div><input type="checkbox" id="preferredCall" name="preferred[]" value="phoneCall"> <label
-                            for="preferredCall"> {{ i18n "phone_call" }}</label></div>
-                        <div><input type="checkbox" id="preferredText" name="preferred[]" value="phoneText"> <label
-                            for="preferredText"> {{ i18n "phone_text" }}</label></div>
-                    </div>
-            
-                    <label for="message">{{ i18n "project_questions" }}</label>
-                    <textarea id="message" name="message" data-placeholder="{{ i18n "project_questions" }}"
-                        required></textarea>
-            
-                    <label>{{ i18n "captcha" }}</label>
-                    <div class="h-captcha" data-captcha="true"></div>
-            
-                    <button type="submit" class="cta-button">{{ i18n "submit" }}</button>
-                </form>
-            </div>
-            <div class="contact-data">
-                <div class="contact-info">
-                    <h2 id="request-title">{{ i18n "ready_to_find" }}</h2>
-                    <span>{{ i18n "we_speak" }}</span>
-                    <span>{{ i18n "physical_address_app" }}</span>
-                    <span>{{ i18n "phone" }}: <a title="{{ i18n "phone" }}" href="tel:{{ .Site.Params.contactPhone }}">{{ .Site.Params.contactPhone }}</a> (9-5 PM EST)</span>
-                    <span>{{ i18n "email" }}: <a title="{{ i18n "email" }}" href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a></span>
+{{- partial "components/page-header.html" . }}
+<div class="section">
+    <div class="container split split-form">
+        <div>
+            <h2>{{ i18n "contact_form" }}</h2>
+            <form id="contact-form" class="form" method="post" action="https://api.web3forms.com/submit" data-w3>
+                <input type="hidden" name="access_key" value="{{ site.Params.web3formsKey }}">
+                <input type="hidden" name="subject" value="{{ i18n "contact_subject" }}">
+                <input type="hidden" name="from_name" value="AquaFinders website">
+                <input type="hidden" name="redirect" value="{{ "/success/" | relLangURL | absURL }}">
+                <input type="hidden" name="language" value="{{ .Lang }}">
+                <input type="hidden" name="submitted_from" value="{{ .RelPermalink }}">
+                {{- range slice "landing_page" "referrer" "utm_source" "utm_medium" "utm_campaign" "gclid" }}
+                <input type="hidden" name="{{ . }}" value="">
+                {{- end }}
+                <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <div class="field">
+                    <label for="cf-name">{{ i18n "form_name" }} <span class="req">*</span></label>
+                    <input id="cf-name" name="name" type="text" autocomplete="name" required>
                 </div>
-            </div>
+                <div class="field">
+                    <label for="cf-email">{{ i18n "form_email" }} <span class="req">*</span></label>
+                    <input id="cf-email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="field">
+                    <label for="cf-phone">{{ i18n "form_phone" }}</label>
+                    <input id="cf-phone" name="phone" type="tel" autocomplete="tel">
+                </div>
+                <div class="field">
+                    <label for="cf-message">{{ i18n "form_message" }} <span class="req">*</span></label>
+                    <textarea id="cf-message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="field"><div class="h-captcha" data-captcha="true"></div></div>
+                <p class="hint">{{ i18n "form_consent" | safeHTML }}</p>
+                <button type="submit" class="btn btn-primary">{{ i18n "submit" }}</button>
+            </form>
         </div>
-    </div>
-</div>
-<div class="text-center" role="region" aria-labelledby="contact-title">
-    <div style="margin: 40px auto;">
-        <p class="bonded-insured">&#9989; &nbsp; {{ i18n "we_are_insured" }}</p>
-    </div>
-    <div class="ready text-center">
-        <a href="{{ "/request/" | relLangURL }}" class="cta-button cta-button-now">&nbsp; &nbsp; {{ i18n "start" }} &nbsp; &nbsp; </a>
+        <aside class="side-panel">
+            <h2>{{ i18n "contact_direct" }}</h2>
+            <ul class="contact-list">
+                <li><strong>{{ i18n "phone" }}:</strong> <a href="tel:{{ site.Params.contactPhone }}" data-track="phone_click">{{ site.Params.contactPhoneDisplay }}</a> <span class="muted">({{ i18n "hours" }})</span></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/{{ site.Params.whatsapp }}" data-track="whatsapp_click" rel="noopener">{{ site.Params.contactPhoneDisplay }}</a></li>
+                <li><strong>{{ i18n "email" }}:</strong> <a href="mailto:{{ site.Params.contactEmail }}">{{ site.Params.contactEmail }}</a></li>
+                <li>{{ i18n "based_in" }}. {{ i18n "physical_address_app" }}</li>
+                <li>{{ i18n "we_speak" }}</li>
+            </ul>
+            <div class="callout">
+                <p class="callout-title">{{ i18n "contact_property_title" }}</p>
+                <p>{{ i18n "contact_property_text" }}</p>
+                <p><a class="btn btn-primary" href="{{ "/request/" | relLangURL }}" data-track="primary_cta_click" data-track-label="contact_aside">{{ i18n "cta_check_property" }}</a></p>
+            </div>
+            {{ .Content }}
+        </aside>
     </div>
 </div>
 {{ end }}

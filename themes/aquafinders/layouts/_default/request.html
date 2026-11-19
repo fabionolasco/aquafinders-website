@@ -1,13 +1,13 @@
 {{ define "main" }}
-<section class="hero-container" role="region" aria-labelledby="request-title">
-    <div class="hero">
+{{- partial "components/page-header.html" . }}
+<div class="section">
+    <div class="container split split-form">
+        <div>
+            {{ partial "components/lead-form.html" . }}
+        </div>
+        <aside class="side-panel prose">
+            {{ .Content }}
+        </aside>
     </div>
-</section>
-
-<section class="request" id="request" role="region" aria-labelledby="request-title">
-    <h2 id="request-title" style="margin: 0;">{{ i18n "start" }}</h2>
-    <div width="100%">
-        <iframe style="display: block; margin: 0 auto; width:100%" src="https://docs.google.com/forms/d/e/1FAIpQLSdcVDVTBY8Al98-JAYwQ4vDkJWr8eEbbfBhGN0dkeZxECTO_A/viewform?embedded=true" height="3010" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
-</section>
+</div>
 {{ end }}

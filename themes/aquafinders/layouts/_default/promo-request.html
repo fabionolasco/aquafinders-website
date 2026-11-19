@@ -185,14 +185,11 @@
     }
 </style>
 
-<section class="hero-container" role="region" aria-labelledby="request-title">
-    <div class="hero">
-    </div>
-</section>
+
 
 <div class="main-container">
     <section class="request" id="request" role="region" aria-labelledby="request-title">
-        <h2 id="request-title">$150 Gift Card {{ i18n "promotion" }}</h2>
+        <h1 id="request-title">$150 Gift Card {{ i18n "promotion" }}</h1>
 
         <p style="margin-bottom: 20px;">
             Use this form to redeem your complimentary satellite-based hydrogeological study, a $150 service that evaluates the groundwater potential across different areas of your property.
@@ -237,21 +234,20 @@
             <h3 style="margin: 20px 0;">Fill out the form to redeem the card</h3>
 
             <form method="post" id="contact-form" name="contact-form" action="https://api.web3forms.com/submit"
-                class="contact-form">
+                class="contact-form form" data-w3>
 
                 <input type="hidden" name="from_name" value="{{ .Site.Title }} Contact">
                 <input type="hidden" name="subject" value="{{ .Site.Title }} Website Contact">
-                <input type="hidden" name="redirect" value="{{ .Site.BaseURL }}success">
-                <input type="hidden" name="access_key" value="38605c7d-f8ee-4232-bf07-d8a8f4b639fa">
-                <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <input type="hidden" name="redirect" value="{{ "/success/" | relLangURL | absURL }}">
+                <input type="hidden" name="access_key" value="{{ site.Params.web3formsKey }}">
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                 <div style="margin: 10px 0 30px 0;">
-                    <div><input type="checkbox" id="preferredEmail" name="preferred[]" value="email"> <label
-                            for="preferredEmail">I agree and accept the Promotion Rules</label></div>
+                    <div><input type="checkbox" id="acceptRules" name="accept_rules" value="yes" required> <label
+                            for="acceptRules">I agree and accept the Promotion Rules</label></div>
                 </div>
 
-                <label for="name">{{ i18n "promo_card" }}*</label>
+                <label for="promo_card">{{ i18n "promo_card" }}*</label>
                 <input type="text" id="promo_card" name="promo_card" 
                     required>
                     <small style="color: grey; font-style: italic;">Promo code is found on the back of gift card.</small>
@@ -294,30 +290,29 @@
                 <input type="text" id="prop_size" name="prop_size"  required>
 
                 <label for="prop_owner">Full Name of the Property Owner</label>
-                <input type="text" id="prop_owner" name="prop_owner"  required>
+                <input type="text" id="prop_owner" name="prop_owner">
 
                 <h3 style="margin-top: 40px;">In case your property already have a well (optional):</h3>
 
                 <label for="well_gallons">How many gallons per minute does it produce?</label>
-                <input type="text" id="well_gallons" name="well_gallons"  required>
+                <input type="text" id="well_gallons" name="well_gallons">
 
                 <label for="well_depth">Well Depth?</label>
-                <input type="text" id="well_depth" name="well_depth"  required>
+                <input type="text" id="well_depth" name="well_depth">
 
                 <label for="when_dug">When was the well dug?</label>
-                <input type="text" id="when_dug" name="when_dug"  required>
+                <input type="text" id="when_dug" name="when_dug">
 
                 <label for="issues_water">Any issues with the water?</label>
-                <input type="text" id="issues_water" name="issues_water"  required>
+                <input type="text" id="issues_water" name="issues_water">
 
                 <label for="well_coordinates">Well latitude/longitude coordinates</label>
-                <input type="text" id="well_coordinates" name="well_coordinates"  required>
+                <input type="text" id="well_coordinates" name="well_coordinates">
 
                 <h3 style="margin-top: 40px;">Comments:</h3>
 
                 <label for="message">Any additional comments or questions?</label>
-                <textarea id="message" name="message" 
-                    required></textarea>
+                <textarea id="message" name="message"></textarea>
 
                 <label>{{ i18n "captcha" }}</label>
                 <div class="h-captcha" data-captcha="true"></div>
@@ -336,11 +331,11 @@
             <h4>Learn about our other services:</h4>
             <a href="{{ "/services" | relLangURL }}">
                 <div class="adv-image-container">
-                    <img src="/images/slide 1.avif" alt="Our services">
+                    <img src="/images/sample-cross-section.avif" alt="Example resistivity cross-section from a groundwater survey" width="1200" height="675" loading="lazy">
                 </div>
             </a>
             <div class="adv-image-container">
-                <img src="/images/we-are-insured.png" alt="We are insured">
+                <img src="/images/we-are-insured.png" alt="We are insured" width="1024" height="1024" loading="lazy">
             </div>
         </div>
     </section>

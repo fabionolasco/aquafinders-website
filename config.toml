@@ -3,33 +3,139 @@ title = "AquaFinders"
 theme = "aquafinders"
 enableRobotsTXT = true
 disableHugoGeneratorInject = true
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+# Taxonomies are not used; disabling them stops empty /categories/ and /tags/ pages and feeds.
+disableKinds = ["taxonomy", "term"]
+# Generated HTML must never depend on JavaScript; RSS is not needed until /insights/ exists.
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  page = ["HTML"]
+
+[sitemap]
+  changeFreq = "monthly"
+  priority = 0.5
 
 [minify]
-  disableCSS = false
-  disableHTML = false
-  disableJS = false
-  disableJSON = false
-  disableSVG = false
-  disableXML = false
   minifyOutput = true
+
+[markup.goldmark.renderer]
+  # Allows small inline HTML (e.g. <abbr>) inside content Markdown written by the site owner.
+  unsafe = true
 
 [params]
   siteName = "AquaFinders"
+  # Facts used across templates. Edit here, not in templates.
   contactPhone = "+1-732-221-1202"
+  contactPhoneDisplay = "(732) 221-1202"
+  whatsapp = "17322211202"
   contactEmail = "support@aquafinders.site"
-  facebook = "https://www.facebook.com/aquafinders"
-  description = "Find water and well drilling solutions"
+  facebook = "https://www.facebook.com/people/AquaFinders-Find-the-best-place-to-drill-a-water-well/61577105078190/"
+  baseTown = "York"
+  baseState = "SC"
+  serviceStates = ["North Carolina", "South Carolina", "Georgia", "Tennessee", "Kentucky", "Virginia"]
+  openingHours = "Mo-Fr 09:00-17:00"
+  logo = "/images/logo-h.png"
 
-# Configure languages
+  # Google Analytics 4 measurement ID (public by design).
+  ga4 = "G-HJMQVSXBWK"
+
+  # Web3Forms access key. Web3Forms keys are designed to be public (they only route mail to the owner's inbox).
+  web3formsKey = "38605c7d-f8ee-4232-bf07-d8a8f4b639fa"
+
+  # HERO IMAGE — to replace the hero later, export the new image at the widths below using the
+  # same base name pattern (e.g. /images/<base>-mobile.avif + .png) or change `base`, then edit `alt`.
+  [params.hero]
+    base = "/images/hero-bg-big"
+    # name suffix = width x height of each existing file
+    [[params.hero.sources]]
+      suffix = "-mobile"
+      width = 414
+      height = 797
+      media = "(max-width: 600px)"
+    [[params.hero.sources]]
+      suffix = "-tablet"
+      width = 768
+      height = 260
+      media = ""
+    [[params.hero.sources]]
+      suffix = "-medium"
+      width = 1280
+      height = 433
+      media = ""
+    [[params.hero.sources]]
+      suffix = "-large"
+      width = 1920
+      height = 650
+      media = ""
+    [[params.hero.sources]]
+      suffix = "-xlarge"
+      width = 3024
+      height = 1024
+      media = ""
+
 [languages]
   [languages.en]
     languageName = "English"
     contentDir = "content/en"
-    languageCode = "en-us"
+    languageCode = "en-US"
     weight = 1
-  
+    [languages.en.params]
+      heroAlt = "Water flowing from a newly drilled well while a family watches in a rural field"
+    [[languages.en.menus.main]]
+      name = "How It Works"
+      pageRef = "/how-it-works"
+      weight = 10
+    [[languages.en.menus.main]]
+      name = "Services"
+      pageRef = "/services"
+      weight = 20
+    [[languages.en.menus.main]]
+      name = "Pricing"
+      pageRef = "/pricing"
+      weight = 30
+    [[languages.en.menus.main]]
+      name = "About"
+      pageRef = "/about"
+      weight = 40
+    [[languages.en.menus.main]]
+      name = "FAQ"
+      pageRef = "/faq"
+      weight = 50
+    [[languages.en.menus.main]]
+      name = "Contact"
+      pageRef = "/contact"
+      weight = 60
+
   [languages.es]
     languageName = "Español"
     contentDir = "content/es"
-    languageCode = "es-es"
+    languageCode = "es"
     weight = 2
+    [languages.es.params]
+      heroAlt = "Agua brotando de un pozo recién perforado mientras una familia observa en un terreno rural"
+    [[languages.es.menus.main]]
+      name = "Cómo funciona"
+      pageRef = "/how-it-works"
+      weight = 10
+    [[languages.es.menus.main]]
+      name = "Servicios"
+      pageRef = "/services"
+      weight = 20
+    [[languages.es.menus.main]]
+      name = "Precios"
+      pageRef = "/pricing"
+      weight = 30
+    [[languages.es.menus.main]]
+      name = "Nosotros"
+      pageRef = "/about"
+      weight = 40
+    [[languages.es.menus.main]]
+      name = "Preguntas"
+      pageRef = "/faq"
+      weight = 50
+    [[languages.es.menus.main]]
+      name = "Contacto"
+      pageRef = "/contact"
+      weight = 60

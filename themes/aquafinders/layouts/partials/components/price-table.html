@@ -1,0 +1,39 @@
+{{- /* Prices come only from data/pricing.yaml so EN and ES can never disagree. Context: page. */ -}}
+{{- $p := site.Data.pricing -}}
+{{- $fmt := cond (eq .Lang "es") "US$%d" "$%d" -}}
+<div class="price-grid">
+    <article class="price-card">
+        <p class="price-step">{{ i18n "phase1_label" }}</p>
+        <h3>{{ i18n "phase1_name" }}</h3>
+        <p class="price"><span class="price-amount">{{ printf $fmt $p.phase1.price }}</span></p>
+        <p>{{ i18n "phase1_summary" }}</p>
+        <ul class="checklist">
+            <li>{{ i18n "phase1_item1" }}</li>
+            <li>{{ i18n "phase1_item2" }}</li>
+            <li>{{ i18n "phase1_item3" }}</li>
+            <li>{{ i18n "phase1_item4" }}</li>
+        </ul>
+        <p class="price-note">{{ i18n "phase1_note" }}</p>
+    </article>
+    <article class="price-card">
+        <p class="price-step">{{ i18n "phase2_label" }}</p>
+        <h3>{{ i18n "phase2_name" }}</h3>
+        <p class="price"><span class="price-amount">{{ printf $fmt $p.phase2.price }}</span></p>
+        <p>{{ i18n "phase2_summary" }}</p>
+        <ul class="checklist">
+            <li>{{ i18n "phase2_item1" }}</li>
+            <li>{{ i18n "phase2_item2" }}</li>
+            <li>{{ i18n "phase2_item3" }}</li>
+            <li>{{ i18n "phase2_item4" }}</li>
+        </ul>
+        <p class="price-note">{{ i18n "phase2_note" }}</p>
+    </article>
+</div>
+<div class="price-extras">
+    <h3>{{ i18n "extras_title" }}</h3>
+    <ul>
+        <li>{{ i18n "extra_travel" (dict "Miles" $p.travel.freeRadiusMiles "From" $p.travel.from) }}</li>
+        <li>{{ i18n "extra_brush" }}</li>
+        <li>{{ i18n "extra_tax" }}</li>
+    </ul>
+</div>

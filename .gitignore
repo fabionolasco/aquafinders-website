@@ -9,3 +9,6 @@ DS_Store
 dist
 public
 /public
+.hugo_build.lock
+/resources/
+/reports/

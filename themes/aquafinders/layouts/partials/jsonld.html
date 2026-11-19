@@ -1,0 +1,43 @@
+{{- /* Structured data describes only facts visible on the site. No ratings, reviews or invented counts. */ -}}
+{{- $home := .Site.Home -}}
+{{- $areas := slice -}}
+{{- range site.Params.serviceStates }}{{ $areas = $areas | append (dict "@type" "State" "name" .) }}{{ end -}}
+{{- $org := dict
+  "@type" "ProfessionalService"
+  "@id" (printf "%s#business" site.BaseURL)
+  "name" site.Title
+  "url" $home.Permalink
+  "description" (i18n "org_description")
+  "logo" (site.Params.logo | absURL)
+  "image" (site.Params.logo | absURL)
+  "telephone" site.Params.contactPhone
+  "email" site.Params.contactEmail
+  "address" (dict "@type" "PostalAddress" "addressLocality" site.Params.baseTown "addressRegion" site.Params.baseState "addressCountry" "US")
+  "areaServed" $areas
+  "openingHours" site.Params.openingHours
+  "knowsLanguage" (slice "en" "es")
+  "sameAs" (slice site.Params.facebook)
+-}}
+{{- $graph := slice $org -}}
+{{- with .Params.service -}}
+  {{- $graph = $graph | append (dict
+    "@type" "Service"
+    "name" .name
+    "description" .description
+    "serviceType" (.type | default .name)
+    "provider" (dict "@id" (printf "%s#business" site.BaseURL))
+    "areaServed" $areas
+    "url" $.Permalink
+  ) -}}
+{{- end -}}
+{{- if not .IsHome -}}
+  {{- $items := slice (dict "@type" "ListItem" "position" 1 "name" (i18n "home") "item" $home.Permalink) -}}
+  {{- $pos := 2 -}}
+  {{- with .Params.parent }}{{ with site.GetPage . }}
+    {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "name" .LinkTitle "item" .Permalink) -}}
+    {{- $pos = add $pos 1 -}}
+  {{- end }}{{ end -}}
+  {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "name" .LinkTitle "item" .Permalink) -}}
+  {{- $graph = $graph | append (dict "@type" "BreadcrumbList" "itemListElement" $items) -}}
+{{- end -}}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS }}</script>

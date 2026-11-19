@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{- partial "components/page-header.html" . }}
+<div class="section">
+    <div class="container narrow prose">
+        {{ .Content }}
+    </div>
+</div>
+{{- range .Params.faqGroups }}
+{{- partial "components/faq-list.html" (dict "faqs" .faqs "title" .title "id" .id) }}
+{{- end }}
+{{- partial "components/faq-list.html" (dict "faqs" .Params.faqs "title" (i18n "faq_short_title") "id" "faq") }}
+{{- if not .Params.hideDisclaimer }}
+<div class="section section-tight">
+    <div class="container narrow">{{ partial "components/disclaimer.html" . }}</div>
+</div>
+{{- end }}
+{{- if not .Params.hideCtaBand }}{{ partial "components/cta-band.html" (dict "page" . "title" .Params.ctaBandTitle) }}{{ end }}
+{{ end }}

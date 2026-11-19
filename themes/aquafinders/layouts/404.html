@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="page-header">
+    <div class="container narrow">
+        <p class="eyebrow">404</p>
+        <h1>{{ i18n "notfound_title" }}</h1>
+        <p class="lead">{{ i18n "notfound_text" }}</p>
+        <div class="actions">
+            <a class="btn btn-primary" href="{{ "/request/" | relLangURL }}" data-track="primary_cta_click" data-track-label="404">{{ i18n "cta_check_property" }}</a>
+            <a class="btn btn-secondary" href="{{ "/" | relLangURL }}">{{ i18n "back_to_home" }}</a>
+        </div>
+        <ul class="link-list">
+            <li><a href="{{ "/find-water/" | relLangURL }}">{{ i18n "nav_find_water" }}</a></li>
+            <li><a href="{{ "/low-yield-well/" | relLangURL }}">{{ i18n "nav_low_yield" }}</a></li>
+            <li><a href="{{ "/how-it-works/" | relLangURL }}">{{ i18n "nav_how" }}</a></li>
+            <li><a href="{{ "/pricing/" | relLangURL }}">{{ i18n "nav_pricing" }}</a></li>
+            <li><a href="{{ "/faq/" | relLangURL }}">{{ i18n "nav_faq" }}</a></li>
+        </ul>
+    </div>
+</section>
+{{ end }}

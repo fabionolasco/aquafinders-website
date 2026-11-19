@@ -1,5 +1,13 @@
-<!-- Language switcher -->
-<div class="language">
-    <a href="{{ "/" | relURL }}" aria-label="English Language" class="{{ if eq $.Lang "en" }}active{{ end }}">EN</a>
-    <a href="{{ "/es/" | relURL }}" aria-label="Spanish Language" class="{{ if eq $.Lang "es" }}active{{ end }}">ES</a>
-</div>
+{{- /* Links to the equivalent page in the other language; falls back to that language's home page. */ -}}
+<span class="lang-switch">
+{{- range site.Languages }}
+  {{- $lang := .Lang }}
+  {{- if eq $lang $.Lang }}
+  <span class="lang-current" lang="{{ $lang }}">{{ upper $lang }}</span>
+  {{- else }}
+    {{- $href := cond (eq $lang "en") "/" (printf "/%s/" $lang) }}
+    {{- range where $.Translations "Lang" $lang }}{{ $href = .RelPermalink }}{{ end }}
+  <a href="{{ $href }}" hreflang="{{ $lang }}" lang="{{ $lang }}">{{ upper $lang }}<span class="visually-hidden"> – {{ .LanguageName }}</span></a>
+  {{- end }}
+{{- end }}
+</span>

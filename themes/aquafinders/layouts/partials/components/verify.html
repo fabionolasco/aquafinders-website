@@ -1,0 +1,10 @@
+{{- /*
+  Unverified claim placeholder. Context: dict "text" "..." "page" .
+  - `hugo server` (development): renders the text, highlighted and labelled NEEDS_OWNER_VERIFICATION.
+  - `hugo` (production): renders nothing and logs a warning, so unverified claims never ship.
+*/ -}}
+{{- if hugo.IsProduction -}}
+  {{- warnf "NEEDS_OWNER_VERIFICATION omitted on %s: %s" .page.RelPermalink .text -}}
+{{- else -}}
+<mark class="needs-verification" title="NEEDS_OWNER_VERIFICATION">[NEEDS_OWNER_VERIFICATION] {{ .text | markdownify }}</mark>
+{{- end -}}

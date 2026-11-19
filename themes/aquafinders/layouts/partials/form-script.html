@@ -1,0 +1,101 @@
+{{- /* Progressive enhancement for Web3Forms forms. Without JS every form still posts normally. */ -}}
+<script src="https://web3forms.com/client/script.js" async defer></script>
+<script>
+(function () {
+  'use strict';
+  var T = {
+    captcha: {{ i18n "captcha_alert" }},
+    needContact: {{ i18n "form_need_contact" }},
+    fixErrors: {{ i18n "form_fix_errors" }}
+  };
+  var track = window.afTrack || function () {};
+  var store = window.afStore || { get: function () { return null; }, set: function () {} };
+
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function makeRef() {
+    var d = new Date(), chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789', r = '';
+    for (var i = 0; i < 4; i++) r += chars.charAt(Math.floor(Math.random() * chars.length));
+    return 'AF-' + String(d.getFullYear()).slice(2) + pad(d.getMonth() + 1) + pad(d.getDate()) + '-' + r;
+  }
+
+  document.querySelectorAll('form[data-w3]').forEach(function (form) {
+    var started = false;
+    form.addEventListener('focusin', function () {
+      if (started) return; started = true;
+      track('form_start', { form: form.id, page: location.pathname });
+    });
+
+    // Attribution hidden fields
+    var ft = {};
+    try { ft = JSON.parse(store.get('localStorage', 'af_first_touch') || '{}'); } catch (e) {}
+    Object.keys(ft).forEach(function (k) {
+      var input = form.querySelector('input[name="' + k + '"]');
+      if (input) input.value = ft[k];
+    });
+    var cur = form.querySelector('input[name="submitted_from"]');
+    if (cur) cur.value = location.pathname;
+
+    // Two-step lead form
+    var step2 = form.querySelector('[data-step="2"]');
+    var next = form.querySelector('[data-next]');
+    var summary = form.querySelector('.form-errors');
+    function step1Fields() { return form.querySelectorAll('[data-step="1"] input, [data-step="1"] select, [data-step="1"] textarea'); }
+
+    function validateContact() {
+      var email = form.querySelector('input[name="email"]');
+      var phone = form.querySelector('input[name="phone"]');
+      if (!email || !phone || form.dataset.contactRule !== 'either') return true;
+      var ok = email.value.trim() !== '' || phone.value.trim() !== '';
+      email.setCustomValidity(ok ? '' : T.needContact);
+      return ok;
+    }
+    function checkStep1() {
+      validateContact();
+      var bad = null;
+      step1Fields().forEach(function (f) { if (!bad && !f.checkValidity()) bad = f; });
+      if (bad) {
+        if (summary) { summary.textContent = T.fixErrors; summary.hidden = false; }
+        bad.reportValidity(); bad.focus();
+        return false;
+      }
+      if (summary) summary.hidden = true;
+      return true;
+    }
+    if (step2 && next) {
+      form.classList.add('is-stepped');
+      step2.hidden = true;
+      next.hidden = false;
+      next.addEventListener('click', function () {
+        if (!checkStep1()) return;
+        step2.hidden = false; next.hidden = true;
+        var first = step2.querySelector('input, select, textarea');
+        var heading = step2.querySelector('[tabindex="-1"]');
+        (heading || first).focus();
+      });
+    }
+    ['email', 'phone'].forEach(function (n) {
+      var el = form.querySelector('input[name="' + n + '"]');
+      if (el) el.addEventListener('input', validateContact);
+    });
+
+    form.addEventListener('submit', function (e) {
+      if (!checkStep1()) { e.preventDefault(); return; }
+      var cap = form.querySelector('textarea[name=h-captcha-response]');
+      if (form.querySelector('.h-captcha') && cap && !cap.value) {
+        e.preventDefault(); alert(T.captcha); return;
+      }
+      var refInput = form.querySelector('input[name="reference"]');
+      if (refInput) {
+        var ref = refInput.value || makeRef();
+        refInput.value = ref;
+        var subj = form.querySelector('input[name="subject"]');
+        if (subj && subj.value.indexOf(ref) === -1) subj.value = subj.value + ' [' + ref + ']';
+        store.set('sessionStorage', 'af_last_ref', ref);
+        var type = form.querySelector('[name="project_type"]');
+        store.set('sessionStorage', 'af_last_type', type ? type.value : '');
+      }
+      store.set('sessionStorage', 'af_last_form', form.id);
+    });
+  });
+})();
+</script>

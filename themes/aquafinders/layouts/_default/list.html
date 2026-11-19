@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{- partial "components/page-header.html" . }}
+<div class="section">
+    <div class="container narrow prose">{{ .Content }}</div>
+</div>
+{{- partial "components/cta-band.html" (dict "page" .) }}
+{{ end }}

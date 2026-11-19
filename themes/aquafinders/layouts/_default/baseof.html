@@ -1,61 +1,17 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode  }}">
+<html lang="{{ .Language.LanguageCode }}">
 <head>
     {{- partial "head.html" . -}}
 </head>
-
-<body{{ with .Params.bodyClass }} class="{{ . }}"{{ end }}>
-    {{- partial "language-switcher.html" . -}}
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRJLRXJ2" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<body class="lang-{{ .Lang }}{{ with .Params.bodyClass }} {{ . }}{{ end }}">
+    <a class="skip-link" href="#main">{{ i18n "skip_to_content" }}</a>
     {{- partial "header.html" . -}}
-
-    <main id="top" role="main">
+    <main id="main">
         {{- block "main" . }}{{- end }}
     </main>
-
     {{- partial "footer.html" . -}}
+    {{- if not .Params.hideMobileCta }}{{ partial "mobile-cta.html" . }}{{ end -}}
     {{- partial "scripts.html" . -}}
-
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "AquaFinders",
-          "description": "Unsure where to drill a water well? AquaFinders uses advanced technology to pinpoint optimal, high-yield locations on your site.",
-          "image": "https://aquafinders.site/images/logo-h.png",
-          "@id": "https://aquafinders.site",
-          "url": "https://aquafinders.site",
-          "telephone": "+1-732-221-1202",
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 35.015171,
-            "longitude": -81.185071
-          },
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday"
-              ],
-              "opens": "09:00",
-              "closes": "17:00"
-            }
-          ],
-          "sameAs": [
-            "https://www.facebook.com/aquafinders"
-          ],
-          "Schedule":{
-              "@type": "Schedule",
-              "ScheduleTimezone": "America/New_York"
-          }
-        }
-    </script>
+    {{- partial "jsonld.html" . -}}
 </body>
 </html>

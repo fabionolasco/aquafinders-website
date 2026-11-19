@@ -1,0 +1,6 @@
+{{- /* {{< card title="..." url="/x/" >}}Text{{< /card >}} — use inside {{< cards >}}. */ -}}
+<article class="card">
+  <h3><a href="{{ .Get "url" | relLangURL }}">{{ .Get "title" }}</a></h3>
+  {{ .Inner | .Page.RenderString (dict "display" "block") }}
+  <p class="card-more" aria-hidden="true">{{ i18n "learn_more" }} →</p>
+</article>

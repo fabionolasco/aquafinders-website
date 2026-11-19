@@ -1,0 +1,10 @@
+# Single source of truth for prices shown in EN and ES. Owner-confirmed 2026-11-19.
+# Change numbers here only; templates and both languages read from this file.
+currency: USD
+phase1:
+  price: 500
+phase2:
+  price: 700
+travel:
+  freeRadiusMiles: 20
+  from: "York, SC"

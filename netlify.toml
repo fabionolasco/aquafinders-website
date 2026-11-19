@@ -1,17 +1,128 @@
-[[redirects]]
-  from = "/images/:file"
-  to = "/.netlify/images?url=/images/:file"
-  status = 200
-
-[[redirects]]
-  from = "/promo-request"
-  to = "/en/promo-request"
-  status = 200
-
-[[redirects]]
-  from = "/success"
-  to = "/success.html"
-  status = 200
+[build]
+  command = "hugo --gc --minify"
+  publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "v0.146.2"
+  HUGO_VERSION = "0.146.2"
+  HUGO_ENV = "production"
+
+# Deploy previews and branch deploys: build with the same command.
+[context.deploy-preview]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+[context.branch-deploy]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+# ---------- Permanent redirects for legacy URLs ----------
+# Process page was split into /how-it-works/ and /pricing/.
+[[redirects]]
+  from = "/process/*"
+  to = "/how-it-works/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/process"
+  to = "/how-it-works/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/es/process/*"
+  to = "/es/how-it-works/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/es/process"
+  to = "/es/how-it-works/"
+  status = 301
+  force = true
+
+# Pre-Hugo static HTML pages.
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/spanish.html"
+  to = "/es/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/faq.html"
+  to = "/faq/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/faq-es.html"
+  to = "/es/faq/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/success.html"
+  to = "/success/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/sitemap.html"
+  to = "/sitemap/"
+  status = 301
+  force = true
+
+# Hugo publishes the English sitemap at /en/sitemap.xml (listed in the /sitemap.xml index): serve it as-is.
+[[redirects]]
+  from = "/en/sitemap.xml"
+  to = "/en/sitemap.xml"
+  status = 200
+  force = true
+
+# Renamed image (the old filename contained a space, which breaks srcset).
+[[redirects]]
+  from = "/images/slide%201.png"
+  to = "/images/sample-cross-section.png"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/images/slide%201.avif"
+  to = "/images/sample-cross-section.avif"
+  status = 301
+  force = true
+
+# English never lived under /en/ in the published site; collapse any such links.
+[[redirects]]
+  from = "/en/*"
+  to = "/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/en"
+  to = "/"
+  status = 301
+  force = true
+
+# Spanish 404s get the Spanish 404 page (Netlify serves /404.html for everything else).
+[[redirects]]
+  from = "/es/*"
+  to = "/es/404.html"
+  status = 404
+
+# ---------- Headers ----------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+[[headers]]
+  for = "/favicon/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    # Fingerprinted filenames: safe to cache for a year.
+    Cache-Control = "public, max-age=31536000, immutable"

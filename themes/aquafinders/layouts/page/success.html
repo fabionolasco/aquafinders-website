@@ -1,17 +1,37 @@
 {{ define "main" }}
-<section class="hero-container" role="region" aria-labelledby="hero-title">
-    <div class="hero">
-        <h2 id="hero-title">{{ i18n "success_title" }}</h2>
-        <p>{{ i18n "success_message" }}</p>
-        <a href="{{ " /" | relURL }}" class="cta-button">{{ i18n "back_to_home" }}</a>
+<section class="page-header">
+    <div class="container narrow">
+        <p class="eyebrow">{{ i18n "success_eyebrow" }}</p>
+        <h1>{{ .Title }}</h1>
+        <p class="lead">{{ i18n "success_message" }}</p>
+        <p class="ref-box" id="ref-box" hidden>{{ i18n "success_ref" }} <strong id="ref-value"></strong></p>
     </div>
 </section>
-
-<div class="text-center" style="margin: 100px;">
-    <h3>{{ i18n "success_title" }}</h3>
-    <div><a class="small block mb40" style="text-decoration: none;" href="{{ " /process/" |
-            relLangURL }}">
-            {{ i18n "info_process" }}
-        </a></div>
+<div class="section">
+    <div class="container narrow prose">
+        {{ .Content }}
+        <p class="actions">
+            <a class="btn btn-secondary" href="{{ "/how-it-works/" | relLangURL }}">{{ i18n "nav_how" }}</a>
+            <a class="btn btn-secondary" href="{{ "/pricing/" | relLangURL }}">{{ i18n "nav_pricing" }}</a>
+        </p>
+    </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var s = window.afStore; if (!s) return;
+  var ref = s.get('sessionStorage', 'af_last_ref');
+  var form = s.get('sessionStorage', 'af_last_form');
+  if (ref) {
+    document.getElementById('ref-value').textContent = ref;
+    document.getElementById('ref-box').hidden = false;
+  }
+  // Count a lead once per reference / form submission, never on reloads.
+  var key = 'af_tracked_' + (ref || form || '');
+  if ((ref || form) && !s.get('sessionStorage', key) && window.afTrack) {
+    window.afTrack(form === 'lead-form' ? 'qualified_inquiry_submit' : 'contact_form_submit',
+      { reference: ref || '', project_type: s.get('sessionStorage', 'af_last_type') || '' });
+    s.set('sessionStorage', key, '1');
+  }
+});
+</script>
 {{ end }}

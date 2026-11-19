@@ -1,8 +1,7 @@
 {{ define "main" }}
-<section class="hero-container" role="region" aria-labelledby="hero-title">
-    <div class="hero">
-        {{ with .Title }}<h2 id="hero-title">{{ . }}</h2>{{ end }}
-        {{ .Content }}
-    </div>
-</section>
+{{- partial "components/page-header.html" . }}
+<div class="section">
+    <div class="container narrow prose">{{ .Content }}</div>
+</div>
+{{- partial "components/cta-band.html" (dict "page" .) }}
 {{ end }}
