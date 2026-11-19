@@ -23,6 +23,14 @@
     <div class="container narrow prose">
         <h2>{{ $s.cost.title }}</h2>
         {{ $s.cost.body | markdownify }}
+        {{- with $s.why.podcast }}
+        <div class="podcast">
+            <p class="podcast-title">{{ .title }}</p>
+            <audio controls preload="none">
+                <source src="{{ .src }}" type="audio/mp4">
+            </audio>
+        </div>
+        {{- end }}
     </div>
 </section>
 
@@ -86,7 +94,7 @@
             {{ $s.proof.body | markdownify }}
             <p><a href="{{ "/gallery/" | relLangURL }}">{{ $s.proof.link }} →</a></p>
         </div>
-        <div>
+        <div style="width: 300px; max-width: 100%; margin: 0 auto;">
             {{ partial "components/picture.html" (dict "src" "/images/field-work-medium.png" "avif" "/images/field-work-medium.avif" "alt" $s.proof.imageAlt "w" 448 "h" 672 "caption" $s.proof.imageCaption) }}
         </div>
     </div>
@@ -100,14 +108,6 @@
             <div class="benefit"><h3>{{ .title }}</h3><p>{{ .text }}</p></div>
             {{- end }}
         </div>
-        {{- with $s.why.podcast }}
-        <div class="podcast">
-            <p class="podcast-title">{{ .title }}</p>
-            <audio controls preload="none">
-                <source src="{{ .src }}" type="audio/mp4">
-            </audio>
-        </div>
-        {{- end }}
     </div>
 </section>
 

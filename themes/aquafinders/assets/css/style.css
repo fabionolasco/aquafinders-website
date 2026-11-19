@@ -2,9 +2,9 @@
 :root {
   --navy: #14324a;
   --navy-700: #1d4463;
-  --teal: #0f6e66;
-  --teal-600: #0b5a53;
-  --teal-50: #e7f2f0;
+  --teal: #009b60;
+  --teal-600: #00804f;
+  --teal-50: #e6f5ee;
   --sand: #f6f3ec;
   --sand-200: #ebe4d6;
   --earth: #8a5a2b;
@@ -138,7 +138,7 @@ p, ul, ol { margin: 0 0 1em; }
 .hero h1 { color: #fff; max-width: 18ch; }
 .hero-text { font-size: 1.125rem; max-width: 60ch; color: #eef3f7; }
 .trust-strip { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: .925rem; color: #dfe7ee; }
-.trust-strip li::before { content: "✓"; margin-right: 6px; color: #8fd3c9; font-weight: 700; }
+.trust-strip li::before { content: "✓"; margin-right: 6px; color: #7fd6b0; font-weight: 700; }
 @media (min-width: 900px) { .hero { min-height: 620px; align-items: center; } .hero-content { padding-top: 64px; padding-bottom: 64px; } }
 
 .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; font-weight: 700; color: var(--earth); margin-bottom: .75em; }
@@ -265,7 +265,7 @@ p, ul, ol { margin: 0 0 1em; }
   background: #fff; border: 1.5px solid #b8c2ca; border-radius: 8px;
 }
 .form textarea { min-height: 110px; resize: vertical; }
-.form input:focus, .form select:focus, .form textarea:focus { border-color: var(--teal); outline: 3px solid rgba(15,110,102,.25); outline-offset: 0; }
+.form input:focus, .form select:focus, .form textarea:focus { border-color: var(--teal); outline: 3px solid rgba(0,155,96,.25); outline-offset: 0; }
 .form input:user-invalid, .form select:user-invalid { border-color: #b42318; }
 .req { color: #b42318; }
 .hint { font-size: .9rem; color: var(--muted); margin: -8px 0 16px; }
@@ -280,7 +280,7 @@ p, ul, ol { margin: 0 0 1em; }
 .contact-list li { margin-bottom: .6em; }
 
 /* ---------- Misc ---------- */
-.podcast { margin-top: 36px; background: var(--sand); border-radius: var(--radius); padding: 18px 20px; max-width: 560px; }
+.podcast { margin-top: 36px; background: #65bed7; border-radius: var(--radius); padding: 18px 20px; max-width: 560px; }
 .podcast-title { font-weight: 600; color: var(--navy); margin-bottom: 8px; }
 .podcast audio { width: 100%; }
 .sitemap-list { padding-left: 1.2em; }
