@@ -18,9 +18,13 @@ sections:
   cost:
     title: "Perforar sin información es una apuesta cara"
     body: |
-      Un pozo se perfora una vez, en un solo lugar. Si ese lugar resulta seco o de poco caudal, el dinero invertido en perforación, revestimiento y permisos no se recupera, y un segundo intento cuesta lo mismo que el primero.
+      Un pozo de agua se perfora en un lugar específico. Si ese punto resulta estar seco o produce muy poca agua, la inversión realizada en la perforación, el revestimiento del pozo y otros gastos puede perderse. Perforar un segundo pozo significa asumir nuevamente gran parte de esos costos.
 
-      En gran parte del sureste de EE. UU., el agua subterránea se encuentra en grietas y fracturas de la roca, no en una capa uniforme. Dos puntos separados por unos cientos de pies pueden dar resultados muy diferentes. Estudiar el subsuelo antes de perforar no elimina esa incertidumbre, pero les da a usted y a su perforador mucha más información para decidir dónde perforar.
+      El agua subterránea no siempre se distribuye de manera uniforme bajo la superficie. En muchas regiones, especialmente donde existe roca sólida, el agua circula a través de grietas, fracturas y otras formaciones geológicas que no son visibles desde la superficie. Dos pozos perforados a poca distancia uno del otro pueden producir cantidades de agua muy diferentes.
+
+      Investigar lo que hay debajo de su terreno antes de perforar no elimina todas las incertidumbres, pero puede proporcionar información valiosa para que usted y su perforador tomen una decisión mejor fundamentada sobre dónde perforar.
+
+      **El objetivo no es simplemente encontrar agua en algún lugar de su propiedad, sino identificar el sitio más prometedor para perforar un pozo que pueda satisfacer sus necesidades de agua.**
   how:
     title: "Cómo funciona"
     intro: "Dos fases, y usted decide después de cada una si continúa."

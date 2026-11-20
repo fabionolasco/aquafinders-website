@@ -18,9 +18,13 @@ sections:
   cost:
     title: "Drilling without information is an expensive guess"
     body: |
-      A well is drilled once, in one spot. If that spot turns out dry or weak, the money spent on drilling, casing and permits doesn't come back, and a second attempt costs as much as the first.
+      A water well is drilled in one location. If that spot turns out to be dry or produces too little water, the money invested in drilling, casing, and other expenses may be lost. Drilling another well means taking on much of that expense all over again.
 
-      Groundwater in much of the Southeast sits in cracks and fractures in the rock, not in a uniform layer. Two points a few hundred feet apart can produce very different results. Looking at the subsurface before drilling won't remove that uncertainty, but it gives you and your driller much better information to decide where to drill.
+      Groundwater isn't always distributed evenly underground. In many areas, especially where bedrock is present, water moves through cracks, fractures, and other geological formations that aren't visible from the surface. Two wells drilled just a short distance apart can produce dramatically different amounts of water.
+
+      Investigating what's beneath your property before drilling won't eliminate every uncertainty, but it can provide valuable information to help you and your well driller make a more informed decision.
+
+      The goal isn't simply to find water somewhere on your property. It's to identify the most promising location for a well that can meet your water needs.
   how:
     title: "How it works"
     intro: "Two phases, and you decide after each one whether to continue."
