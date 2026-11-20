@@ -12,7 +12,6 @@ hero:
   trust:
     - "Con sede en York, Carolina del Sur"
     - "Estudios independientes"
-    - "Asegurados"
     - "No perforamos pozos"
 sections:
   cost:
@@ -80,6 +79,35 @@ sections:
     podcast:
       title: "Escuche: un breve resumen en audio de nuestro trabajo"
       src: "/podcast-es.mp4"
+    gallery:
+      - file: "gallery-001"
+        alt: "Un técnico trabaja en una laptop junto al equipo de resistividad en un terreno arbolado, mientras una integrante del equipo sonríe a la cámara."
+        w: 1600
+        h: 1200
+      - file: "gallery-002"
+        alt: "Una laptop y un medidor de resistividad sobre una mesa plegable en el bosque, con los cables de medición conectados."
+        w: 1600
+        h: 1200
+      - file: "gallery-003"
+        alt: "Un técnico con chaleco de seguridad de pie en un terreno despejado, sosteniendo una estaca de medición."
+        w: 1200
+        h: 1600
+      - file: "gallery-004"
+        alt: "Herramientas de campo sobre el pasto: una cinta métrica, una batería, un teléfono y banderines naranjas."
+        w: 1200
+        h: 1600
+      - file: "gallery-005"
+        alt: "Un técnico recorre una línea de medición en un campo de pasto alto."
+        w: 1600
+        h: 1200
+      - file: "gallery-006"
+        alt: "Un técnico coloca un electrodo a lo largo de una línea de medición en un campo de pasto alto."
+        w: 1600
+        h: 1200
+      - file: "gallery-007"
+        alt: "Una laptop y equipo de medición bajo una carpa de campo junto a la cerca de un potrero."
+        w: 1200
+        h: 1600
   coverage:
     title: "Dónde trabajamos"
     body: |

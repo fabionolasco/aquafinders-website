@@ -158,3 +158,10 @@ preferred_communication: "Preferred ways of communication:"
 phone_call: "Phone Call"
 phone_text: "Text"
 captcha: "Captcha"
+
+# ---------- Gallery lightbox ----------
+gallery_label: "Photos from field surveys"
+gallery_open: "Open photo {{ .n }} of {{ .total }}"
+lightbox_close: "Close"
+lightbox_prev: "Previous photo"
+lightbox_next: "Next photo"

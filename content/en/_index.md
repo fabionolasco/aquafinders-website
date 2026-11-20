@@ -12,7 +12,6 @@ hero:
   trust:
     - "Based in York, SC"
     - "Independent well-siting studies"
-    - "Insured"
     - "We do not drill wells"
 sections:
   cost:
@@ -80,6 +79,35 @@ sections:
     podcast:
       title: "Listen: a short audio overview of our approach"
       src: "/podcast.mp4"
+    gallery:
+      - file: "gallery-001"
+        alt: "A field technician works on a laptop next to resistivity equipment in a wooded lot while a team member smiles at the camera."
+        w: 1600
+        h: 1200
+      - file: "gallery-002"
+        alt: "A laptop and resistivity meter set up on a folding table in the woods, with survey cables connected."
+        w: 1600
+        h: 1200
+      - file: "gallery-003"
+        alt: "A technician in a safety vest stands in a cleared lot holding a survey stake."
+        w: 1200
+        h: 1600
+      - file: "gallery-004"
+        alt: "Survey tools on the grass: a measuring tape, a battery pack, a phone and orange marking flags."
+        w: 1200
+        h: 1600
+      - file: "gallery-005"
+        alt: "A technician walks a survey line through a tall-grass field."
+        w: 1600
+        h: 1200
+      - file: "gallery-006"
+        alt: "A technician places an electrode along a survey line in a tall-grass field."
+        w: 1600
+        h: 1200
+      - file: "gallery-007"
+        alt: "A laptop and survey equipment under a field tent next to a pasture fence."
+        w: 1200
+        h: 1600
   coverage:
     title: "Where we work"
     body: |

@@ -159,3 +159,10 @@ preferred_communication: "Forma preferida de comunicación:"
 phone_call: "Llamada telefónica"
 phone_text: "Mensaje de texto"
 captcha: "Captcha"
+
+# ---------- Gallery lightbox ----------
+gallery_label: "Fotos de estudios de campo"
+gallery_open: "Abrir foto {{ .n }} de {{ .total }}"
+lightbox_close: "Cerrar"
+lightbox_prev: "Foto anterior"
+lightbox_next: "Foto siguiente"

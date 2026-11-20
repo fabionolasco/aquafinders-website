@@ -31,6 +31,30 @@
             </audio>
         </div>
         {{- end }}
+        {{- with $s.why.gallery }}
+        {{- $total := len . }}
+        <ul class="thumb-gallery" aria-label="{{ i18n "gallery_label" }}" data-lightbox>
+            {{- range $i, $p := . }}
+            <li>
+                <a href="/images/{{ $p.file }}.jpg" data-full-avif="/images/{{ $p.file }}.avif" data-w="{{ $p.w }}" data-h="{{ $p.h }}" aria-label="{{ i18n "gallery_open" (dict "n" (add $i 1) "total" $total) }}">
+                    <picture>
+                        <source srcset="/images/{{ $p.file }}-thumb.avif" type="image/avif">
+                        <img src="/images/{{ $p.file }}-thumb.jpg" alt="{{ $p.alt }}" width="480" height="360" loading="lazy" decoding="async">
+                    </picture>
+                </a>
+            </li>
+            {{- end }}
+        </ul>
+        <dialog class="lightbox" aria-label="{{ i18n "gallery_label" }}">
+            <button type="button" class="lightbox-btn lightbox-close" aria-label="{{ i18n "lightbox_close" }}">&times;</button>
+            <button type="button" class="lightbox-btn lightbox-prev" aria-label="{{ i18n "lightbox_prev" }}">&#8249;</button>
+            <figure class="lightbox-figure">
+                <picture><source type="image/avif"><img alt="" width="1600" height="1200"></picture>
+                <figcaption class="lightbox-count" aria-live="polite"></figcaption>
+            </figure>
+            <button type="button" class="lightbox-btn lightbox-next" aria-label="{{ i18n "lightbox_next" }}">&#8250;</button>
+        </dialog>
+        {{- end }}
     </div>
 </section>
 

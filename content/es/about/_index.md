@@ -31,4 +31,4 @@ Así el estudio es independiente: nuestra recomendación no depende de quién pe
 
 Perforar un pozo es una decisión importante que se toma con información limitada. Un estudio cuidadoso puede mejorar esa información, pero no puede eliminar toda la incertidumbre, así que somos claros sobre lo que significan nuestros resultados y lo que no.
 
-Estamos asegurados, hablamos español e inglés, y preferimos decirle que un estudio no vale la pena antes que venderle uno que no necesita.
+Hablamos español e inglés, y preferimos decirle que un estudio no vale la pena antes que venderle uno que no necesita.

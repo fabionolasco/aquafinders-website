@@ -33,4 +33,4 @@ This keeps the study independent: our recommendation doesn't depend on who drill
 
 Drilling a well is a big decision made with limited information. A careful study can improve that information, but it can't remove all uncertainty, so we're upfront about what our results mean and what they don't.
 
-We're insured, we speak English and Spanish, and we'd rather tell you a study isn't worth it than sell you one you don't need.
+We speak English and Spanish, and we'd rather tell you a study isn't worth it than sell you one you don't need.

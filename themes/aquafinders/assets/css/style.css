@@ -283,6 +283,27 @@ p, ul, ol { margin: 0 0 1em; }
 .podcast { margin-top: 36px; background: #65bed7; border-radius: var(--radius); padding: 18px 20px; max-width: 560px; }
 .podcast-title { font-weight: 600; color: var(--navy); margin-bottom: 8px; }
 .podcast audio { width: 100%; }
+
+/* Thumbnail gallery + lightbox */
+.prose .thumb-gallery, .thumb-gallery { list-style: none; padding: 0; margin: 20px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; max-width: 560px; }
+.prose .thumb-gallery li, .thumb-gallery li { margin: 0; padding: 0; }
+.thumb-gallery a { display: block; border-radius: 6px; overflow: hidden; aspect-ratio: 4 / 3; background: var(--sand-200); }
+.thumb-gallery img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .2s ease, opacity .2s ease; }
+.thumb-gallery a:hover img { transform: scale(1.05); }
+.thumb-gallery a:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+.lightbox { padding: 0; border: 0; background: transparent; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; overflow: hidden; }
+.lightbox[open] { display: flex; align-items: center; justify-content: center; }
+.lightbox::backdrop { background: rgba(0, 0, 0, .85); }
+.lightbox-figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; pointer-events: none; }
+.lightbox-figure img { display: block; max-width: calc(100vw - 32px); max-height: calc(100vh - 96px); width: auto; height: auto; object-fit: contain; border-radius: 4px; pointer-events: auto; }
+.lightbox-count { color: #fff; font-size: .9rem; opacity: .85; }
+.lightbox-btn { position: absolute; z-index: 1; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 0; border-radius: 50%; background: rgba(0, 0, 0, .5); color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
+.lightbox-btn:hover { background: rgba(0, 0, 0, .75); }
+.lightbox-btn:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+.lightbox-close { top: 12px; right: 12px; }
+.lightbox-prev { left: 12px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 12px; top: 50%; transform: translateY(-50%); }
+@media (min-width: 700px) { .lightbox-figure img { max-width: calc(100vw - 160px); } }
 .sitemap-list { padding-left: 1.2em; }
 .sitemap-list li { margin-bottom: .5em; }
 mark.needs-verification { background: var(--mark); outline: 2px dashed #b08900; padding: 2px 4px; }

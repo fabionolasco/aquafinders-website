@@ -107,23 +107,22 @@ Spanish pages mirror these with Spanish titles; the full list is printed by the 
 - The ES promo page still has English content, so it is `noindex` and excluded from the sitemap and hreflang.
 
 ## Owner approval checklist
-1. **Insurance:** provide the current proof. "Insured" appears on the home page and the About page.
-2. **Turnaround time:** confirm "about five weeks" and the rush option. The text is hidden in production until confirmed (`{{< verify >}}` in `how-it-works`).
-3. **Business hours:** confirm Mon–Fri 9–5 ET. It's shown on Contact and in the structured data.
-4. **Standard limits:** confirm "up to 50 acres" for the standard study and the "several hundred feet" depth wording.
-5. **Sample image** (`sample-cross-section.png`): confirm it comes from your own or a partner project and may be shown publicly. It is labeled as an example. Also note `ert.jpeg`: it looks like a figure from a published paper. It is no longer used; don't reuse it without a license.
-6. **Gallery photos:** confirm they are from your or your partners' fieldwork and that the people shown agreed to it.
-7. **Hero image:** it shows water gushing and a celebrating family, which implies a promised outcome and looks AI-generated. Replace it when you can (see README, "Replacing the hero image").
-8. **Podcast audio** (EN/ES): listen for claims that conflict with the new wording (guarantees, "pinpoint", 600 ft).
-9. **Partner geologists:** names and credentials, if you want them shown.
-10. **Real proof:** the first permissioned case study and an anonymized sample report. That unblocks `/case-studies/` and the "See a Sample Report" CTA.
-11. **Spanish review** by a native speaker, covering all `content/es/*` and `i18n/es.yaml`.
-12. **Promo page:** keep it indexable? Translate the ES version?
-13. **Netlify:** create the site from this repo/branch, review the deploy preview, then switch DNS. Afterwards submit the sitemap in Search Console (`docs/operations.md`).
-14. **Repo cleanup candidates** (not deleted):
+1. **Turnaround time:** confirm "about five weeks" and the rush option. The text is hidden in production until confirmed (`{{< verify >}}` in `how-it-works`).
+2. **Business hours:** confirm Mon–Fri 9–5 ET. It's shown on Contact and in the structured data.
+3. **Standard limits:** confirm "up to 50 acres" for the standard study and the "several hundred feet" depth wording.
+4. **Sample image** (`sample-cross-section.png`): confirm it comes from your own or a partner project and may be shown publicly. It is labeled as an example. Also note `ert.jpeg`: it looks like a figure from a published paper. It is no longer used; don't reuse it without a license.
+5. **Gallery photos:** confirm they are from your or your partners' fieldwork and that the people shown agreed to it.
+6. **Hero image:** it shows water gushing and a celebrating family, which implies a promised outcome and looks AI-generated. Replace it when you can (see README, "Replacing the hero image").
+7. **Podcast audio** (EN/ES): listen for claims that conflict with the new wording (guarantees, "pinpoint", 600 ft).
+8. **Partner geologists:** names and credentials, if you want them shown.
+9. **Real proof:** the first permissioned case study and an anonymized sample report. That unblocks `/case-studies/` and the "See a Sample Report" CTA.
+10. **Spanish review** by a native speaker, covering all `content/es/*` and `i18n/es.yaml`.
+11. **Promo page:** keep it indexable? Translate the ES version?
+12. **Netlify:** create the site from this repo/branch, review the deploy preview, then switch DNS. Afterwards submit the sitemap in Search Console (`docs/operations.md`).
+13. **Repo cleanup candidates** (not deleted):
     - `_old/`
     - the root `images/`, `favicon/` and `robots.txt` (unused duplicates)
     - the 16 MB `.docx` report in `images/` (committed twice). It may contain client data; consider removing it from git history.
     - `memory/`, `test_reports/`, `.emergent/` (React-era artifacts)
     - `themes/aquafinders/static/podcast.wav` (14.5 MB, unused)
-15. **Follow-up cadence and CRM:** confirm the steps in `docs/operations.md`.
+14. **Follow-up cadence and CRM:** confirm the steps in `docs/operations.md`.
