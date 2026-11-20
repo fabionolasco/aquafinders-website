@@ -36,8 +36,17 @@
 
         <div class="field">
             <label for="lf-location">{{ i18n "form_location" }} <span class="req">*</span></label>
-            <input id="lf-location" name="property_location" type="text" autocomplete="street-address" required aria-describedby="lf-location-hint">
-            <p class="hint" id="lf-location-hint">{{ i18n "form_location_hint" }}</p>
+            <input id="lf-location" name="property_location" type="text" autocomplete="street-address" required>
+        </div>
+        <div class="field-row">
+            <div class="field">
+                <label for="lf-city">{{ i18n "form_city" }} <span class="req">*</span></label>
+                <input id="lf-city" name="property_city" type="text" autocomplete="address-level2" required>
+            </div>
+            <div class="field">
+                <label for="lf-zip">{{ i18n "form_zip" }} <span class="req">*</span></label>
+                <input id="lf-zip" name="property_zip" type="text" autocomplete="postal-code" inputmode="numeric" maxlength="10" required>
+            </div>
         </div>
         <div class="field-row">
             <div class="field">
