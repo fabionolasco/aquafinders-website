@@ -39,7 +39,7 @@ AquaFinders manages your project from start to finish and carries out the field 
 - **After Phase 1:** a property map showing areas of higher and lower groundwater potential, the reasoning behind it, and the proposed survey line location(s).
 
 <div style="width: 400px; max-width: 100%; margin: 0 auto;">
-{{< picture src="/images/line.png" avif="/images/line.avif" w="400" alt="Example of phase 1 report with line recommendation." caption="Example of a phase 1 report." >}}
+{{< picture src="/images/line.jpg" avif="/images/line.avif" w="400" h="569" alt="Example of phase 1 report with line recommendation." caption="Example of a phase 1 report." >}}
 </div>
 
 - **After Phase 2:** subsurface cross-section image(s), the recommended drilling location(s) referenced to markers on site, and notes on the assumptions and limitations of the interpretation.

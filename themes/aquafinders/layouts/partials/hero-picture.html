@@ -1,18 +1,18 @@
 {{- /* Hero image from site.Params.hero. Sources with `media` are art-directed crops (portrait phone crop);
   the rest form one width-based srcset. Swap the image by replacing files or editing params.hero in config.toml. */ -}}
 {{- $hero := site.Params.hero -}}
-{{- $wide := slice }}{{ $widePng := slice }}{{ $fallback := dict -}}
+{{- $wide := slice }}{{ $wideJpg := slice }}{{ $fallback := dict -}}
 {{- range $hero.sources }}{{ if not .media }}
   {{- $wide = $wide | append (printf "%s%s.avif %dw" $hero.base .suffix .width) -}}
-  {{- $widePng = $widePng | append (printf "%s%s.png %dw" $hero.base .suffix .width) -}}
+  {{- $wideJpg = $wideJpg | append (printf "%s%s.jpg %dw" $hero.base .suffix .width) -}}
   {{- if eq .suffix "-large" }}{{ $fallback = . }}{{ end -}}
 {{- end }}{{ end -}}
 <picture class="hero-media">
     {{- range $hero.sources }}{{ if .media }}
     <source type="image/avif" media="{{ .media }}" srcset="{{ $hero.base }}{{ .suffix }}.avif" width="{{ .width }}" height="{{ .height }}">
-    <source type="image/png" media="{{ .media }}" srcset="{{ $hero.base }}{{ .suffix }}.png" width="{{ .width }}" height="{{ .height }}">
+    <source type="image/jpeg" media="{{ .media }}" srcset="{{ $hero.base }}{{ .suffix }}.jpg" width="{{ .width }}" height="{{ .height }}">
     {{- end }}{{ end }}
     <source type="image/avif" srcset="{{ delimit $wide ", " }}" sizes="100vw">
-    <img src="{{ $hero.base }}{{ $fallback.suffix | default "-large" }}.png" srcset="{{ delimit $widePng ", " }}" sizes="100vw"
+    <img src="{{ $hero.base }}{{ $fallback.suffix | default "-large" }}.jpg" srcset="{{ delimit $wideJpg ", " }}" sizes="100vw"
          alt="{{ site.Language.Params.heroAlt }}" width="{{ $fallback.width | default 1920 }}" height="{{ $fallback.height | default 650 }}" fetchpriority="high">
 </picture>

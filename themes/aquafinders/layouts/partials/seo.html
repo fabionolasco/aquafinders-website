@@ -21,7 +21,7 @@
 {{- end }}{{ end }}
 {{- end }}
 {{- end }}
-{{- $img := .Params.ogImage | default "/images/hero-bg-big-large.png" }}
+{{- $img := .Params.ogImage | default "/images/hero-bg-big-large.jpg" }}
 <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:title" content="{{ .Params.ogTitle | default $title }}">

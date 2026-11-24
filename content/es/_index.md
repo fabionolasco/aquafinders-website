@@ -10,9 +10,12 @@ hero:
   secondaryLabel: "Vea lo que recibe"
   secondaryUrl: "/how-it-works/#deliverables"
   trust:
-    - "Con sede en York, Carolina del Sur"
-    - "Estudios independientes"
-    - "No perforamos pozos"
+    - text: "Proteja su presupuesto de perforación"
+      icon: "budget"
+    - text: "Elija el mejor lugar para perforar"
+      icon: "location"
+    - text: "Ciencia, no adivinanzas"
+      icon: "science"
 sections:
   cost:
     title: "Perforar sin información es una apuesta cara"

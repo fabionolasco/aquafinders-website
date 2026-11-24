@@ -14,7 +14,7 @@
             <a class="btn btn-on-dark" href="{{ $h.secondaryUrl | relLangURL }}" data-track="view_sample_report" data-track-label="hero">{{ $h.secondaryLabel }}</a>
         </div>
         <ul class="trust-strip">
-            {{- range $h.trust }}<li>{{ . }}</li>{{ end }}
+            {{- range $h.trust }}<li>{{ partial "components/icon.html" .icon }}<span>{{ .text }}</span></li>{{ end }}
         </ul>
     </div>
 </section>
@@ -119,7 +119,7 @@
             <p><a href="{{ "/gallery/" | relLangURL }}">{{ $s.proof.link }} →</a></p>
         </div>
         <div style="width: 300px; max-width: 100%; margin: 0 auto;">
-            {{ partial "components/picture.html" (dict "src" "/images/field-work-medium.png" "avif" "/images/field-work-medium.avif" "alt" $s.proof.imageAlt "w" 448 "h" 672 "caption" $s.proof.imageCaption) }}
+            {{ partial "components/picture.html" (dict "src" "/images/field-work-medium.jpg" "avif" "/images/field-work-medium.avif" "alt" $s.proof.imageAlt "w" 448 "h" 672 "caption" $s.proof.imageCaption) }}
         </div>
     </div>
 </section>

@@ -10,9 +10,12 @@ hero:
   secondaryLabel: "See what you receive"
   secondaryUrl: "/how-it-works/#deliverables"
   trust:
-    - "Based in York, SC"
-    - "Independent well-siting studies"
-    - "We do not drill wells"
+    - text: "Protect Your Drilling Budget"
+      icon: "budget"
+    - text: "Choose the Best Place to Drill"
+      icon: "location"
+    - text: "Science, Not Guesswork"
+      icon: "science"
 sections:
   cost:
     title: "Drilling without information is an expensive guess"

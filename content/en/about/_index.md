@@ -26,7 +26,7 @@ AquaFinders is based in York, South Carolina, and serves North Carolina, South C
 This keeps the study independent: our recommendation doesn't depend on who drills, how deep they go or how many wells get drilled.
 
 <div style="width: 300px; max-width: 100%; margin: 0 auto;">
-{{< picture src="/images/field-work-medium.png" avif="/images/field-work-medium.avif" w="448" h="672" alt="A field technician takes notes next to resistivity survey equipment." caption="Field data collection." >}}
+{{< picture src="/images/field-work-medium.jpg" avif="/images/field-work-medium.avif" w="448" h="672" alt="A field technician takes notes next to resistivity survey equipment." caption="Field data collection." >}}
 </div>
 
 ## What we believe

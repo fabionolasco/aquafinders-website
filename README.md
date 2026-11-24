@@ -37,10 +37,10 @@ Hugo version: 0.146.x extended (pinned in `netlify.toml`).
 
 ## Replacing the hero image
 
-The hero files are `themes/aquafinders/static/images/hero-bg-big-{mobile,tablet,medium,large,xlarge}.{avif,png}`.
+The hero files are `themes/aquafinders/static/images/hero-bg-big-{mobile,tablet,medium,large,xlarge}.{avif,jpg}`.
 To swap the image:
 
-1. Export the new image as AVIF and PNG at these sizes: mobile 414×797 (portrait crop), tablet 768 wide, medium 1280, large 1920, xlarge 3024.
+1. Export the new image as AVIF and JPEG at these sizes: mobile 414×797 (portrait crop), tablet 768 wide, medium 1280, large 1920, xlarge 3024.
 2. Either overwrite the files with the same names, or use a new base name and change `params.hero.base` in `config.toml`.
 3. If the sizes differ, update `width`/`height` for each entry under `params.hero.sources`.
 4. Update `heroAlt` under `[languages.en.params]` and `[languages.es.params]` so it describes the new image.

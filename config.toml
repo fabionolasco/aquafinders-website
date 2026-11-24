@@ -45,7 +45,7 @@ disableKinds = ["taxonomy", "term"]
   web3formsKey = "38605c7d-f8ee-4232-bf07-d8a8f4b639fa"
 
   # HERO IMAGE — to replace the hero later, export the new image at the widths below using the
-  # same base name pattern (e.g. /images/<base>-mobile.avif + .png) or change `base`, then edit `alt`.
+  # same base name pattern (e.g. /images/<base>-mobile.avif + .jpg) or change `base`, then edit `alt`.
   [params.hero]
     base = "/images/hero-bg-big"
     # name suffix = width x height of each existing file

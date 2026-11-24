@@ -138,7 +138,8 @@ p, ul, ol { margin: 0 0 1em; }
 .hero h1 { color: #fff; max-width: 18ch; }
 .hero-text { font-size: 1.125rem; max-width: 60ch; color: #eef3f7; }
 .trust-strip { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: .925rem; color: #dfe7ee; }
-.trust-strip li::before { content: "✓"; margin-right: 6px; color: #7fd6b0; font-weight: 700; }
+.trust-strip li { display: inline-flex; align-items: center; gap: 8px; }
+.trust-strip .icon { flex: none; width: 22px; height: 22px; color: #7fd6b0; }
 @media (min-width: 900px) { .hero { min-height: 620px; align-items: center; } .hero-content { padding-top: 64px; padding-bottom: 64px; } }
 
 .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; font-weight: 700; color: var(--earth); margin-bottom: .75em; }

@@ -23,9 +23,11 @@ LANG_CODES = {"en": "en-US", "es": "es"}
 
 # Claims the brief forbids, or facts the owner retired. Matched case-insensitively in visible text.
 BANNED = [
-    r"\bpinpoint", r"cutting[- ]edge", r"revolutionary", r"highest gpm", r"dramatically",
+    r"\bpinpoint", r"cutting[- ]edge", r"revolutionary", r"highest gpm",
+    # Owner-approved exceptions: "dramatically different" (well yields) and "nationwide upon special request".
+    r"dramatically(?! different)",
     r"\b600 (?:ft|feet|pies)", r"hundreds of (?:homeowners|clients)", r"cientos de propietarios",
-    r"\$\s?1,?200", r"\$\s?725", r"nationwide", r"todo el país", r"exact aquifer",
+    r"\$\s?1,?200", r"\$\s?725", r"nationwide(?! upon special request)", r"todo el país", r"exact aquifer",
     r"guaranteed (?:water|success|results|yield)", r"\bwe guarantee", r"\bgarantizamos",
 ]
 SECRET_PATTERNS = [r"sk_live_[0-9a-zA-Z]+", r"AKIA[0-9A-Z]{16}", r"-----BEGIN [A-Z ]*PRIVATE KEY", r"ghp_[0-9A-Za-z]{30,}",

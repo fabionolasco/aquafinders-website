@@ -4,7 +4,7 @@
   "scripts": {
     "start": "hugo server",
     "build": "hugo --gc --minify",
-    "check": "hugo --gc --minify && python3 scripts/check_site.py"
+    "check": "hugo --gc --minify --cleanDestinationDir && python3 scripts/check_site.py"
   },
   "keywords": [],
   "author": "Fabio Nolasco",

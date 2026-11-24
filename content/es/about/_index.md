@@ -25,7 +25,7 @@ AquaFinders tiene su sede en York, Carolina del Sur, y atiende Carolina del Nort
 
 Así el estudio es independiente: nuestra recomendación no depende de quién perfore, de la profundidad ni de cuántos pozos se perforen.
 
-{{< picture src="/images/field-work-medium.png" avif="/images/field-work-medium.avif" w="448" h="672" alt="Un técnico de campo toma notas junto al equipo de un estudio de resistividad." caption="Toma de datos en el campo." >}}
+{{< picture src="/images/field-work-medium.jpg" avif="/images/field-work-medium.avif" w="448" h="672" alt="Un técnico de campo toma notas junto al equipo de un estudio de resistividad." caption="Toma de datos en el campo." >}}
 
 ## En qué creemos
 

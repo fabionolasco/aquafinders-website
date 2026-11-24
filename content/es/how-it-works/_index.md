@@ -39,7 +39,7 @@ AquaFinders gestiona su proyecto de principio a fin y realiza la toma de datos e
 - **Después de la Fase 1:** un mapa del terreno con zonas de mayor y menor potencial de agua subterránea, el razonamiento detrás de él y la ubicación propuesta de la(s) línea(s) de medición.
 
 <div style="width: 400px; max-width: 100%; margin: 0 auto;">
-{{< picture src="/images/line.png" avif="/images/line.avif" w="400" alt="Ejemplo de informe de fase 1 con recomendación de línea." caption="Ejemplo de un informe de fase 1." >}}
+{{< picture src="/images/line.jpg" avif="/images/line.avif" w="400" h="569" alt="Ejemplo de informe de fase 1 con recomendación de línea." caption="Ejemplo de un informe de fase 1." >}}
 </div>
 
 - **Después de la Fase 2:** imagen(es) del subsuelo en corte, la(s) ubicación(es) recomendada(s) para perforar, referidas a marcas en el terreno, y notas sobre los supuestos y las limitaciones de la interpretación.

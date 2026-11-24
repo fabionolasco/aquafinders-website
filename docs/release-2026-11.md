@@ -110,7 +110,7 @@ Spanish pages mirror these with Spanish titles; the full list is printed by the 
 1. **Turnaround time:** confirm "about five weeks" and the rush option. The text is hidden in production until confirmed (`{{< verify >}}` in `how-it-works`).
 2. **Business hours:** confirm Mon–Fri 9–5 ET. It's shown on Contact and in the structured data.
 3. **Standard limits:** confirm "up to 50 acres" for the standard study and the "several hundred feet" depth wording.
-4. **Sample image** (`sample-cross-section.png`): confirm it comes from your own or a partner project and may be shown publicly. It is labeled as an example. Also note `ert.jpeg`: it looks like a figure from a published paper. It is no longer used; don't reuse it without a license.
+4. **Sample image** (`sample-cross-section.png`): confirm it comes from your own or a partner project and may be shown publicly. It is labeled as an example.
 5. **Gallery photos:** confirm they are from your or your partners' fieldwork and that the people shown agreed to it.
 6. **Hero image:** it shows water gushing and a celebrating family, which implies a promised outcome and looks AI-generated. Replace it when you can (see README, "Replacing the hero image").
 7. **Podcast audio** (EN/ES): listen for claims that conflict with the new wording (guarantees, "pinpoint", 600 ft).
@@ -119,10 +119,5 @@ Spanish pages mirror these with Spanish titles; the full list is printed by the 
 10. **Spanish review** by a native speaker, covering all `content/es/*` and `i18n/es.yaml`.
 11. **Promo page:** keep it indexable? Translate the ES version?
 12. **Netlify:** create the site from this repo/branch, review the deploy preview, then switch DNS. Afterwards submit the sitemap in Search Console (`docs/operations.md`).
-13. **Repo cleanup candidates** (not deleted):
-    - `_old/`
-    - the root `images/`, `favicon/` and `robots.txt` (unused duplicates)
-    - the 16 MB `.docx` report in `images/` (committed twice). It may contain client data; consider removing it from git history.
-    - `memory/`, `test_reports/`, `.emergent/` (React-era artifacts)
-    - `themes/aquafinders/static/podcast.wav` (14.5 MB, unused)
+13. **Repo cleanup (done 2026-11-23):** removed `_old/`, the root `images/` (including the client `.docx`), `favicon/` and `robots.txt`, the unused `podcast.wav` and unreferenced images, and replaced the PNG photo fallbacks with JPEG. Still left: `memory/`, `test_reports/`, `.emergent/` (React-era artifacts). The `.docx` is still in git history.
 14. **Follow-up cadence and CRM:** confirm the steps in `docs/operations.md`.
